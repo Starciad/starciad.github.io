@@ -23,20 +23,6 @@
     font-weight: 600;
 }
 
-.app-header button {
-    background-color: #415A77;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.app-header button:hover {
-    background-color: #778DA9;
-}
-
 .app-main {
     width: 90%;
     max-width: 1200px;

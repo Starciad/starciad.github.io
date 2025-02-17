@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="./styles/general.css">
     <link rel="stylesheet" href="./styles/navigator.css">
     <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/elements.css">
+    <link rel="stylesheet" href="./styles/projects.css">
     <!-- #endregion -->
 </head>
 
@@ -44,10 +46,6 @@
         <header class="app-header">
             <div>
                 <h1>Starciad's Dreamland</h1>
-            </div>
-
-            <div>
-                <button>Navigator</button>
             </div>
         </header>
 
@@ -119,7 +117,7 @@
                         <h2>Conhecimentos</h2>
                     </header>
                     <article class="app-section-content">
-                        
+
                         <h3>Linguagens de Programação</h3>
                         <ul>
                             <li>C#</li>
@@ -128,15 +126,15 @@
                             <li>Python</li>
                             <li>PHP</li>
                         </ul>
-                
+
                         <h3>Desenvolvimento Web</h3>
-                
+
                         <h4>Front-end</h4>
                         <ul>
                             <li>HTML5</li>
                             <li>CSS3</li>
                         </ul>
-                
+
                         <h4>Back-end</h4>
                         <ul>
                             <li>ASP.NET Core MVC</li>
@@ -152,16 +150,16 @@
                         <ul>
                             <li>Sqlite3</li>
                         </ul>
-                
+
                         <h3>Ferramentas</h3>
                         <ul>
                             <li>Git</li>
                             <li>Visual Studio</li>
                             <li>Visual Studio Code</li>
                         </ul>
-                
+
                     </article>
-                </section>                
+                </section>
 
                 <section class="app-section" id="projects">
                     <header>
@@ -170,106 +168,107 @@
 
                     <article class="app-section-content">
                         <h3>Jogos</h3>
-                        <div>
-                            <div>
-                                <h4>Stardust Sandbox</h4>
-                                <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
 
-                                <div>
-                                    <button>Itch</button>
-                                    <button>GitHub</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4>Stellar Duelist</h4>
-                                <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
-
-                                <div>
-                                    <button>Itch</button>
-                                    <button>GitHub</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4>Super Mario Cards</h4>
-                                <p>Um pequeno fan game Tower Defense de cartas baseado na série de jogos Super Mario Bros.</p>
-
-                                <div>
-                                    <button>Itch</button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4>JaaJ Xel</h4>
-                                <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6. Esse projeto foi feito em colaboração com o <a href="https://github.com/igorzizinio" target="_blank">Igor S. Zizinio</a>.</p>
-
-                                <div>
-                                    <button>Itch</button>
-                                </div>
-                            </div>
-
-                            <div>
+                        <div class="projects-container">
+                            <div class="project-card">
                                 <h4>SUno</h4>
+                                <p class="project-date">04/02/2025</p>
+                                <p class="project-lang">C</p>
                                 <p>Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
-
-                                <div>
-                                    <button>GitHub</button>
+                                <div class="project-buttons">
+                                    <button class="btn">GitHub</button>
                                 </div>
                             </div>
 
-                            <div>
+                            <div class="project-card">
+                                <h4>Stellar Duelist</h4>
+                                <p class="project-date">21/09/2023</p>
+                                <p class="project-lang">C# | MonoGame</p>
+                                <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
+                                <div class="project-buttons">
+                                    <button class="btn">Itch</button>
+                                    <button class="btn">GitHub</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <h4>Stardust Sandbox</h4>
+                                <p class="project-date">05/08/2023</p>
+                                <p class="project-lang">C# | MonoGame</p>
+                                <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
+                                <div class="project-buttons">
+                                    <button class="btn">Itch</button>
+                                    <button class="btn">GitHub</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
                                 <h4>Slime Lab</h4>
+                                <p class="project-date">21/10/2022</p>
+                                <p class="project-lang">C# | MonoGame</p>
                                 <p>Pequeno jogo feito em MonoGame para estudos.</p>
-
-                                <div>
-                                    <button>GitHub</button>
+                                <div class="project-buttons">
+                                    <button class="btn">GitHub</button>
                                 </div>
                             </div>
 
-                            <div>
-                                <h4>Star Zombie Chase</h4>
-                                <p>Um pequeno jogo de quebra-cabeça cujo o objetivo é fugir dos zumbis e coletar itens.</p>
+                            <div class="project-card">
+                                <h4>Super Mario Cards</h4>
+                                <p class="project-date">13/01/2022</p>
+                                <p class="project-lang">C# | Unity</p>
+                                <p>Um pequeno fan game Tower Defense de cartas baseado na série de jogos Super Mario Bros.</p>
+                                <div class="project-buttons">
+                                    <button class="btn">Itch</button>
+                                </div>
+                            </div>
 
-                                <div>
-                                    <button>WebSite</button>
-                                    <button>GitHub</button>
+                            <div class="project-card">
+                                <h4>JaaJ Xel</h4>
+                                <p class="project-date">30/07/2021</p>
+                                <p class="project-lang">C# | Unity</p>
+                                <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
+                                <div class="project-buttons">
+                                    <button class="btn">Itch</button>
                                 </div>
                             </div>
                         </div>
 
                         <h3>Ferramentas</h3>
-                        <div>
-                            <div>
+                        <div class="projects-container">
+                            <div class="project-card">
                                 <h4>Star Character Sheet Generator (SCSG)</h4>
-                                <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens para livros, RPGs, roteiros etc.</p>
-
-                                <div>
-                                    <button>WebSite</button>
-                                    <button>GitHub</button>
+                                <p class="project-date">23/01/2024</p>
+                                <p class="project-lang">HTML, CSS e JS</p>
+                                <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.</p>
+                                <div class="project-buttons">
+                                    <button class="btn">WebSite</button>
+                                    <button class="btn">GitHub</button>
                                 </div>
                             </div>
                         </div>
 
                         <h3>Bibliotecas</h3>
-                        <div>
-                            <div>
+                        <div class="projects-container">
+                            <div class="project-card">
                                 <h4>Star ASCII</h4>
+                                <p class="project-date">10/09/2024</p>
+                                <p class="project-lang">C#</p>
                                 <p>Uma biblioteca para criação de animações ASCII para terminais.</p>
-
-                                <div>
-                                    <button>GitHub</button>
+                                <div class="project-buttons">
+                                    <button class="btn">GitHub</button>
                                 </div>
                             </div>
                         </div>
 
                         <h3>Outros</h3>
-                        <div>
-                            <h4>Star Pixel Icons (SPI) Theme</h4>
-                            <p>Um pacote de ícones Pixel Art para Linux. Ícones para aplicativos, pastas e arquivos, fornecendo um visual coeso e nostálgico para o ambiente de desktop.</p>
-
-                            <div>
-                                <button>GitHub</button>
+                        <div class="projects-container">
+                            <div class="project-card">
+                                <h4>Star Pixel Icons (SPI) Theme</h4>
+                                <p class="project-date">18/07/2024</p>
+                                <p>Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
+                                <div class="project-buttons">
+                                    <button class="btn">GitHub</button>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -317,7 +316,7 @@
                         </ul>
                     </article>
                 </section>
-                
+
                 <section class="app-section" id="contact">
                     <header>
                         <h2>Contato</h2>
