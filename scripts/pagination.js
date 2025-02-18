@@ -1,8 +1,5 @@
 const hiddenClass = "hidden";
-
-const sectionContainer = document.querySelector(".app-section-container");
 const sections = document.querySelectorAll(".app-section");
-
 const numberOfSections = sections.length;
 
 let currentSectionIndex = 0;
@@ -32,12 +29,6 @@ function setCurrentSection(index) {
     showSection(index);
 
     currentSectionIndex = index;
-}
-
-function showAllSections() {
-    for (let i = 0; i < numberOfSections; i++) {
-        showSection(i);
-    }
 }
 
 function hideAllSections() {
