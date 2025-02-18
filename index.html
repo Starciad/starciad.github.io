@@ -30,13 +30,12 @@
     <meta property="twitter:description" content="Portfólio pessoal de Davi 'Starciad' Fernandes.">
     <!-- #endregion -->
 
+    <!-- #region SCRIPTS -->
+    <script src="scripts/buttons.js" type="module" defer></script>
+    <!-- #endregion -->
+
     <!--#region STYLES -->
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/general.css">
-    <link rel="stylesheet" href="./styles/navigator.css">
-    <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/elements.css">
-    <link rel="stylesheet" href="./styles/projects.css">
     <!-- #endregion -->
 </head>
 
@@ -51,16 +50,22 @@
 
         <!-- Conteúdo principal -->
         <main class="app-main">
-            <div class="app-sections">
+            <div>
+
+            </div>
+
+            <div class="app-section-container">
                 <section class="app-section" id="introduction">
                     <header>
                         <h2>Introdução</h2>
                     </header>
                     <article class="app-section-content">
                         <h3>Sobre Mim</h3>
-                        <p>Me chamo Davi Fernandes, mais conhecido pelo pseudônimo "Starciad". Sou apaixonado por programação e tecnologia. Atualmente, trato a programação como um hobby, mas estou trilhando meu caminho nesse vasto mundo.</p>
+
+                        <p>Me chamo Davi Fernandes, mais conhecido pelo pseudônimo "Starciad". Sou brasileiro, nascido em Minas Gerais, apaixonado por programação e tecnologia. Atualmente, trato a programação como um hobby, mas aos poucos, trilho meu caminho nesse vasto mundo, tentando sempre me manter aperfeiçoar a cada dia.</p>
 
                         <h3>Sobre o Site</h3>
+
                         <p>Este site centraliza minhas informações relevantes, facilitando o compartilhamento de meus projetos, conquistas e interesses. O intuito é fornecer um ambiente amigável e agradável aos leitores(as).</p>
                     </article>
                 </section>
@@ -130,28 +135,33 @@
                         <h3>Desenvolvimento Web</h3>
 
                         <h4>Front-end</h4>
+                        
                         <ul>
                             <li>HTML5</li>
                             <li>CSS3</li>
                         </ul>
 
                         <h4>Back-end</h4>
+
                         <ul>
                             <li>ASP.NET Core MVC</li>
                             <li>Flask</li>
                         </ul>
 
                         <h3>Desenvolvimento de Jogos</h3>
+
                         <ul>
                             <li>MonoGame</li>
                         </ul>
 
                         <h3>Banco de Dados</h3>
+
                         <ul>
                             <li>Sqlite3</li>
                         </ul>
 
                         <h3>Ferramentas</h3>
+
                         <ul>
                             <li>Git</li>
                             <li>Visual Studio</li>
@@ -173,62 +183,108 @@
                             <div class="project-card">
                                 <h4>SUno</h4>
                                 <p class="project-date">04/02/2025</p>
-                                <p class="project-lang">C</p>
+
+                                <div class="project-technologies">
+                                    <p>C</p>
+                                </div>
+
                                 <p>Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/SUno.git">GitHub</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <h4>Star Zombie Chase</h4>
+                                <p class="project-date">31/05/2024</p>
+
+                                <div class="project-technologies">
+                                    <p>HTML</p>
+                                    <p>CSS</p>
+                                    <p>JS</p>
+                                </div>
+
+                                <p>Um pequeno jogo de quebra-cabeça cujo objetivo é escapar de zumbis e coletar itens.</p>
+                                <div class="project-buttons">
+                                    <button id="link-button" class="btn" data-url="https://starciad.github.io/StarZombieChase/">WebSite</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StarZombieChase.git">GitHub</button>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <h4>Stellar Duelist</h4>
                                 <p class="project-date">21/09/2023</p>
-                                <p class="project-lang">C# | MonoGame</p>
+
+                                <div class="project-technologies">
+                                    <p>C#</p>
+                                    <p>MonoGame</p>
+                                </div>
+
                                 <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
                                 <div class="project-buttons">
-                                    <button class="btn">Itch</button>
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://starciad.itch.io/stellar-duelist">Itch</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StellarDuelist.git">GitHub</button>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <h4>Stardust Sandbox</h4>
                                 <p class="project-date">05/08/2023</p>
-                                <p class="project-lang">C# | MonoGame</p>
+                                
+                                <div class="project-technologies">
+                                    <p>C#</p>
+                                    <p>MonoGame</p>
+                                </div>
+
                                 <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">Itch</button>
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://starciad.itch.io/stardust-sandbox">Itch</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StardustSandbox.git">GitHub</button>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <h4>Slime Lab</h4>
                                 <p class="project-date">21/10/2022</p>
-                                <p class="project-lang">C# | MonoGame</p>
+                                
+                                <div class="project-technologies">
+                                    <p>C#</p>
+                                    <p>MonoGame</p>
+                                </div>
+
                                 <p>Pequeno jogo feito em MonoGame para estudos.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/SlimeLab.git">GitHub</button>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <h4>Super Mario Cards</h4>
                                 <p class="project-date">13/01/2022</p>
-                                <p class="project-lang">C# | Unity</p>
+
+                                <div class="project-technologies">
+                                    <p>C#</p>
+                                    <p>Unity</p>
+                                </div>
+
                                 <p>Um pequeno fan game Tower Defense de cartas baseado na série de jogos Super Mario Bros.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">Itch</button>
+                                    <button id="link-button" class="btn" data-url="https://starciad.itch.io/super-mario-cards">Itch</button>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <h4>JaaJ Xel</h4>
                                 <p class="project-date">30/07/2021</p>
-                                <p class="project-lang">C# | Unity</p>
+
+                                <div class="project-technologies">
+                                    <p>C#</p>
+                                    <p>Unity</p>
+                                </div>
+
                                 <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">Itch</button>
+                                    <button id="link-button" class="btn" data-url="https://igor-up.itch.io/jaajxel">Itch</button>
                                 </div>
                             </div>
                         </div>
@@ -238,11 +294,17 @@
                             <div class="project-card">
                                 <h4>Star Character Sheet Generator (SCSG)</h4>
                                 <p class="project-date">23/01/2024</p>
-                                <p class="project-lang">HTML, CSS e JS</p>
+
+                                <div class="project-technologies">
+                                    <p>HTML</p>
+                                    <p>CSS</p>
+                                    <p>JS</p>
+                                </div>
+
                                 <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">WebSite</button>
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://starciad.github.io/SCSG/">WebSite</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/SCSG.git">GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -252,10 +314,15 @@
                             <div class="project-card">
                                 <h4>Star ASCII</h4>
                                 <p class="project-date">10/09/2024</p>
-                                <p class="project-lang">C#</p>
+
+                                <div class="project-technologies">
+                                    <p>C#</p>
+                                </div>
+
                                 <p>Uma biblioteca para criação de animações ASCII para terminais.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://www.nuget.org/packages/StarASCII/">NuGet</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StarASCII.git">GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +334,7 @@
                                 <p class="project-date">18/07/2024</p>
                                 <p>Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
                                 <div class="project-buttons">
-                                    <button class="btn">GitHub</button>
+                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/star-pixel-icons-theme.git">GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -325,6 +392,20 @@
                         <p>Caso tenha gostado do que viu aqui, entre em contato!</p>
                     </article>
                 </section>
+            </div>
+
+            <div class="app-section-control">
+                <div class="app-section-control-content">
+                    <button>Previous</button>
+                </div>
+
+                <div class="app-section-control-content">
+
+                </div>
+
+                <div class="app-section-control-content">
+                    <button>Next</button>
+                </div>
             </div>
         </main>
 
