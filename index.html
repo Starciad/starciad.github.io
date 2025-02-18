@@ -35,30 +35,47 @@
     <script src="scripts/buttons.js" type="module" defer></script>
     <!-- #endregion -->
 
+    <!-- #region FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <!-- #endregion -->
+
     <!--#region STYLES -->
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./styles/states.css">
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
     <!-- #endregion -->
 </head>
 
 <body>
+    <div class="modals">
+        <div class="navigator">
+
+        </div>
+    </div>
+
     <div class="app">
-        <!-- Cabeçalho e Navegação -->
+        <!-- Header and Navigation -->
         <header class="app-header">
-            <div>
-                <h1>Starciad's Dreamland</h1>
+            <div class="app-header-content">
+                
             </div>
 
-            <div>
-                <button>Navegador</button>
+            <div class="app-header-content">
+                <div class="app-header-title"></div>
+            </div>
+
+            <div class="app-header-content">
+                <button class="app-header-navigator"></button>
             </div>
         </header>
 
-        <!-- Conteúdo principal -->
+        <!-- Main Content -->
         <main class="app-main">
-            <div class="app-navigator">
-
-            </div>
+            <h1 class="font-pixelify-sans-title">Starciad's Dreamland</h1>
 
             <div class="app-section-container">
                 <section class="app-section" id="introduction">
@@ -533,7 +550,7 @@
                     <header>
                         <h2>Contato</h2>
                     </header>
-                    
+
                     <article class="app-section-content">
                         <p>Caso tenha gostado do que viu aqui, entre em contato!</p>
                     </article>
@@ -555,7 +572,7 @@
             </div>
         </main>
 
-        <!-- Rodapé -->
+        <!-- Baseboard -->
         <footer class="app-footer">
             <p>&copy; 2024 Starciad's Dreamland. Todos os direitos reservados.</p>
         </footer>
