@@ -48,11 +48,15 @@
             <div>
                 <h1>Starciad's Dreamland</h1>
             </div>
+
+            <div>
+                <button>Navegador</button>
+            </div>
         </header>
 
         <!-- Conteúdo principal -->
         <main class="app-main">
-            <div>
+            <div class="app-navigator">
 
             </div>
 
@@ -62,13 +66,29 @@
                         <h2>Introdução</h2>
                     </header>
                     <article class="app-section-content">
+                        <p>Seja muito bem-vindo(a) à minha terra dos sonhos, aventureiro(a)!</p>
+
+                        <p>Fique à vontade, onde quer que esteja, pois nossa jornada está apenas começando.</p>
+
                         <h3>Sobre Mim</h3>
 
-                        <p>Me chamo Davi Fernandes, mais conhecido pelo pseudônimo "Starciad". Sou brasileiro, nascido em Minas Gerais, apaixonado por programação e tecnologia. Atualmente, trato a programação como um hobby, mas aos poucos, trilho meu caminho nesse vasto mundo, tentando sempre me manter aperfeiçoar a cada dia.</p>
+                        <p>Meu nome é Davi Fernandes, mas você pode me chamar de "Starciad". Sou brasileiro, nascido em Minas Gerais, apaixonado por programação e tecnologia. Embora trate a programação como um hobby, sigo explorando esse vasto mundo, buscando sempre evoluir e aperfeiçoar minhas habilidades a cada dia.</p>
 
-                        <h3>Sobre o Site</h3>
+                        <h3>Sobre o Website</h3>
 
-                        <p>Este site centraliza minhas informações relevantes, facilitando o compartilhamento de meus projetos, conquistas e interesses. O intuito é fornecer um ambiente amigável e agradável aos leitores(as).</p>
+                        <p>Criei este site como uma porta de entrada para meus conteúdos mais relevantes, facilitando o compartilhamento dos meus projetos, conquistas e interesses. Meu objetivo é oferecer tudo isso em um ambiente acolhedor, bem-estruturado e agradável para leitura.</p>
+
+                        <p>O site é organizado em diversas seções independentes, cada uma com seu próprio universo de conteúdo. A navegação foi pensada para proporcionar uma experiência dinâmica e intuitiva. Você pode acessar todas as seções pelo <strong>navegador</strong>, um menu com ancoragem para facilitar a exploração dos conteúdos.</p>
+
+                        <p>Além disso, os botões "próximo" e "anterior" no final de cada artigo permitem avançar ou retroceder pelos conteúdos de forma lógica, funcionando como um pequeno sistema de páginas.</p>
+
+                        <h3>Conclusão</h3>
+
+                        <p>Sinta-se à vontade para explorar o site! Espero que sua experiência aqui seja tão gratificante quanto foi o processo de criação deste espaço.</p>
+
+                        <h3>Veja Também</h3>
+
+                        <button id="link-button" class="btn" data-url="https://github.com/Starciad/starciad.github.io.git">GitHub</button>
                     </article>
                 </section>
 
@@ -103,19 +123,53 @@
                     <header>
                         <h2>Educação & Formações</h2>
                     </header>
+
                     <article class="app-section-content">
                         <h3>Ensino Básico</h3>
-                        <ul>
-                            <li>Ensino Fundamental | 2022</li>
-                            <li>Ensino Médio | 2024</li>
-                        </ul>
+
+                        <div class="education-container">
+                            <div class="education-card">
+                                <h4>Ensino Fundamental</h4>
+                                <p class="education-date">Concluído em 2021</p>
+                            </div>
+
+                            <div class="education-card">
+                                <h4>Ensino Médio</h4>
+                                <p class="education-date">Concluído em 2024</p>
+                            </div>
+                        </div>
+
+                        <h3>Olimpíadas</h3>
+
+                        <div class="education-container">
+                            <div class="education-card">
+                                <h4>Olimpíada Brasileira de Informática (OBI) - Modalidade Programação Nível 2</h4>
+                                <p class="education-date">2023</p>
+                                <p class="education-description">
+                                    Durante o ensino médio, graças à iniciativa de um professor, tive a oportunidade de participar pela primeira vez da OBI. Consegui avançar até a segunda fase, de um total de três, e foi uma experiência enriquecedora no mundo da programação competitiva.
+                                </p>
+                            </div>
+                        </div>
 
                         <h3>Cursos</h3>
-                        <ul>
-                            <li>OBI - Modalidade Programação Nível 2 | 2023</li>
-                            <li>Inclusão Digital - Programação Web: Curso PHP | 2023</li>
-                            <li>CC50 - O Curso de Ciência da Computação de Harvard | 2022</li>
-                        </ul>
+
+                        <div class="education-container">
+                            <div class="education-card">
+                                <h4>Inclusão Digital - Programação Web: Curso PHP</h4>
+                                <p class="education-date">2023</p>
+                                <p class="education-description">
+                                    Esse curso foi oferecido pelo governo de Belo Horizonte como parte de um programa de inclusão digital, abrangendo diversas áreas do conhecimento. Em específico, este curso introduziu o desenvolvimento web com PHP, abordando conceitos fundamentais de backend, manipulação de bancos de dados e criação de páginas dinâmicas. O uso do XAMPP também foi explorado ao longo das aulas.
+                                </p>
+                            </div>
+
+                            <div class="education-card">
+                                <h4>CC50 - Curso de Ciência da Computação de Harvard</h4>
+                                <p class="education-date">2022</p>
+                                <p class="education-description">
+                                    Através de uma iniciativa da <a href="https://www.estudar.org.br/" target="_blank">Fundação Estudar</a>, tive o prazer de realizar esse curso no formato EAD. Ele é a versão traduzida e adaptada do renomado CS50 da Universidade de Harvard, explorando conceitos fundamentais de ciência da computação, algoritmos, estrutura de dados e programação em C. Durante o curso, desenvolvemos diversos projetos práticos e passamos por múltiplos módulos, cada um repleto de desafios e aprendizados.
+                                </p>
+                            </div>
+                        </div>
                     </article>
                 </section>
 
@@ -137,7 +191,7 @@
                         <h3>Desenvolvimento Web</h3>
 
                         <h4>Front-end</h4>
-                        
+
                         <ul>
                             <li>HTML5</li>
                             <li>CSS3</li>
@@ -165,11 +219,19 @@
                         <h3>Ferramentas</h3>
 
                         <ul>
+                            <li>XAMPP</li>
                             <li>Git</li>
                             <li>Visual Studio</li>
                             <li>Visual Studio Code</li>
+                            <li>WSL2</li>
                         </ul>
 
+                        <h3>Sistemas Operacionais</h3>
+
+                        <ul>
+                            <li>Windows 7 e 10</li>
+                            <li>Linux Mint</li>
+                        </ul>
                     </article>
                 </section>
 
@@ -232,7 +294,7 @@
                             <div class="project-card">
                                 <h4>Stardust Sandbox</h4>
                                 <p class="project-date">05/08/2023</p>
-                                
+
                                 <div class="project-technologies">
                                     <p>C#</p>
                                     <p>MonoGame</p>
@@ -248,7 +310,7 @@
                             <div class="project-card">
                                 <h4>Slime Lab</h4>
                                 <p class="project-date">21/10/2022</p>
-                                
+
                                 <div class="project-technologies">
                                     <p>C#</p>
                                     <p>MonoGame</p>
