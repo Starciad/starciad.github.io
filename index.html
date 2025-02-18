@@ -31,11 +31,13 @@
     <!-- #endregion -->
 
     <!-- #region SCRIPTS -->
+    <script src="scripts/pagination.js" type="module" defer></script>
     <script src="scripts/buttons.js" type="module" defer></script>
     <!-- #endregion -->
 
     <!--#region STYLES -->
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/states.css">
     <!-- #endregion -->
 </head>
 
@@ -394,17 +396,17 @@
                 </section>
             </div>
 
-            <div class="app-section-control">
-                <div class="app-section-control-content">
-                    <button>Previous</button>
+            <div class="app-section-pagination">
+                <div class="app-section-pagination-content">
+                    <button id="previous-section-pagination-button" class="btn">Previous</button>
                 </div>
 
-                <div class="app-section-control-content">
+                <div class="app-section-pagination-content">
 
                 </div>
 
-                <div class="app-section-control-content">
-                    <button>Next</button>
+                <div class="app-section-pagination-content">
+                    <button id="next-section-pagination-button" class="btn">Next</button>
                 </div>
             </div>
         </main>
