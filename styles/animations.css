@@ -1,0 +1,11 @@
+/* PATTERNS */
+
+@keyframes movement-pattern {
+    from {
+        background-position: top right;
+    }
+
+    to {
+        background-position: bottom left;
+    }
+}

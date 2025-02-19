@@ -1,4 +1,8 @@
 body {
     width: 100%;
     height: 100dvh;
+
+    background-image: url("../assets/images/backgrounds/pattern.webp");
+
+    animation: movement-pattern 100s linear infinite;
 }

@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="./styles/buttons.css">
     <link rel="stylesheet" href="./styles/markdown.css">
     <link rel="stylesheet" href="./styles/text.css">
+    <link rel="stylesheet" href="./styles/animations.css">
     <!-- #endregion -->
 </head>
 
@@ -57,8 +58,8 @@
         <!-- Header and Navigation -->
         <header class="app-header">
             <div class="app-header-content">
-                <button class="btn btn-success" type="button"><i class="icon icon-menu"></i>Som</button>
-                <button class="btn btn-success" type="button"><i class="icon icon-menu"></i>Música</button>
+                <button class="btn btn-success" type="button"><i class="icon icon-sound"></i>Som</button>
+                <button class="btn btn-success" type="button"><i class="icon icon-music"></i>Música</button>
             </div>
 
             <div class="app-header-content">
@@ -66,22 +67,22 @@
             </div>
 
             <div class="app-header-content">
-                <button class="btn btn-success" type="button"><i class="icon icon-menu"></i>Explorador</button>
+                <button class="btn btn-success" type="button"><i class="icon icon-explorer"></i>Explorador</button>
             </div>
         </header>
 
         <!-- Main Content -->
         <main class="app-main">
-            <h1 class="font-pixelify-sans-title">Starciad's Dreamland</h1>
+            <h1>Starciad's Dreamland</h1>
 
             <div class="app-section-container">
                 <section class="app-section" id="introduction">
-                    <header>
+                    <header class="app-section-header">
                         <h2>Introdução</h2>
                     </header>
 
-                    <article class="app-section-content markdown-body">
-                        <p><span class="drop-cap">S</span>eja muito bem-vindo(a) à minha terra dos sonhos, aventureiro(a)! Fique à vontade, onde quer que esteja, pois nossa jornada está apenas começando.</p>
+                    <article class="app-section-main markdown-body">
+                        <p>Seja muito bem-vindo(a) à minha terra dos sonhos, aventureiro(a)! Fique à vontade, onde quer que esteja, pois nossa jornada está apenas começando.</p>
 
                         <h3>Sobre Mim</h3>
 
@@ -110,7 +111,7 @@
                         <h2>História</h2>
                     </header>
 
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <p>[Placeholder]</p>
                     </article>
                 </section>
@@ -120,7 +121,7 @@
                         <h2>Habilidades</h2>
                     </header>
                     
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <p>[Placeholder]</p>
                     </article>
                 </section>
@@ -130,7 +131,7 @@
                         <h2>Carreira</h2>
                     </header>
 
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <p>[Placeholder]</p>
                     </article>
                 </section>
@@ -140,7 +141,7 @@
                         <h2>Educação & Formações</h2>
                     </header>
 
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <h3>Ensino Básico</h3>
 
                         <div class="education-container">
@@ -193,7 +194,7 @@
                     <header>
                         <h2>Conhecimentos</h2>
                     </header>
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <h3>Linguagens de Programação</h3>
 
                         <div class="knowledge-container">
@@ -320,7 +321,7 @@
                         <h2>Projetos</h2>
                     </header>
 
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <h3>Jogos</h3>
 
                         <div class="projects-container">
@@ -501,7 +502,7 @@
                     <header>
                         <h2>Conquistas</h2>
                     </header>
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <p>[Placeholder]</p>
                     </article>
                 </section>
@@ -511,7 +512,7 @@
                         <h2>Redes Sociais</h2>
                     </header>
 
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <ul class="social-media-list">
                             <li>
                                 <a href="https://github.com/starciad" target="_blank">
@@ -546,7 +547,7 @@
                         <h2>Contato</h2>
                     </header>
 
-                    <article class="app-section-content">
+                    <article class="app-section-main">
                         <p>Caso tenha gostado do que viu aqui, entre em contato!</p>
                     </article>
                 </section>
@@ -554,7 +555,7 @@
 
             <div class="app-section-pagination">
                 <div class="app-section-pagination-content">
-                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button">Previous</button>
+                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-previous"></i>Previous</button>
                 </div>
 
                 <div class="app-section-pagination-content">
@@ -562,7 +563,7 @@
                 </div>
 
                 <div class="app-section-pagination-content">
-                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button">Next</button>
+                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-next"></i>Next</button>
                 </div>
             </div>
         </main>

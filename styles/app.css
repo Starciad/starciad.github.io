@@ -15,12 +15,15 @@
     display: flex;
 
     justify-content: space-between;
+    align-items: center;
 
     width: 100%;
-    height: 128px;
+    height: 160px;
 
     background-image: url("../assets/images/header/header.webp");
+    background-position: center;
     background-repeat: repeat-x;
+    background-size: contain;
     image-rendering: pixelated;
 
     animation: movement-pattern 100s linear infinite;
@@ -62,6 +65,25 @@
     padding: 32px;
 }
 
+.app-section {
+    width: 100%;
+    height: 100%;
+
+    padding: 32px;
+}
+
+.app-section-header {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 96px;
+}
+
+.app-section-main {
+
+}
+
 .app-section-pagination {
     display: flex;
 
@@ -81,16 +103,4 @@
     height: 100%;
 
     padding: 32px;
-}
-
-/* ANIMATIONS */
-
-@keyframes movement-pattern {
-    from {
-        background-position: top right;
-    }
-
-    to {
-        background-position: bottom left;
-    }
 }

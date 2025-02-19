@@ -9,6 +9,22 @@
     background-repeat: no-repeat;
 }
 
-.icon-menu {
-    background-image: url("../assets/images/icons/menu.webp");
+.icon-explorer {
+    background-image: url("../assets/images/icons/explorer.webp");
+}
+
+.icon-sound {
+    background-image: url("../assets/images/icons/sound.webp");
+}
+
+.icon-music {
+    background-image: url("../assets/images/icons/music.webp");
+}
+
+.icon-previous {
+    background-image: url("../assets/images/icons/previous.webp");
+}
+
+.icon-next {
+    background-image: url("../assets/images/icons/next.webp");
 }
