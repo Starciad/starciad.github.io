@@ -1,7 +1,7 @@
 import { nextSection, previousSection } from "./pagination.js";
 
 // Add interactivity to link buttons
-document.querySelectorAll("#link-button").forEach(element => {
+document.querySelectorAll(".btn-link").forEach(element => {
     element.addEventListener('click', function () {
         window.open(element.dataset.url, '_blank');
     });

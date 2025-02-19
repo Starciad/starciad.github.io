@@ -11,7 +11,6 @@
     <meta name="keywords" content="Starciad, portfólio, programação, tecnologia, desenvolvimento">
     <meta name="author" content="Davi 'Starciad' Fernandes">
     <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Portuguese">
     <meta name="referrer" content="no-referrer">
     <meta name="handheld-friendly" content="true">
@@ -35,24 +34,19 @@
     <script src="scripts/buttons.js" type="module" defer></script>
     <!-- #endregion -->
 
-    <!-- #region FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <!-- #endregion -->
-
     <!--#region STYLES -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./styles/states.css">
     <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
     <!-- #endregion -->
 </head>
 
 <body>
     <div class="modals">
-        <div class="navigator">
+        <div class="explorer">
 
         </div>
     </div>
@@ -61,7 +55,8 @@
         <!-- Header and Navigation -->
         <header class="app-header">
             <div class="app-header-content">
-                
+                <button class="btn btn-success" type="button"><i class="icon icon-menu"></i>Som</button>
+                <button class="btn btn-success" type="button"><i class="icon icon-menu"></i>Música</button>
             </div>
 
             <div class="app-header-content">
@@ -69,7 +64,7 @@
             </div>
 
             <div class="app-header-content">
-                <button class="app-header-navigator"></button>
+                <button class="btn btn-success" type="button"><i class="icon icon-menu"></i>Explorador</button>
             </div>
         </header>
 
@@ -96,7 +91,7 @@
 
                         <p>Criei este site como uma porta de entrada para meus conteúdos mais relevantes, facilitando o compartilhamento dos meus projetos, conquistas e interesses. Meu objetivo é oferecer tudo isso em um ambiente acolhedor, bem-estruturado e agradável para leitura.</p>
 
-                        <p>O site é organizado em diversas seções independentes, cada uma com seu próprio universo de conteúdo. A navegação foi pensada para proporcionar uma experiência dinâmica e intuitiva. Você pode acessar todas as seções pelo <strong>navegador</strong>, um menu com ancoragem para facilitar a exploração dos conteúdos.</p>
+                        <p>O site é organizado em diversas seções independentes, cada uma com seu próprio universo de conteúdo. A navegação foi pensada para proporcionar uma experiência dinâmica e intuitiva. Você pode acessar todas as seções pelo <strong>explorador</strong>, um menu com ancoragem para facilitar a exploração dos conteúdos.</p>
 
                         <p>Além disso, os botões "próximo" e "anterior" no final de cada artigo permitem avançar ou retroceder pelos conteúdos de forma lógica, funcionando como um pequeno sistema de páginas.</p>
 
@@ -106,7 +101,7 @@
 
                         <h3>Veja Também</h3>
 
-                        <button id="link-button" class="btn" data-url="https://github.com/Starciad/starciad.github.io.git">GitHub</button>
+                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/starciad.github.io.git">GitHub</button>
                     </article>
                 </section>
 
@@ -340,7 +335,7 @@
                                 <p>Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/SUno.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/SUno.git">GitHub</button>
                                 </div>
                             </div>
 
@@ -357,8 +352,8 @@
                                 <p>Um pequeno jogo de quebra-cabeça cujo objetivo é escapar de zumbis e coletar itens.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://starciad.github.io/StarZombieChase/">WebSite</button>
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StarZombieChase.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://starciad.github.io/StarZombieChase/">WebSite</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StarZombieChase.git">GitHub</button>
                                 </div>
                             </div>
 
@@ -374,8 +369,8 @@
                                 <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://starciad.itch.io/stellar-duelist">Itch</button>
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StellarDuelist.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/stellar-duelist">Itch</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StellarDuelist.git">GitHub</button>
                                 </div>
                             </div>
 
@@ -391,8 +386,8 @@
                                 <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://starciad.itch.io/stardust-sandbox">Itch</button>
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StardustSandbox.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/stardust-sandbox">Itch</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StardustSandbox.git">GitHub</button>
                                 </div>
                             </div>
 
@@ -408,7 +403,7 @@
                                 <p>Pequeno jogo feito em MonoGame para estudos.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/SlimeLab.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/SlimeLab.git">GitHub</button>
                                 </div>
                             </div>
 
@@ -424,7 +419,7 @@
                                 <p>Um pequeno fan game Tower Defense de cartas baseado na série de jogos Super Mario Bros.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://starciad.itch.io/super-mario-cards">Itch</button>
+                                    <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/super-mario-cards">Itch</button>
                                 </div>
                             </div>
 
@@ -433,14 +428,14 @@
                                 <p class="project-date">30/07/2021</p>
 
                                 <div class="project-technologies">
-                                    <p>C#</p>
-                                    <p>Unity</p>
+                                    <span>C#</span>
+                                    <span>Unity</span>
                                 </div>
 
                                 <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://igor-up.itch.io/jaajxel">Itch</button>
+                                    <button class="btn btn-link" type="button" data-url="https://igor-up.itch.io/jaajxel">Itch</button>
                                 </div>
                             </div>
                         </div>
@@ -453,16 +448,16 @@
                                 <p class="project-date">23/01/2024</p>
 
                                 <div class="project-technologies">
-                                    <p>HTML</p>
-                                    <p>CSS</p>
-                                    <p>JS</p>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
                                 </div>
 
                                 <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://starciad.github.io/SCSG/">WebSite</button>
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/SCSG.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://starciad.github.io/SCSG/">WebSite</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/SCSG.git">GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -474,14 +469,14 @@
                                 <p class="project-date">10/09/2024</p>
 
                                 <div class="project-technologies">
-                                    <p>C#</p>
+                                    <span>C#</span>
                                 </div>
 
                                 <p>Uma biblioteca para criação de animações ASCII para terminais.</p>
                                 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://www.nuget.org/packages/StarASCII/">NuGet</button>
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/StarASCII.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://www.nuget.org/packages/StarASCII/">NuGet</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StarASCII.git">GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -495,7 +490,7 @@
                                 <p>Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
 
                                 <div class="project-buttons">
-                                    <button id="link-button" class="btn" data-url="https://github.com/Starciad/star-pixel-icons-theme.git">GitHub</button>
+                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/star-pixel-icons-theme.git">GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -559,7 +554,7 @@
 
             <div class="app-section-pagination">
                 <div class="app-section-pagination-content">
-                    <button id="previous-section-pagination-button" class="btn">Previous</button>
+                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button">Previous</button>
                 </div>
 
                 <div class="app-section-pagination-content">
@@ -567,7 +562,7 @@
                 </div>
 
                 <div class="app-section-pagination-content">
-                    <button id="next-section-pagination-button" class="btn">Next</button>
+                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button">Next</button>
                 </div>
             </div>
         </main>

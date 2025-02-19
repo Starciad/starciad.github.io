@@ -1,0 +1,113 @@
+.btn {
+    all: unset;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+    
+    padding: 10px 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Primary */
+
+.btn-primary {
+    background: #285cc4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #249fde;
+}
+
+.btn-primary:active {
+    background: #143464;
+}
+
+/* Secondary */
+.btn-secondary {
+    background: #4a5462;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #6d758d;
+}
+
+.btn-secondary:active {
+    background: #333941;
+}
+
+/* Success */
+.btn-success {
+    background: #1a7a3e;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #1e8f49;
+}
+
+.btn-success:active {
+    background: #12572c;
+}
+
+/* Danger */
+.btn-danger {
+    background: #b4202a;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b5313a;
+}
+
+.btn-danger:active {
+    background: #73172d;
+}
+
+/* Link */
+.btn-link {
+    background: rgba(40, 92, 196, 0.1); /* Fundo sutil */
+    color: #285cc4;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.btn-link:hover {
+    background: rgba(36, 159, 222, 0.2);
+    color: #249fde;
+}
+
+.btn-link:active {
+    background: rgba(20, 52, 100, 0.3);
+    color: #143464;
+}
+
+.btn-link:focus {
+    outline: 3px solid rgba(40, 92, 196, 0.2);
+}
+
+/* Outline */
+.btn:focus {
+    outline: 3px solid rgba(6, 6, 8, 0.2);
+}
+
+/* Disable */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

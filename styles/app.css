@@ -29,7 +29,17 @@
 }
 
 .app-header-content {
-    margin-top: 16px;
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    align-content: center;
+
+    gap: 30px;
 }
 
 .app-header-title {
@@ -44,26 +54,6 @@
     image-rendering: pixelated;
 
     scale: 0.5;
-}
-
-.app-header-navigator {
-    width: 32px;
-    height: 32px;
-
-    margin-top: 16px;
-    margin-right: 32px;
-
-    background-image: url("../assets/images/icons/menu.webp");
-    background-repeat: no-repeat;
-
-    image-rendering: pixelated;
-
-    background-color: transparent;
-    border: none;
-
-    scale: 1.5;
-
-    cursor: pointer;
 }
 
 /* MAIN */
