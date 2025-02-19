@@ -1,0 +1,8 @@
+.drop-cap {
+    margin-left: 1em;
+    font-size: 3em;
+    font-weight: bold;
+    float: left;
+    margin-right: -1em;
+    line-height: 1;
+}
