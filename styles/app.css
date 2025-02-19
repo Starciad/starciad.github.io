@@ -77,7 +77,19 @@
 
     justify-content: center;
 
-    margin-bottom: 96px;
+    margin-bottom: 32px;
+    padding: 32px;
+
+    border-radius: 32px;
+
+    background-color: #0d1117;
+
+    color: white;
+
+    font-family: "Tiny5", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
 }
 
 .app-section-main {
