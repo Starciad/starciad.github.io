@@ -49,8 +49,6 @@
     width: 524px;
     height: 122px;
 
-    margin-top: -32px;
-
     background-image: url("../assets/images/texts/title.webp");
     background-repeat: no-repeat;
     
@@ -90,10 +88,6 @@
     font-weight: 400;
     font-style: normal;
     font-size: 32px;
-}
-
-.app-section-main {
-
 }
 
 .app-section-pagination {
