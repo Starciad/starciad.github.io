@@ -28,3 +28,73 @@
 .icon-next {
     background-image: url("../assets/images/icons/next.webp");
 }
+
+/* TECH */
+
+.icon-aspnetcore {
+    background-image: url("../assets/images/icons/aspnetcore.webp");
+}
+
+.icon-c {
+    background-image: url("../assets/images/icons/c.webp");
+}
+
+.icon-csharp {
+    background-image: url("../assets/images/icons/csharp.webp");
+}
+
+.icon-css3 {
+    background-image: url("../assets/images/icons/css3.webp");
+}
+
+.icon-flask {
+    background-image: url("../assets/images/icons/flask.webp");
+}
+
+.icon-git {
+    background-image: url("../assets/images/icons/git.webp");
+}
+
+.icon-html5 {
+    background-image: url("../assets/images/icons/html5.webp");
+}
+
+.icon-javascript {
+    background-image: url("../assets/images/icons/javascript.webp");
+}
+
+.icon-linuxmint {
+    background-image: url("../assets/images/icons/linuxmint.webp");
+}
+
+.icon-monogame {
+    background-image: url("../assets/images/icons/monogame.webp");
+}
+
+.icon-php {
+    background-image: url("../assets/images/icons/php.webp");
+}
+
+.icon-python {
+    background-image: url("../assets/images/icons/python.webp");
+}
+
+.icon-sqlite {
+    background-image: url("../assets/images/icons/sqlite.webp");
+}
+
+.icon-visualstudio {
+    background-image: url("../assets/images/icons/visualstudio.webp");
+}
+
+.icon-visualstudiocode {
+    background-image: url("../assets/images/icons/visualstudiocode.webp");
+}
+
+.icon-windows {
+    background-image: url("../assets/images/icons/windows.webp");
+}
+
+.icon-xampp {
+    background-image: url("../assets/images/icons/xampp.webp");
+}
