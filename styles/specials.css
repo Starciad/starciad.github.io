@@ -65,11 +65,21 @@
 
     width: 100%;
     height: 100%;
+
+    background-color: #151b23;
+
+    padding: 32px;
+
+    border-radius: 16px;
 }
 
 .project-card-thumbnail-container {
-    width: 256px;
-    height: 256px;
+    display: flex;
+
+    width: 352px;
+    height: 100%;
+
+    margin-right: 32px;
 }
 
 .project-card-informations {
@@ -132,16 +142,22 @@
 /* Thumbnails */
 
 .project-card-thumbnail {
-    display: inline-block;
-
-    width: 256px;
-    height: 256px;
+    width: 315px;
+    height: 250px;
 
     image-rendering: pixelated;
 
     background-repeat: no-repeat;
 }
 
-.project-card-thumbnail-suno {
-    background-image: url("../assets/images/thumbnails/suno.webp");
+.project-card-thumbnail-jaajxel {
+    background-image: url("../assets/images/thumbnails/projects/jaajxel.webp");
+}
+
+.project-card-thumbnail-stardustsandbox {
+    background-image: url("../assets/images/thumbnails/projects/stardustsandbox.webp");
+}
+
+.project-card-thumbnail-stellarduelist {
+    background-image: url("../assets/images/thumbnails/projects/stellarduelist.webp");
 }
