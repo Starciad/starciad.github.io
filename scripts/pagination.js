@@ -4,21 +4,21 @@ const numberOfSections = sections.length;
 
 let currentSectionIndex = 0;
 
-export function previousSection() {
-    let index = currentSectionIndex - 1;
-
-    if (index < 0) {
-        index = numberOfSections - 1;
-    }
-
-    setCurrentSection(index);
-}
-
 export function nextSection() {
     let index = currentSectionIndex + 1;
 
     if (index > numberOfSections - 1) {
         index = 0;
+    }
+
+    setCurrentSection(index);
+}
+
+export function previousSection() {
+    let index = currentSectionIndex - 1;
+
+    if (index < 0) {
+        index = numberOfSections - 1;
     }
 
     setCurrentSection(index);
