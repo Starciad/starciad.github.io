@@ -1,0 +1,141 @@
+
+/* KNOWLEDGE */
+
+.knowledge-container {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 64px;
+}
+
+.knowledge-card {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    width: 160px;
+    height: 192px;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    background-color: #151b23;
+
+    text-align: center;
+    font-size: smaller;
+
+    cursor: pointer;
+
+    transition: 0.15s ease-in-out;
+}
+
+.knowledge-card .icon {
+    scale: 1.5;
+}
+
+.knowledge-card:hover {
+    scale: 1.5;
+}
+
+/* PROJECTS */
+
+.projects-container {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 64px;
+}
+
+.project-card {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+.project-card-thumbnail-container {
+    width: 256px;
+    height: 256px;
+}
+
+.project-card-informations {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+.project-date {
+    opacity: 0.25;
+}
+
+.project-technologies {
+    display: flex;
+
+    gap: 32px;
+}
+
+.project-technology {
+    background: rgba(36, 82, 59, 0.1);
+    color: #1a7a3e;
+    text-decoration: none;
+    padding: 8px 32px;
+    border-radius: 8px;
+}
+
+.project-card-header {
+    width: 100%;
+    height: 100%;
+
+    font-family: "Tiny5", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+.project-card-details {
+    width: 100%;
+    height: 100%;
+}
+
+.project-card-footer {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 32px;
+}
+
+/* Thumbnails */
+
+.project-card-thumbnail {
+    display: inline-block;
+
+    width: 256px;
+    height: 256px;
+
+    image-rendering: pixelated;
+
+    background-repeat: no-repeat;
+}
+
+.project-card-thumbnail-suno {
+    background-image: url("../assets/images/thumbnails/suno.webp");
+}
