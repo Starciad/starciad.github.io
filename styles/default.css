@@ -3,6 +3,7 @@ body {
     height: 100dvh;
 
     background-image: url("../assets/images/backgrounds/pattern.webp");
+    image-rendering: pixelated;
 
     animation: movement-pattern 100s linear infinite;
 }

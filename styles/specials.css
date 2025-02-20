@@ -154,10 +154,34 @@
     background-image: url("../assets/images/thumbnails/projects/jaajxel.webp");
 }
 
+.project-card-thumbnail-scsg {
+    background-image: url("../assets/images/thumbnails/projects/scsg.webp");
+}
+
+.project-card-thumbnail-slimelab {
+    background-image: url("../assets/images/thumbnails/projects/slimelab.webp");
+}
+
+.project-card-thumbnail-starascii {
+    background-image: url("../assets/images/thumbnails/projects/starascii.webp");
+}
+
 .project-card-thumbnail-stardustsandbox {
     background-image: url("../assets/images/thumbnails/projects/stardustsandbox.webp");
 }
 
+.project-card-thumbnail-starzombiechase {
+    background-image: url("../assets/images/thumbnails/projects/starzombiechase.webp");
+}
+
 .project-card-thumbnail-stellarduelist {
     background-image: url("../assets/images/thumbnails/projects/stellarduelist.webp");
+}
+
+.project-card-thumbnail-suno {
+    background-image: url("../assets/images/thumbnails/projects/suno.webp");
+}
+
+.project-card-thumbnail-spi {
+    background-image: url("../assets/images/thumbnails/projects/spi.webp");
 }
