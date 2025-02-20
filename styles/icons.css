@@ -83,6 +83,10 @@
     background-image: url("../assets/images/icons/sqlite.webp");
 }
 
+.icon-unityengine {
+    background-image: url("../assets/images/icons/unityengine.webp");
+}
+
 .icon-visualstudio {
     background-image: url("../assets/images/icons/visualstudio.webp");
 }
