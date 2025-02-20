@@ -63,8 +63,7 @@
 .project-card {
     display: flex;
 
-    width: 100%;
-    height: 100%;
+    align-items: center;
 
     background-color: #151b23;
 
@@ -82,7 +81,7 @@
     margin-right: 32px;
 }
 
-.project-card-informations {
+.project-card-information {
     display: flex;
 
     flex-direction: column;
@@ -109,13 +108,15 @@
 .project-technologies {
     display: flex;
 
+    width: 100%;
+    height: 100%;
+
     gap: 32px;
 }
 
 .project-technology {
     background: rgba(36, 82, 59, 0.1);
     color: #1a7a3e;
-    text-decoration: none;
     padding: 8px 32px;
     border-radius: 8px;
 }
@@ -142,6 +143,8 @@
 /* Thumbnails */
 
 .project-card-thumbnail {
+    display: inline-block;
+    
     width: 315px;
     height: 250px;
 
