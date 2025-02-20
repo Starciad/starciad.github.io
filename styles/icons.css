@@ -95,6 +95,10 @@
     background-image: url("../assets/images/icons/windows.webp");
 }
 
+.icon-wsl2 {
+    background-image: url("../assets/images/icons/wsl2.webp");
+}
+
 .icon-xampp {
     background-image: url("../assets/images/icons/xampp.webp");
 }
