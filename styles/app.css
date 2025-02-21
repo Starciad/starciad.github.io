@@ -96,6 +96,12 @@
     justify-content: space-between;
 
     padding: 32px;
+
+    background-color: #0d1117;
+
+    border-radius: 16px;
+
+    opacity: 0.8;
 }
 
 /* FOOTER */
@@ -106,7 +112,20 @@
     align-content: center;
 
     width: 100%;
-    height: 100%;
+    height: 160px;
 
     padding: 32px;
+
+    background-image: url("../assets/images/footers/default.webp");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    image-rendering: pixelated;
+
+    color: white;
+
+    font-family: "Tiny5", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
 }
