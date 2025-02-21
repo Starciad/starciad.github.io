@@ -1,9 +1,10 @@
-
 /* KNOWLEDGE */
 
 .knowledge-container {
     display: flex;
 
+    flex-wrap: wrap;
+    
     justify-content: center;
 
     width: 100%;
@@ -204,4 +205,61 @@
 
 .project-card-thumbnail-spi {
     background-image: url("../assets/images/thumbnails/projects/spi.webp");
+}
+
+/* CONTACT */
+
+.contact-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 64px;
+}
+
+.contact-card {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    width: 160px;
+    height: 192px;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    background-color: #151b23;
+
+    text-align: center;
+    font-size: smaller;
+}
+
+.contact-card .icon {
+    scale: 1.5;
+}
+
+.contact-card-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    font-family: "Tiny5", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }

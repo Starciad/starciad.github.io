@@ -47,6 +47,10 @@
     background-image: url("../assets/images/icons/css3.webp");
 }
 
+.icon-email {
+    background-image: url("../assets/images/icons/email.webp");
+}
+
 .icon-flask {
     background-image: url("../assets/images/icons/flask.webp");
 }
@@ -55,12 +59,20 @@
     background-image: url("../assets/images/icons/git.webp");
 }
 
+.icon-github {
+    background-image: url("../assets/images/icons/github.webp");
+}
+
 .icon-html5 {
     background-image: url("../assets/images/icons/html5.webp");
 }
 
 .icon-javascript {
     background-image: url("../assets/images/icons/javascript.webp");
+}
+
+.icon-linkedin {
+    background-image: url("../assets/images/icons/linkedin.webp");
 }
 
 .icon-linuxmint {
@@ -81,6 +93,10 @@
 
 .icon-sqlite {
     background-image: url("../assets/images/icons/sqlite.webp");
+}
+
+.icon-stackoverflow {
+    background-image: url("../assets/images/icons/stackoverflow.webp");
 }
 
 .icon-unityengine {
@@ -105,4 +121,8 @@
 
 .icon-xampp {
     background-image: url("../assets/images/icons/xampp.webp");
+}
+
+.icon-youtube {
+    background-image: url("../assets/images/icons/youtube.webp");
 }
