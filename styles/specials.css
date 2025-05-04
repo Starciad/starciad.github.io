@@ -24,7 +24,7 @@
     width: 160px;
     height: 192px;
 
-    padding: 32px;
+    padding: 16px;
 
     border-radius: 16px;
 
@@ -69,23 +69,28 @@
     display: flex;
 
     flex-direction: column;
+    flex-wrap: wrap;
 
+    align-items: center;
     justify-content: center;
 
     width: 100%;
     height: 100%;
 
-    gap: 64px;
+    gap: 32px;
 }
 
 .project-card {
     display: flex;
 
+    flex-wrap: wrap;
+
     align-items: center;
+    justify-content: center;
 
     background-color: #151b23;
 
-    padding: 32px;
+    padding: 16px;
 
     border-radius: 16px;
 }
@@ -93,17 +98,14 @@
 .project-card-thumbnail-container {
     display: flex;
 
-    width: 352px;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
 
-    margin-right: 32px;
+    width: 100%;
+    height: 100%;
 }
 
 .project-card-information {
-    display: flex;
-
-    flex-direction: column;
-
     width: 100%;
     height: 100%;
 }
@@ -120,11 +122,16 @@
 }
 
 .project-date {
+    margin-top: -24px;
+    text-align: center;
     opacity: 0.25;
 }
 
 .project-technologies {
     display: flex;
+
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
     height: 100%;
@@ -139,6 +146,10 @@
     border-radius: 8px;
 }
 
+.project-description {
+    text-align: center;
+}
+
 .project-card-header {
     width: 100%;
     height: 100%;
@@ -147,10 +158,15 @@
     font-weight: 400;
     font-style: normal;
     font-size: 32px;
+
+    text-align: center;
 }
 
 .project-card-footer {
     display: flex;
+
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
     height: 100%;
@@ -233,7 +249,7 @@
     width: 160px;
     height: 192px;
 
-    padding: 32px;
+    padding: 8px;
 
     border-radius: 16px;
 
@@ -241,10 +257,6 @@
 
     text-align: center;
     font-size: smaller;
-}
-
-.contact-card .icon {
-    scale: 1.5;
 }
 
 .contact-card-content {
@@ -262,4 +274,17 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+}
+
+/* ======================================================== */
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 450px)
+{
+
+}
+
+@media only screen and (min-width: 450px)
+{
+
 }

@@ -115,3 +115,16 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+/* ============================================= */
+/* TOOLS */
+
+.btn-horizontal-grouping {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    
+    padding: 8px;
+    gap: 8px;
+}

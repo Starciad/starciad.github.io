@@ -29,6 +29,14 @@
     background-image: url("../assets/images/icons/next.webp");
 }
 
+.icon-link {
+    background-image: url("../assets/images/icons/link.webp");
+}
+
+.icon-menu {
+    background-image: url("../assets/images/icons/menu.webp");
+}
+
 /* TECH */
 
 .icon-aspnetcore {
@@ -65,6 +73,10 @@
 
 .icon-html5 {
     background-image: url("../assets/images/icons/html5.webp");
+}
+
+.icon-javascript {
+    background-image: url("../assets/images/icons/javascript.webp");
 }
 
 .icon-javascript {
