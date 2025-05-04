@@ -40,29 +40,45 @@
     <!-- #endregion -->
 
     <!-- #region SCRIPTS -->
-    <script src="scripts/pagination.js" type="module" defer></script>
     <script src="scripts/buttons.js" type="module" defer></script>
+    <script src="scripts/modal_manager.js" type="module" defer></script>
+    <script src="scripts/pagination.js" type="module" defer></script>
     <script src="scripts/shortcuts.js" type="module" defer></script>
+
+    <script src="scripts/modals/explorer_modal.js" type="module" defer></script>
     <!-- #endregion -->
 
     <!--#region STYLES -->
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/default.css">
-    <link rel="stylesheet" href="./styles/states.css">
-    <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/icons.css">
-    <link rel="stylesheet" href="./styles/buttons.css">
-    <link rel="stylesheet" href="./styles/specials.css">
-    <link rel="stylesheet" href="./styles/markdown.css">
     <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="stylesheet" href="./styles/markdown.css">
+    <link rel="stylesheet" href="./styles/modals.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/specials.css">
+    <link rel="stylesheet" href="./styles/states.css">
     <!-- #endregion -->
 </head>
 
 <body>
-    <div class="modals">
-        <div class="explorer">
+    <div class="modal-container">
+        <div id="explorer-modal" class="modal">
+            <h1>Explorador</h1>
 
+            <div class="modal-body">
+                <p>Selecione o capítulo que desejado.</p>
+
+                <div class="chapter-container">
+                    <template id="chapter-card-template">
+                        <div class="chapter-card">
+                            <span class="chapter-name">Name</span>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -77,7 +93,7 @@
         <!-- Main Content -->
         <main class="app-main">
             <div class="app-section-container">
-                <section class="app-section" id="introduction">
+                <section class="app-section" data-chapter_id="introduction">
                     <header class="app-section-header">
                         <h1>INTRODUÇÃO</h1>
                     </header>
@@ -110,7 +126,7 @@
                     </article>
                 </section>
 
-                <section class="app-section" id="history">
+                <section class="app-section" data-chapter_id="history">
                     <header class="app-section-header">
                         <h1>HISTÓRIA</h1>
                     </header>
@@ -152,7 +168,7 @@
                     </article>
                 </section>
 
-                <section class="app-section" id="education-and-training">
+                <section class="app-section" data-chapter_id="education-and-training">
                     <header class="app-section-header">
                         <h1>EDUCAÇÃO & FORMAÇÃO</h1>
                     </header>
@@ -206,7 +222,7 @@
                     </article>
                 </section>
 
-                <section class="app-section" id="knowledge">
+                <section class="app-section" data-chapter_id="knowledge">
                     <header class="app-section-header">
                         <h1>CONHECIMENTOS</h1>
                     </header>
@@ -433,7 +449,7 @@
                     </article>
                 </section>
 
-                <section class="app-section" id="projects">
+                <section class="app-section" data-chapter_id="projects">
                     <header class="app-section-header">
                         <h1>PROJETOS</h1>
                     </header>
@@ -699,7 +715,7 @@
                     </article>
                 </section>
 
-                <section class="app-section" id="contact">
+                <section class="app-section" data-chapter_id="contact">
                     <header class="app-section-header">
                         <h1>CONTATO</h1>
                     </header>
@@ -784,15 +800,15 @@
 
             <div class="app-section-pagination">
                 <div class="app-section-pagination-content">
-                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-previous"></i>Anterior</button>
+                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-previous"></i></button>
                 </div>
 
                 <div class="app-section-pagination-content">
-                    <button id="explorer-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-menu"></i>Explorador</button>
+                    <button id="explorer-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-menu"></i></button>
                 </div>
 
                 <div class="app-section-pagination-content">
-                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-next"></i>Próximo</button>
+                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-next"></i></button>
                 </div>
             </div>
         </main>

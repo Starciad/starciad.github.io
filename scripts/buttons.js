@@ -1,3 +1,4 @@
+import { openModal } from "./modal_manager.js";
 import { nextSection, previousSection } from "./pagination.js";
 
 // Add interactivity to link buttons
@@ -12,6 +13,10 @@ document.querySelector("#previous-section-pagination-button").addEventListener('
     previousSection();
 });
 
-document.querySelector("#next-section-pagination-button").addEventListener('click', function () {
-    nextSection();
+document.querySelector("#explorer-pagination-button").addEventListener('click', function () {
+    openModal("explorer-modal");
+});
+
+document.querySelector("#previous-section-pagination-button").addEventListener('click', function() {
+    previousSection();
 });

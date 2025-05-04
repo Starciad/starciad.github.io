@@ -24,7 +24,7 @@ export function previousSection() {
     setCurrentSection(index);
 }
 
-function setCurrentSection(index) {
+export function setCurrentSection(index) {
     hideAllSections();
     showSection(index);
 
