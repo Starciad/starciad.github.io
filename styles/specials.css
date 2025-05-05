@@ -187,6 +187,10 @@
     background-repeat: no-repeat;
 }
 
+.project-card-thumbnail-depths {
+    background-image: url("../assets/images/thumbnails/projects/depths.webp");
+}
+
 .project-card-thumbnail-jaajxel {
     background-image: url("../assets/images/thumbnails/projects/jaajxel.webp");
 }
