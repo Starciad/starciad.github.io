@@ -5,20 +5,25 @@ const chapterContainer = document.querySelector(".chapter-container");
 const chapterCardTemplate = document.querySelector("#chapter-card-template");
 const appSections = document.querySelectorAll(".app-section");
 
+document.querySelector("#explorer-modal-close-button").addEventListener('click', function () {
+    closeModal("explorer-modal");
+});
+
 let index = 0;
 
 appSections.forEach(appSection => {
     const chapterId = appSection.dataset.chapter_id;
-    const chapterCard = chapterCardTemplate.content.cloneNode(true).firstElementChild;
+    const chapterCardElement = chapterCardTemplate.content.cloneNode(true).firstElementChild;
 
-    chapterCard.classList.add(`chapter-thumbnail-${chapterId}`);
-    chapterCard.dataset.chapter_index = index;
+    chapterCardElement.classList.add(`chapter-thumbnail-${chapterId}`);
+    chapterCardElement.dataset.chapter_index = index;
+    chapterCardElement.querySelector(".chapter-card-name").innerHTML = appSection.querySelector(".app-section-title").innerHTML;
 
-    chapterContainer.append(chapterCard);
+    chapterContainer.append(chapterCardElement);
 
-    chapterCard.addEventListener('click', function() {
+    chapterCardElement.addEventListener('click', function() {
         closeModal("explorer-modal");
-        setCurrentSection(chapterCard.dataset.chapter_index);
+        setCurrentSection(chapterCardElement.dataset.chapter_index);
         window.scrollTo(0, 0);
     });
 

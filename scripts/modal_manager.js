@@ -7,10 +7,10 @@ let currentlyOpenModal = null;
 modalElements.forEach(modalEl => {
     if (modalEl.id) {
         modalsById.set(modalEl.id, modalEl);
-        modalEl.style.display = 'none';
+        modalEl.classList.add("modal-hidden");
     }
 
-    modalContainer.style.display = 'none';
+    modalContainer.classList.add("modal-hidden");
 });
 
 export function openModal(modalId) {
@@ -25,8 +25,8 @@ export function openModal(modalId) {
         closeModal(currentlyOpenModal.id);
     }
 
-    modalContainer.style.display = 'flex';
-    targetModal.style.display = 'block';
+    modalContainer.classList.remove("modal-hidden");
+    targetModal.classList.remove("modal-hidden");
 
     currentlyOpenModal = targetModal;
 }
@@ -44,8 +44,8 @@ export function closeModal(modalId = null) {
         return;
     }
 
-    modalContainer.style.display = 'none';
-    modalToClose.style.display = 'none';
+    modalContainer.classList.add("modal-hidden");
+    modalToClose.classList.add("modal-hidden");
 
     if (currentlyOpenModal === modalToClose) {
         currentlyOpenModal = null;

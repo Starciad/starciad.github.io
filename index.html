@@ -66,19 +66,24 @@
 <body>
     <div class="modal-container">
         <div id="explorer-modal" class="modal">
-            <h1>Explorador</h1>
+            <header class="modal-header">
+                <h1>Explorador</h1>
+                <p>Selecione o capítulo desejado.</p>
+            </header>
 
             <div class="modal-body">
-                <p>Selecione o capítulo que desejado.</p>
-
                 <div class="chapter-container">
                     <template id="chapter-card-template">
                         <div class="chapter-card">
-                            <span class="chapter-name">Name</span>
+                            <span class="chapter-card-name">Name</span>
                         </div>
                     </template>
                 </div>
             </div>
+
+            <footer class="modal-footer">
+                <button id="explorer-modal-close-button" type="button" class="btn btn-secondary">Fechar</button>
+            </footer>
         </div>
     </div>
 
@@ -95,7 +100,7 @@
             <div class="app-section-container">
                 <section class="app-section" data-chapter_id="introduction">
                     <header class="app-section-header">
-                        <h1>INTRODUÇÃO</h1>
+                        <h1 class="app-section-title">INTRODUÇÃO</h1>
                     </header>
 
                     <article class="app-section-main markdown-body">
@@ -120,15 +125,15 @@
                         <h2>Veja Também</h2>
                         
                         <div class="btn-horizontal-grouping">
-                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad"><i class="icon icon-link"></i>Meu Perfil (GitHub)</button>
-                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/starciad.github.io.git"><i class="icon icon-link"></i>Repositório do Website (GitHub)</button>
+                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad"><i class="icon icon-link"></i>Perfil</button>
+                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/starciad.github.io.git"><i class="icon icon-link"></i>Repositório</button>
                         </div>
                     </article>
                 </section>
 
                 <section class="app-section" data-chapter_id="history">
                     <header class="app-section-header">
-                        <h1>HISTÓRIA</h1>
+                        <h1 class="app-section-title">HISTÓRIA</h1>
                     </header>
 
                     <article class="app-section-main markdown-body">
@@ -170,7 +175,7 @@
 
                 <section class="app-section" data-chapter_id="education-and-training">
                     <header class="app-section-header">
-                        <h1>EDUCAÇÃO & FORMAÇÃO</h1>
+                        <h1 class="app-section-title">EDUCAÇÃO & FORMAÇÃO</h1>
                     </header>
 
                     <article class="app-section-main markdown-body">
@@ -224,7 +229,7 @@
 
                 <section class="app-section" data-chapter_id="knowledge">
                     <header class="app-section-header">
-                        <h1>CONHECIMENTOS</h1>
+                        <h1 class="app-section-title">CONHECIMENTOS</h1>
                     </header>
 
                     <article class="app-section-main markdown-body">
@@ -451,7 +456,7 @@
 
                 <section class="app-section" data-chapter_id="projects">
                     <header class="app-section-header">
-                        <h1>PROJETOS</h1>
+                        <h1 class="app-section-title">PROJETOS</h1>
                     </header>
 
                     <article class="app-section-main markdown-body">
@@ -717,7 +722,7 @@
 
                 <section class="app-section" data-chapter_id="contact">
                     <header class="app-section-header">
-                        <h1>CONTATO</h1>
+                        <h1 class="app-section-title">CONTATO</h1>
                     </header>
 
                     <article class="app-section-main markdown-body">
