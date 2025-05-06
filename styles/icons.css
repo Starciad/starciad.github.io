@@ -9,36 +9,6 @@
     background-repeat: no-repeat;
 }
 
-.icon-explorer {
-    background-image: url("../assets/images/icons/explorer.webp");
-}
-
-.icon-sound {
-    background-image: url("../assets/images/icons/sound.webp");
-}
-
-.icon-music {
-    background-image: url("../assets/images/icons/music.webp");
-}
-
-.icon-previous {
-    background-image: url("../assets/images/icons/previous.webp");
-}
-
-.icon-next {
-    background-image: url("../assets/images/icons/next.webp");
-}
-
-.icon-link {
-    background-image: url("../assets/images/icons/link.webp");
-}
-
-.icon-menu {
-    background-image: url("../assets/images/icons/menu.webp");
-}
-
-/* TECH */
-
 .icon-aspnetcore {
     background-image: url("../assets/images/icons/aspnetcore.webp");
 }
@@ -55,8 +25,16 @@
     background-image: url("../assets/images/icons/css3.webp");
 }
 
+.icon-dev {
+    background-image: url("../assets/images/icons/dev.webp");
+}
+
 .icon-email {
     background-image: url("../assets/images/icons/email.webp");
+}
+
+.icon-explorer {
+    background-image: url("../assets/images/icons/explorer.webp");
 }
 
 .icon-flask {
@@ -75,12 +53,20 @@
     background-image: url("../assets/images/icons/html5.webp");
 }
 
-.icon-javascript {
-    background-image: url("../assets/images/icons/javascript.webp");
+.icon-instagram {
+    background-image: url("../assets/images/icons/instagram.webp");
+}
+
+.icon-itch {
+    background-image: url("../assets/images/icons/itch.webp");
 }
 
 .icon-javascript {
     background-image: url("../assets/images/icons/javascript.webp");
+}
+
+.icon-link {
+    background-image: url("../assets/images/icons/link.webp");
 }
 
 .icon-linkedin {
@@ -91,16 +77,36 @@
     background-image: url("../assets/images/icons/linuxmint.webp");
 }
 
+.icon-menu {
+    background-image: url("../assets/images/icons/menu.webp");
+}
+
 .icon-monogame {
     background-image: url("../assets/images/icons/monogame.webp");
+}
+
+.icon-music {
+    background-image: url("../assets/images/icons/music.webp");
+}
+
+.icon-next {
+    background-image: url("../assets/images/icons/next.webp");
 }
 
 .icon-php {
     background-image: url("../assets/images/icons/php.webp");
 }
 
+.icon-previous {
+    background-image: url("../assets/images/icons/previous.webp");
+}
+
 .icon-python {
     background-image: url("../assets/images/icons/python.webp");
+}
+
+.icon-sound {
+    background-image: url("../assets/images/icons/sound.webp");
 }
 
 .icon-sqlite {
@@ -109,6 +115,10 @@
 
 .icon-stackoverflow {
     background-image: url("../assets/images/icons/stackoverflow.webp");
+}
+
+.icon-twitter {
+    background-image: url("../assets/images/icons/twitter.webp");
 }
 
 .icon-unityengine {
