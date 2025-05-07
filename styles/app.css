@@ -71,7 +71,6 @@
 }
 
 .app-section-container {
-    min-width: 960px;
     max-width: 960px;
 
     min-height: 480px;
@@ -109,6 +108,8 @@
 
 .app-section-pagination {
     display: flex;
+
+    flex-wrap: wrap;
 
     width: 100%;
     max-width: 960px;
