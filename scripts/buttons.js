@@ -10,7 +10,7 @@ document.querySelectorAll(".btn-link").forEach(element => {
 
 // Add interactivity to the pagination system
 document.querySelector("#previous-section-pagination-button").addEventListener('click', function() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     previousSection();
 });
 
@@ -19,6 +19,6 @@ document.querySelector("#explorer-pagination-button").addEventListener('click', 
 });
 
 document.querySelector("#next-section-pagination-button").addEventListener('click', function() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     nextSection();
 });

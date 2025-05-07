@@ -85,7 +85,7 @@
 /* Link */
 .btn-link {
     background: rgba(40, 92, 196, 0.1); /* Fundo sutil */
-    color: #285cc4;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -93,7 +93,7 @@
 
 .btn-link:hover {
     background: rgba(36, 159, 222, 0.2);
-    color: #249fde;
+    color: rgb(255, 255, 255);
 }
 
 .btn-link:active {
@@ -118,6 +118,19 @@
 
 /* ============================================= */
 /* TOOLS */
+
+.btn-vertical-grouping {
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    padding: 8px;
+    gap: 8px;
+}
 
 .btn-horizontal-grouping {
     display: flex;

@@ -76,9 +76,9 @@
             <div class="modal-body">
                 <div class="chapter-container">
                     <template id="chapter-card-template">
-                        <div class="chapter-card">
+                        <button type="button" class="chapter-card">
                             <span class="chapter-card-name">Name</span>
-                        </div>
+                        </button>
                     </template>
                 </div>
             </div>
@@ -126,9 +126,9 @@
 
                         <h2>Veja Também</h2>
 
-                        <div class="btn-horizontal-grouping">
-                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad"><i class="icon icon-link"></i>Perfil</button>
-                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/starciad.github.io.git"><i class="icon icon-link"></i>Repositório</button>
+                        <div class="btn-vertical-grouping">
+                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad"><i class="icon icon-link"></i>Perfil (GitHub)</button>
+                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/starciad.github.io.git"><i class="icon icon-link"></i>Repositório do Website (GitHub)</button>
                         </div>
                     </article>
                 </section>
@@ -174,18 +174,6 @@
                     </article>
                 </section>
 
-                <!-- HOBBIES -->
-                <!--
-                <section class="app-section" data-chapter_id="hobbies">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">HOBBIES</h1>
-                    </header>
-
-                    <article class="app-section-main markdown-body">
-                    </article>
-                </section>
-                -->
-                
                 <!-- EDUCAÇÃO E FORMAÇÃO -->
                 <section class="app-section" data-chapter_id="education-and-training">
                     <header class="app-section-header">
@@ -249,6 +237,18 @@
                                 </p>
                             </div>
                         </div>
+                    </article>
+                </section>
+
+                <!-- CARREIRA -->
+                <section class="app-section" data-chapter_id="career">
+                    <header class="app-section-header">
+                        <h1 class="app-section-title">CARREIRA</h1>
+                    </header>
+
+                    <article class="app-section-main markdown-body">
+                        <p>Atualmente, não possuo experiência profissional formal no mercado de trabalho.</p>
+                        <p>No entanto, venho desenvolvendo habilidades técnicas e criativas por meio de projetos pessoais, estudos autônomos e colaborações informais. Estou aberto a oportunidades que me permitam aplicar e expandir esses conhecimentos em contextos reais.</p>
                     </article>
                 </section>
 
@@ -993,15 +993,15 @@
             <!-- PAGINAÇÃO -->
             <div class="app-section-pagination">
                 <div class="app-section-pagination-content">
-                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-previous"></i></button>
+                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-previous"></i>Anterior</button>
                 </div>
 
                 <div class="app-section-pagination-content">
-                    <button id="explorer-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-menu"></i></button>
+                    <button id="explorer-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-menu"></i>Explorador</button>
                 </div>
 
                 <div class="app-section-pagination-content">
-                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-next"></i></button>
+                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-next"></i>Próximo</button>
                 </div>
             </div>
         </main>
