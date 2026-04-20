@@ -40,959 +40,816 @@
     <meta property="twitter:description" content="Portfólio pessoal de Davi 'Starciad' Fernandes.">
     <!-- #endregion -->
 
-    <!-- #region SCRIPTS -->
-    <script src="scripts/buttons.js" type="module" defer></script>
-    <script src="scripts/modal_manager.js" type="module" defer></script>
-    <script src="scripts/pagination.js" type="module" defer></script>
-    <script src="scripts/shortcuts.js" type="module" defer></script>
-
-    <script src="scripts/modals/explorer_modal.js" type="module" defer></script>
-    <!-- #endregion -->
-
     <!--#region STYLES -->
-    <link rel="stylesheet" href="./styles/animations.css">
-    <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/buttons.css">
-    <link rel="stylesheet" href="./styles/chapters.css">
-    <link rel="stylesheet" href="./styles/default.css">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/icons.css">
-    <link rel="stylesheet" href="./styles/markdown.css">
-    <link rel="stylesheet" href="./styles/modals.css">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/specials.css">
-    <link rel="stylesheet" href="./styles/states.css">
     <!-- #endregion -->
 </head>
 
 <body>
-    <div class="modal-container modal-hidden">
-        <div id="explorer-modal" class="modal modal-hidden">
-            <header class="modal-header">
-                <h1>Explorador</h1>
-                <p>Selecione o capítulo desejado.</p>
-            </header>
-
-            <div class="modal-body">
-                <div class="chapter-container">
-                    <template id="chapter-card-template">
-                        <button type="button" class="chapter-card">
-                            <span class="chapter-card-name">Name</span>
-                        </button>
-                    </template>
-                </div>
-            </div>
-
-            <footer class="modal-footer">
-                <button id="explorer-modal-close-button" type="button" class="btn btn-secondary">Fechar</button>
-            </footer>
-        </div>
-    </div>
-
-    <div class="app">
-        <!-- Header and Navigation -->
+    <div class="app-container">
+        <!-- Header -->
         <header class="app-header">
-            <div class="app-header-content">
-                <div class="app-header-title"></div>
-            </div>
+            <h1>Starciad's Dreamland</h1>
         </header>
 
-        <!-- Main Content -->
+        <!-- Main -->
         <main class="app-main">
-            <div class="app-section-container">
+            <!-- INTRODUÇÃO -->
+            <article>
+                <header>
+                    <h2>INTRODUÇÃO</h2>
+                </header>
 
-                <!-- INTRODUÇÃO -->
-                <section class="app-section" data-chapter_id="introduction">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">INTRODUÇÃO</h1>
-                    </header>
+                <section>
+                    <h3>Sobre Mim</h3>
 
-                    <article class="app-section-main markdown-body">
-                        <h2>Sobre Mim</h2>
+                    <p>Olá, me chamo Davi Fernandes, mais conhecido pelo pseudônimo "Starciad". Sou brasileiro, natural de Minas Gerais e com um gosto muito grande pela tecnologia. Embora trate tudo isso — atualmente — como um mero hobby, sigo explorando e aprendendo, desbravando esse vasto mundo da tecnologia.</p>
 
-                        <p>Olá, me chamo Davi Fernandes, mais conhecido pelo pseudônimo "Starciad". Sou brasileiro, natural de Minas Gerais e com um gosto muito grande pela tecnologia. Embora trate tudo isso — atualmente — como um mero hobby, sigo explorando e aprendendo, desbravando esse vasto mundo da tecnologia.</p>
+                    <h3>Sobre o <i>Website</i></h3>
 
-                        <h2>Sobre o <i>Website</i></h2>
+                    <p>O intuito desse <i>website</i> é servir como uma espécie de porta de entrada para você poder explorar um pouco do meu universo. Aqui, você irá encontrar meus projetos, conquistas, histórias e muitas outras coisas! Meu objetivo é oferecer tudo isso em um ambiente que seja acolhedor, bem-estruturado e agradável para a leitura.</p>
+                    <p>O site foi organizado em diversas seções autocontidas. Cada uma com seu próprio conglomerado de informações. A navegação também não ficou para trás e foi desenvolvida para proporcionar uma experiência dinâmica e intuitiva. No final de cada seção, você irá encontrar botões que realizam a troca de capítulos, permitindo retroceder ou avançar pelo site em um sistema de paginação.</p>
+                    <p>Ou, se preferir, você também pode utilizar o <strong>explorador</strong>, que lhe concede a capacidade de acessar rapidamente cada um dos capítulos existentes no site. O botão responsável por abrir esse menu está localizado na parte inferior, entre os botões de avançar e retroceder.</p>
 
-                        <p>O intuito desse <i>website</i> é servir como uma espécie de porta de entrada para você poder explorar um pouco do meu universo. Aqui, você irá encontrar meus projetos, conquistas, histórias e muitas outras coisas! Meu objetivo é oferecer tudo isso em um ambiente que seja acolhedor, bem-estruturado e agradável para a leitura.</p>
+                    <h3>Finalização</h3>
 
-                        <p>O site foi organizado em diversas seções autocontidas. Cada uma com seu próprio conglomerado de informações. A navegação também não ficou para trás e foi desenvolvida para proporcionar uma experiência dinâmica e intuitiva. No final de cada seção, você irá encontrar botões que realizam a troca de capítulos, permitindo retroceder ou avançar pelo site em um sistema de paginação.</p>
+                    <p>No final de tudo, espero que você possa se sentir a vontade para explorar o site! Desejo que sua experiência aqui seja tão gratificante quanto foi o processo de criação desse ambiente.</p>
 
-                        <p>Ou, se preferir, você também pode utilizar o <strong>explorador</strong>, que lhe concede a capacidade de acessar rapidamente cada um dos capítulos existentes no site. O botão responsável por abrir esse menu está localizado na parte inferior, entre os botões de avançar e retroceder.</p>
+                    <h3>Veja Também</h3>
 
-                        <h2>Finalização</h2>
+                    <ul>
+                        <li><a href="https://github.com/Starciad" target="_blank">Perfil (GitHub)</a></li>
+                        <li><a href="https://github.com/Starciad/starciad.github.io.git" target="_blank">Repositório do Website (GitHub)</a></li>
+                    </ul>
+                </section>
 
-                        <p>No final de tudo, espero que você possa se sentir a vontade para explorar o site! Desejo que sua experiência aqui seja tão gratificante quanto foi o processo de criação desse ambiente.</p>
+                <footer>
+                </footer>
+            </article>
 
-                        <h2>Veja Também</h2>
+            <!-- HISTÓRIA -->
+            <article>
+                <header>
+                    <h2>HISTÓRIA</h2>
+                </header>
 
-                        <div class="btn-vertical-grouping">
-                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad"><i class="icon icon-link"></i>Perfil (GitHub)</button>
-                            <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/starciad.github.io.git"><i class="icon icon-link"></i>Repositório do Website (GitHub)</button>
+                <section>
+                    <p>Como as boas-vindas já foram concebidas, serei direto. Aqui, irei contar-lhe sobre minha trajetória. Compartilharei um pouco sobre como me envolvi com a tecnologia, pontuando os momentos mais relevantes para compor essa história. O propósito não é contar cada detalhe minunciosamente, mas sim, oferecer um panorama geral sobre minhas experiências e interesses. Espero que esta história possa inspirar você, ou, ao menos, servir como um ponto de partida para entender melhor meu trabalho.</p>
+
+                    <h3>Biografia</h3>
+
+                    <h4>Infância</h4>
+
+                    <p>Para contar essa história, irei voltar um pouco no tempo; especificamente para o período em que, ainda, era apenas uma criança. Desde pequeno, sempre fui movido pela curiosidade de entender sobre como as coisas funcionavam. Não parece muito, mas são essas pequenas coisas — os passos mais triviais — que moldam nossa existência.</p>
+                    <p>Meu primeiro contato significativo com esse universo foi através do meu <i>PlayStation 2</i> que tinha quando era criança, em que, além dos jogos tradicionais, passava incontáveis horas explorando um emulador chamado <i><strong>SNES Station</strong></i>, que me apresentou a uma biblioteca vasta de clássicos do Super Nintendo. Foi ali que comecei a me perguntar: "Como esses jogos são feitos?". Essa pergunta se tornaria o ponto de virada para minha jornada.</p>
+
+                    <h4>Os Primeiros Passos</h4>
+
+                    <p>A grande mudança veio quando ganhei meu primeiro computador. Antes disso, minhas interações com tecnologia eram limitadas a visitas ocasionais a <i>Lan Houses</i>, onde jogava títulos pré-instalados ou games em <i>Flash</i>. Mas, com um <i>PC</i> em casa, o leque de possibilidades se abriu de vez.</p>
+                    <p>Movido pela curiosidade, pesquisei no Google "como criar jogos" e fui apresentado a diversas ferramentas. Entre elas, descobri o <i><strong>001 Game Creator</strong></i>, uma <i>engine</i> de desenvolvimento visual que me permitia criar jogos sem precisar programar diretamente. Comecei desenvolvendo pequenos projetos, experimentando mecânicas e testando ideias.</p>
+                    <p>Com o tempo, percebi querer mais controle sobre o que criava. Foi quando decidi aprender programação de verdade. Minha introdução à programação textual aconteceu através da <i><strong>Unity Engine</strong></i> e da linguagem <i><strong>C#</strong></i> (<i>CSharp</i>), o que me proporcionou uma compreensão mais profunda da lógica por trás dos jogos. A transição não foi fácil, mas cada obstáculo vencido reforçava minha vontade de seguir em frente.</p>
+
+                    <h4>Explorando Novos Horizontes</h4>
+
+                    <p>Após me familiarizar com o <i>C#</i> e entender melhor os princípios da programação orientada a objetos, decidi expandir meu conhecimento. Descobri o <i><strong>MonoGame</strong></i>, um <i>framework</i> que, embora exigisse mais esforço para desenvolver do zero, me permitia aprender conceitos essenciais sobre renderização, gerenciamento de áudio e arquitetura de jogos de maneira mais aprofundada.</p>
+                    <p>Ao longo dessa jornada, também explorei outras áreas no desenvolvimento de software. Experimentei a criação de aplicações web com o <i><strong>ASP.NET Core MVC</strong></i>, o desenvolvimento de interfaces desktop com o <i><strong>Windows Forms</strong></i> e <i><strong>WPF</strong></i> e até mesmo o universo <i>mobile</i> com o antigo <i><strong>Xamarin</strong></i>. Além disso, comecei a estudar novas linguagens como <i><strong>C</strong></i>, <i><strong>Python</strong></i> e <i><strong>PHP</strong></i>, além de aprofundar meus conhecimentos em tecnologias como <i><strong>HTML</strong></i>, <i><strong>CSS</strong></i> e <i><strong>JavaScript</strong></i>.</p>
+                    <p>O interesse por sistemas operacionais também surgiu naturalmente. Aprender sobre formatação, <i>dual boot</i> e o ambiente <i>Linux</i> me ajudou a entender melhor a relação entre software e hardware, além de fortalecer minha familiaridade com o terminal e administração de sistemas.</p>
+
+                    <h4>O Futuro</h4>
+
+                    <p>Se tem algo que aprendi ao longo dessa trajetória, é que o aprendizado nunca tem fim. A tecnologia evolui constantemente, e estar sempre explorando novas possibilidades é parte do processo. Embora ainda esteja traçando meus próximos passos, sigo motivado a expandir meu conhecimento e a desenvolver projetos cada vez mais interessantes.</p>
+                    <p>Agradeço por chegar até aqui. Mesmo que o ponto final tenha sido alocado ao texto, ainda não é o final dessa história. Um mero resumo não consegue suprir a existência de uma pessoa, contudo, fornece a ideia que é possível se ter sobre o indivíduo. Fique a vontade para ver os outros capítulos do <i>website</i>. Ainda há muitos outros conteúdos que podem vir a lhe interessar.</p>
+                </section>
+
+                <footer>
+
+                </footer>
+            </article>
+
+            <!-- EDUCAÇÃO E FORMAÇÃO -->
+            <article>
+                <header>
+                    <h2>EDUCAÇÃO & FORMAÇÃO</h2>
+                </header>
+
+                <section>
+                    <h3>Ensino Básico</h3>
+
+                    <div>
+                        <div>
+                            <h4>Ensino Fundamental</h4>
+                            <p>Concluído em 2021</p>
+                        </div>
+
+                        <div>
+                            <h4>Ensino Médio</h4>
+                            <p>Concluído em 2024</p>
+                        </div>
+                    </div>
+
+                    <h3>Ensino Superior</h3>
+
+                    <div>
+                        <div>
+                            <h4>Ciência da Computação | Bacharelado</h4>
+                            <p><strong>Instituição:</strong> Escola Superior Dom Helder Câmara (ESDHC)</p>
+                            <p><strong>Início:</strong> 2025 – <em>Em andamento</em></p>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <h3>Olimpíadas</h3>
+
+                    <div>
+                        <div>
+                            <h4>Olimpíada Brasileira de Informática (OBI) - Modalidade Programação Nível 2</h4>
+                            <p>2023</p>
+                            <p>Durante o ensino médio, graças à iniciativa de um professor, tive a oportunidade de participar pela primeira vez da OBI. Consegui avançar até a segunda fase, de um total de três, e foi uma experiência enriquecedora no mundo da programação competitiva.</p>
+                        </div>
+                    </div>
+
+                    <h3>Cursos</h3>
+
+                    <div>
+                        <div>
+                            <h4>Inclusão Digital - Programação Web: Curso PHP</h4>
+                            <p>2023</p>
+                            <p>Esse curso foi oferecido pelo governo de Belo Horizonte como parte de um programa de inclusão digital, abrangendo diversas áreas do conhecimento. Em específico, este curso introduziu o desenvolvimento web com <i>PHP</i>, abordando conceitos fundamentais de <i>backend</i>, manipulação de bancos de dados e criação de páginas dinâmicas. O uso do <i>XAMPP</i> também foi explorado ao longo das aulas.</p>
+                        </div>
+
+                        <div>
+                            <h4>CC50 - Curso de Ciência da Computação de Harvard</h4>
+                            <p>2022</p>
+                            <p>Através de uma iniciativa da <a href="https://www.estudar.org.br/" target="_blank">Fundação Estudar</a>, tive o prazer de realizar esse curso no formato EaD (Ensino a Distância). Ele é a versão traduzida e adaptada do renomado <i>CS50</i> da Universidade de Harvard, explorando conceitos fundamentais de ciência da computação, algoritmos, estrutura de dados e programação em <i>C</i>. Durante o curso, desenvolvemos diversos projetos práticos e passamos por múltiplos módulos, cada um repleto de desafios e aprendizados.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+
+                </footer>
+            </article>
+
+            <!-- CONHECIMENTOS -->
+            <article>
+                <header>
+                    <h2>CONHECIMENTOS</h2>
+                </header>
+
+                <section>
+                    <h3>Linguagens de Programação</h3>
+
+                    <ul>
+                        <!-- C# -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/csharp.webp" alt="Ícone da linguagem C#" class="icon">
+                                <figcaption>C#</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- C -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/c.webp" alt="Ícone da linguagem C" class="icon">
+                                <figcaption>C</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- C++ -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/cplusplus.webp" alt="Ícone da linguagem C++" class="icon">
+                                <figcaption>C++</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- JavaScript -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/javascript.webp" alt="Ícone da linguagem JavaScript" class="icon">
+                                <figcaption>JavaScript</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- Python -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/python.webp" alt="Ícone da linguagem Python" class="icon">
+                                <figcaption>Python</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- PHP -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/php.webp" alt="Ícone da linguagem PHP" class="icon">
+                                <figcaption>PHP</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3>Desenvolvimento Web</h3>
+                    <h4>Front-end</h4>
+
+                    <ul>
+                        <!-- HTML5 -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/html5.webp" alt="Ícone da linguagem HTML5" class="icon">
+                                <figcaption>HTML5</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- CSS3 -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/css3.webp" alt="Ícone da linguagem CSS3" class="icon">
+                                <figcaption>CSS3</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h4>Back-end</h4>
+
+                    <ul>
+                        <!-- ASP.NET -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/aspnetcore.webp" alt="Ícone da linguagem ASP.NET Core" class="icon">
+                                <figcaption>ASP.NET Core</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- FLASK -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/flask.webp" alt="Ícone da linguagem Flask" class="icon">
+                                <figcaption>Flask</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3>Desenvolvimento de Jogos</h3>
+
+                    <ul>
+                        <!-- MONO GAME -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/monogame.webp" alt="Ícone do jogo Mono Game" class="icon">
+                                <figcaption>Mono Game</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- UNITY ENGINE -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/unityengine.webp" alt="Ícone do jogo Unity Engine" class="icon">
+                                <figcaption>Unity Engine</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3>Banco de Dados</h3>
+
+                    <!-- SQLITE -->
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/sqlite.webp" alt="Ícone do banco de dados SQLite" class="icon">
+                                <figcaption>SQLite</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3>Ferramentas</h3>
+
+                    <ul>
+                        <!-- XAMPP -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/xampp.webp" alt="Ícone da ferramenta XAMPP" class="icon">
+                                <figcaption>XAMPP</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- GIT -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/git.webp" alt="Ícone da ferramenta Git" class="icon">
+                                <figcaption>Git</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- VISUAL STUDIO -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/visualstudio.webp" alt="Ícone da ferramenta Visual Studio" class="icon">
+                                <figcaption>Visual Studio</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- VISUAL STUDIO CODE -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/visualstudiocode.webp" alt="Ícone da ferramenta Visual Studio Code" class="icon">
+                                <figcaption>Visual Studio Code</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- WSL2 -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/wsl2.webp" alt="WSL2" class="icon">
+                                <figcaption>WSL2</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3>Sistemas Operacionais</h3>
+
+                    <ul>
+                        <!-- WINDOWS 7 & 10 -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/windows.webp" alt="Windows 7 e 10" class="icon">
+                                <figcaption>Windows 7 e 10</figcaption>
+                            </figure>
+                        </li>
+
+                        <!-- LINUX MINT -->
+                        <li>
+                            <figure>
+                                <img src="./assets/images/icons/linuxmint.webp" alt="Linux Mint" class="icon">
+                                <figcaption>Linux Mint</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+
+                <footer>
+                </footer>
+            </article>
+
+            <!-- PROJETOS -->
+            <article>
+                <header>
+                    <h2>PROJETOS</h2>
+                </header>
+
+                <section>
+                    <!-- STAR MAGE (04/04/2026) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/starmage.webp" alt="Star Mage" class="thumbnail">
+                            <figcaption>Capa do Star Mage</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h3>Star Mage</h3>
+                            </header>
+
+                            <time datetime="2026-04-04">04/04/2026</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                                <li>MonoGame</li>
+                            </ul>
+
+                            <p>Star Mage é um desafiador jogo de tiro 2D de rolagem lateral inspirado no design da era NES.</p>
+
+                            <footer>
+                                <a href="https://starciad.itch.io/depths" target="_blank">Itch</a>
+                                <a href="https://github.com/Starciad/Depths.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- DEPTHS (02/03/2025) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/depths.webp" alt="Depths" class="thumbnail">
+                            <figcaption>Capa do Depths</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Depths</h4>
+                            </header>
+
+                            <time datetime="2025-03-02">02/03/2025</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                                <li>MonoGame</li>
+                            </ul>
+
+                            <p>Um jogo sobre mineração e exploração de catacumbas antigas em busca de tesouros!</p>
+
+                            <footer>
+                                <a href="https://starciad.itch.io/depths" target="_blank">Itch</a>
+                                <a href="https://github.com/Starciad/Depths.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- SUNO (04/02/2025) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/suno.webp" alt="SUno" class="thumbnail">
+                            <figcaption>Capa do SUno</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>SUno</h4>
+                            </header>
+
+                            <time datetime="2025-02-04">04/02/2025</time>
+
+                            <ul class="technologies">
+                                <li>C</li>
+                            </ul>
+
+                            <p>Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
+
+                            <footer>
+                                <a href="https://github.com/Starciad/SUno.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- STAR ZOMBIE CHASE (31/05/2024) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/starzombiechase.webp" alt="Star Zombie Chase" class="thumbnail">
+                            <figcaption>Capa do Star Zombie Chase</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Star Zombie Chase</h4>
+                            </header>
+
+                            <time datetime="2024-05-31">31/05/2024</time>
+
+                            <ul class="technologies">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+
+                            <p>Um pequeno jogo de quebra-cabeça cujo objetivo é escapar de zumbis e coletar itens.</p>
+
+                            <footer>
+                                <a href="https://starciad.github.io/StarZombieChase/" target="_blank">WebSite</a>
+                                <a href="https://github.com/Starciad/StarZombieChase.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- STAR ASCII (10/09/2024) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/starascii.webp" alt="Star ASCII" class="thumbnail">
+                            <figcaption>Capa do Star ASCII</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Star ASCII</h4>
+                            </header>
+
+                            <time datetime="2024-09-10">10/09/2024</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                            </ul>
+
+                            <p>Uma biblioteca para criação de animações ASCII para terminais.</p>
+
+                            <footer>
+                                <a href="https://www.nuget.org/packages/StarASCII/" target="_blank">NuGet</a>
+                                <a href="https://github.com/Starciad/StarASCII.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- SPI THEME (18/07/2024) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/spi.webp" alt="Star Pixel Icons (SPI) Theme" class="thumbnail">
+                            <figcaption>Capa do Star Pixel Icons (SPI) Theme</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Star Pixel Icons (SPI) Theme</h4>
+                            </header>
+
+                            <time datetime="2024-07-18">18/07/2024</time>
+
+                            <ul class="technologies">
+                                <li>Ícones</li>
+                                <li>Linux</li>
+                            </ul>
+
+                            <p>Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
+
+                            <footer>
+                                <a href="https://github.com/Starciad/star-pixel-icons-theme.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- SCSG (23/01/2024) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/scsg.webp" alt="Star Character Sheet Generator (SCSG)" class="thumbnail">
+                            <figcaption>Capa do Star Character Sheet Generator (SCSG)</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Star Character Sheet Generator (SCSG)</h4>
+                            </header>
+
+                            <time datetime="2024-01-23">23/01/2024</time>
+
+                            <ul class="technologies">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+
+                            <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.</p>
+
+                            <footer>
+                                <a href="https://starciad.github.io/SCSG/" target="_blank">WebSite</a>
+                                <a href="https://github.com/Starciad/SCSG.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- STELLAR DUELIST (21/09/2023) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/stellarduelist.webp" alt="Stellar Duelist" class="thumbnail">
+                            <figcaption>Capa do Stellar Duelist</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Stellar Duelist</h4>
+                            </header>
+
+                            <time datetime="2023-09-21">21/09/2023</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                                <li>MonoGame</li>
+                            </ul>
+
+                            <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
+
+                            <footer>
+                                <a href="https://starciad.itch.io/stellar-duelist" target="_blank">Itch</a>
+                                <a href="https://github.com/Starciad/StellarDuelist.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- STARDUST SANDBOX (05/08/2023) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/stardustsandbox.webp" alt="Stardust Sandbox" class="thumbnail">
+                            <figcaption>Capa do Stardust Sandbox</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Stardust Sandbox</h4>
+                            </header>
+
+                            <time datetime="2023-08-05">05/08/2023</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                                <li>MonoGame</li>
+                            </ul>
+
+                            <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
+
+                            <footer>
+                                <a href="https://store.steampowered.com/app/4348740/Stardust_Sandbox" target="_blank">Steam</a>
+                                <a href="https://starciad.itch.io/stardust-sandbox" target="_blank">Itch</a>
+                                <a href="https://github.com/Starciad/StardustSandbox.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- SLIME LAB (21/10/2022) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/slimelab.webp" alt="Slime Lab" class="thumbnail">
+                            <figcaption>Capa do Slime Lab</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>Slime Lab</h4>
+                            </header>
+
+                            <time datetime="2022-10-21">21/10/2022</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                                <li>MonoGame</li>
+                            </ul>
+
+                            <p>Pequeno jogo feito em MonoGame para estudos.</p>
+
+                            <footer>
+                                <a href="https://github.com/Starciad/SlimeLab.git" target="_blank">GitHub</a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- JAAJ XEL (30/07/2021) -->
+                    <article class="project">
+                        <figure>
+                            <img src="./assets/images/thumbnails/projects/jaajxel.webp" alt="JaaJ Xel" class="thumbnail">
+                            <figcaption>Capa do JaaJ Xel</figcaption>
+                        </figure>
+
+                        <div class="project-content">
+                            <header>
+                                <h4>JaaJ Xel</h4>
+                            </header>
+
+                            <time datetime="2021-07-30">30/07/2021</time>
+
+                            <ul class="technologies">
+                                <li>C#</li>
+                                <li>Unity</li>
+                            </ul>
+
+                            <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
+
+                            <footer>
+                                <a href="https://igor-up.itch.io/jaajxel" target="_blank">Itch</a>
+                            </footer>
                         </div>
                     </article>
                 </section>
 
-                <!-- HISTÓRIA -->
-                <section class="app-section" data-chapter_id="history">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">HISTÓRIA</h1>
-                    </header>
+                <footer>
 
-                    <article class="app-section-main markdown-body">
-                        <p>Como as boas-vindas já foram concebidas, serei direto. Aqui, irei contar-lhe sobre minha trajetória. Compartilharei um pouco sobre como me envolvi com a tecnologia, pontuando os momentos mais relevantes para compor essa história. O propósito não é contar cada detalhe minunciosamente, mas sim, oferecer um panorama geral sobre minhas experiências e interesses. Espero que esta história possa inspirar você, ou, ao menos, servir como um ponto de partida para entender melhor meu trabalho.</p>
+                </footer>
+            </article>
 
-                        <h2>Biografia</h2>
+            <!-- CONTATO -->
+            <article>
+                <header>
+                    <h2>CONTATO</h2>
+                </header>
 
-                        <h3>Infância</h3>
+                <section>
+                    <h3>Redes Sociais</h3>
 
-                        <p>Para contar essa história, irei voltar um pouco no tempo; especificamente para o período em que, ainda, era apenas uma criança. Desde pequeno, sempre fui movido pela curiosidade de entender sobre como as coisas funcionavam. Não parece muito, mas são essas pequenas coisas — os passos mais triviais — que moldam nossa existência.</p>
+                    <div>
 
-                        <p>Meu primeiro contato significativo com esse universo foi através do meu <i>PlayStation 2</i> que tinha quando era criança, em que, além dos jogos tradicionais, passava incontáveis horas explorando um emulador chamado <i><strong>SNES Station</strong></i>, que me apresentou a uma biblioteca vasta de clássicos do Super Nintendo. Foi ali que comecei a me perguntar: "Como esses jogos são feitos?". Essa pergunta se tornaria o ponto de virada para minha jornada.</p>
+                        <!-- DEV.TO -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-dev"></i>
+                            </div>
 
-                        <h3>Os Primeiros Passos</h3>
+                            <div class="contact-card-content">
+                                <span>Dev.to</span>
+                            </div>
 
-                        <p>A grande mudança veio quando ganhei meu primeiro computador. Antes disso, minhas interações com tecnologia eram limitadas a visitas ocasionais a <i>Lan Houses</i>, onde jogava títulos pré-instalados ou games em <i>Flash</i>. Mas, com um <i>PC</i> em casa, o leque de possibilidades se abriu de vez.</p>
+                            <div class="contact-card-content">
+                                <a href="https://dev.to/starciad" target="_blank">Visitar</a>
+                            </div>
+                        </div>
 
-                        <p>Movido pela curiosidade, pesquisei no Google "como criar jogos" e fui apresentado a diversas ferramentas. Entre elas, descobri o <i><strong>001 Game Creator</strong></i>, uma <i>engine</i> de desenvolvimento visual que me permitia criar jogos sem precisar programar diretamente. Comecei desenvolvendo pequenos projetos, experimentando mecânicas e testando ideias.</p>
+                        <!-- EMAIL -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-email"></i>
+                            </div>
 
-                        <p>Com o tempo, percebi querer mais controle sobre o que criava. Foi quando decidi aprender programação de verdade. Minha introdução à programação textual aconteceu através da <i><strong>Unity Engine</strong></i> e da linguagem <i><strong>C#</strong></i> (<i>CSharp</i>), o que me proporcionou uma compreensão mais profunda da lógica por trás dos jogos. A transição não foi fácil, mas cada obstáculo vencido reforçava minha vontade de seguir em frente.</p>
+                            <div class="contact-card-content">
+                                <span>Email</span>
+                            </div>
 
-                        <h3>Explorando Novos Horizontes</h3>
+                            <div class="contact-card-content">
+                                <a href="mailto:davilsfernandes.starciad.comu@gmail.com" target="_blank">Visitar</a>
+                            </div>
+                        </div>
 
-                        <p>Após me familiarizar com o <i>C#</i> e entender melhor os princípios da programação orientada a objetos, decidi expandir meu conhecimento. Descobri o <i><strong>MonoGame</strong></i>, um <i>framework</i> que, embora exigisse mais esforço para desenvolver do zero, me permitia aprender conceitos essenciais sobre renderização, gerenciamento de áudio e arquitetura de jogos de maneira mais aprofundada.</p>
+                        <!-- GITHUB -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-github"></i>
+                            </div>
 
-                        <p>Ao longo dessa jornada, também explorei outras áreas no desenvolvimento de software. Experimentei a criação de aplicações web com o <i><strong>ASP.NET Core MVC</strong></i>, o desenvolvimento de interfaces desktop com o <i><strong>Windows Forms</strong></i> e <i><strong>WPF</strong></i> e até mesmo o universo <i>mobile</i> com o antigo <i><strong>Xamarin</strong></i>. Além disso, comecei a estudar novas linguagens como <i><strong>C</strong></i>, <i><strong>Python</strong></i> e <i><strong>PHP</strong></i>, além de aprofundar meus conhecimentos em tecnologias como <i><strong>HTML</strong></i>, <i><strong>CSS</strong></i> e <i><strong>JavaScript</strong></i>.</p>
+                            <div class="contact-card-content">
+                                <span>GitHub</span>
+                            </div>
 
-                        <p>O interesse por sistemas operacionais também surgiu naturalmente. Aprender sobre formatação, <i>dual boot</i> e o ambiente <i>Linux</i> me ajudou a entender melhor a relação entre software e hardware, além de fortalecer minha familiaridade com o terminal e administração de sistemas.</p>
+                            <div class="contact-card-content">
+                                <a href="https://github.com/Starciad" target="_blank">Visitar</a>
+                            </div>
+                        </div>
 
-                        <h3>O Futuro</h3>
+                        <!-- ITCH.IO -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-itch"></i>
+                            </div>
 
-                        <p>Se tem algo que aprendi ao longo dessa trajetória, é que o aprendizado nunca tem fim. A tecnologia evolui constantemente, e estar sempre explorando novas possibilidades é parte do processo. Embora ainda esteja traçando meus próximos passos, sigo motivado a expandir meu conhecimento e a desenvolver projetos cada vez mais interessantes.</p>
+                            <div class="contact-card-content">
+                                <span>Itch.io</span>
+                            </div>
 
-                        <p>Agradeço por chegar até aqui. Mesmo que o ponto final tenha sido alocado ao texto, ainda não é o final dessa história. Um mero resumo não consegue suprir a existência de uma pessoa, contudo, fornece a ideia que é possível se ter sobre o indivíduo. Fique a vontade para ver os outros capítulos do <i>website</i>. Ainda há muitos outros conteúdos que podem vir a lhe interessar.</p>
-                    </article>
+                            <div class="contact-card-content">
+                                <a href="https://starciad.itch.io/" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- LINKEDIN -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-linkedin"></i>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <span>LinkedIn</span>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <a href="https://www.linkedin.com/in/davi-fernandes-723748268/" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- STACK OVERFLOW -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-stackoverflow"></i>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <span>Stack Overflow</span>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <a href="https://stackoverflow.com/users/18094188/starciad" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- TWITTER/X -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-twitter"></i>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <span>Twitter/X</span>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <a href="https://x.com/Starciad" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+
+                        <!-- YOUTUBE -->
+                        <div class="contact-card">
+                            <div class="contact-card-content">
+                                <i class="icon icon-youtube"></i>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <span>Youtube</span>
+                            </div>
+
+                            <div class="contact-card-content">
+                                <a href="https://www.youtube.com/@starciad" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
-                <!-- EDUCAÇÃO E FORMAÇÃO -->
-                <section class="app-section" data-chapter_id="education-and-training">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">EDUCAÇÃO & FORMAÇÃO</h1>
-                    </header>
+                <footer>
 
-                    <article class="app-section-main markdown-body">
-                        <h2>Ensino Básico</h2>
-
-                        <div class="education-container">
-                            <div class="education-card">
-                                <h3>Ensino Fundamental</h3>
-                                <p class="education-date">Concluído em 2021</p>
-                            </div>
-
-                            <div class="education-card">
-                                <h3>Ensino Médio</h3>
-                                <p class="education-date">Concluído em 2024</p>
-                            </div>
-                        </div>
-
-                        <h2>Ensino Superior</h2>
-
-                        <div class="education-container">
-                            <div class="education-card">
-                                <h3>Ciência da Computação | Bacharelado</h3>
-                                <p><strong>Instituição:</strong> Escola Superior Dom Helder Câmara (ESDHC)</p>
-                                <p class="education-date"><strong>Início:</strong> 2025 – <em>Em andamento</em></p>
-                                <p class="education-description"></p>
-                            </div>
-                        </div>
-
-                        <h2>Olimpíadas</h2>
-
-                        <div class="education-container">
-                            <div class="education-card">
-                                <h3>Olimpíada Brasileira de Informática (OBI) - Modalidade Programação Nível 2</h3>
-                                <p class="education-date">2023</p>
-                                <p class="education-description">
-                                    Durante o ensino médio, graças à iniciativa de um professor, tive a oportunidade de participar pela primeira vez da OBI. Consegui avançar até a segunda fase, de um total de três, e foi uma experiência enriquecedora no mundo da programação competitiva.
-                                </p>
-                            </div>
-                        </div>
-
-                        <h2>Cursos</h2>
-
-                        <div class="education-container">
-                            <div class="education-card">
-                                <h3>Inclusão Digital - Programação Web: Curso PHP</h3>
-                                <p class="education-date">2023</p>
-                                <p class="education-description">
-                                    Esse curso foi oferecido pelo governo de Belo Horizonte como parte de um programa de inclusão digital, abrangendo diversas áreas do conhecimento. Em específico, este curso introduziu o desenvolvimento web com <i>PHP</i>, abordando conceitos fundamentais de <i>backend</i>, manipulação de bancos de dados e criação de páginas dinâmicas. O uso do <i>XAMPP</i> também foi explorado ao longo das aulas.
-                                </p>
-                            </div>
-
-                            <div class="education-card">
-                                <h3>CC50 - Curso de Ciência da Computação de Harvard</h3>
-                                <p class="education-date">2022</p>
-                                <p class="education-description">
-                                    Através de uma iniciativa da <a href="https://www.estudar.org.br/" target="_blank">Fundação Estudar</a>, tive o prazer de realizar esse curso no formato EaD (Ensino a Distância). Ele é a versão traduzida e adaptada do renomado <i>CS50</i> da Universidade de Harvard, explorando conceitos fundamentais de ciência da computação, algoritmos, estrutura de dados e programação em <i>C</i>. Durante o curso, desenvolvemos diversos projetos práticos e passamos por múltiplos módulos, cada um repleto de desafios e aprendizados.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                <!-- CARREIRA -->
-                <section class="app-section" data-chapter_id="career">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">CARREIRA</h1>
-                    </header>
-
-                    <article class="app-section-main markdown-body">
-                        <p>Atualmente, não possuo experiência profissional formal no mercado de trabalho.</p>
-                        <p>No entanto, venho desenvolvendo habilidades técnicas e criativas por meio de projetos pessoais, estudos autônomos e colaborações informais. Estou aberto a oportunidades que me permitam aplicar e expandir esses conhecimentos em contextos reais.</p>
-                    </article>
-                </section>
-
-                <!-- CONHECIMENTOS -->
-                <section class="app-section" data-chapter_id="knowledge">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">CONHECIMENTOS</h1>
-                    </header>
-
-                    <article class="app-section-main markdown-body">
-                        <h2>Linguagens de Programação</h2>
-
-                        <div class="knowledge-container">
-
-                            <!-- C# -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-csharp"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>C#</span>
-                                </div>
-                            </div>
-
-                            <!-- C -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-c"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>C</span>
-                                </div>
-                            </div>
-
-                            <!-- JAVA SCRIPT -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-javascript"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>JavaScript</span>
-                                </div>
-                            </div>
-
-                            <!-- PYTHON -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-python"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Python</span>
-                                </div>
-                            </div>
-
-                            <!-- PHP -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-php"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>PHP</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <h2>Desenvolvimento Web</h2>
-                        <h3>Front-end</h3>
-
-                        <div class="knowledge-container">
-
-                            <!-- HTML5 -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-html5"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>HTML5</span>
-                                </div>
-                            </div>
-
-                            <!-- CSS3 -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-css3"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>CSS3</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <h3>Back-end</h3>
-
-                        <div class="knowledge-container">
-
-                            <!-- ASP.NET -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-aspnetcore"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>ASP.NET Core MVC</span>
-                                </div>
-                            </div>
-
-                            <!-- FLASK -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-flask"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Flask</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <h2>Desenvolvimento de Jogos</h2>
-
-                        <div class="knowledge-container">
-
-                            <!-- MONO GAME -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-monogame"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Mono Game</span>
-                                </div>
-                            </div>
-
-                            <!-- UNITY ENGINE -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-unityengine"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Unity Engine</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Banco de Dados</h2>
-
-                        <!-- SQLITE -->
-                        <div class="knowledge-container">
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-sqlite"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>SQLite</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Ferramentas</h2>
-
-                        <div class="knowledge-container">
-
-                            <!-- XAMPP -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-xampp"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>XAMPP</span>
-                                </div>
-                            </div>
-
-                            <!-- GIT -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-git"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Git</span>
-                                </div>
-                            </div>
-
-                            <!-- VISUAL STUDIO -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-visualstudio"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Visual Studio</span>
-                                </div>
-                            </div>
-
-                            <!-- VISUAL STUDIO CODE -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-visualstudiocode"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Visual Studio Code</span>
-                                </div>
-                            </div>
-
-                            <!-- WSL2 -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-wsl2"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>WSL2</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Sistemas Operacionais</h2>
-
-                        <div class="knowledge-container">
-
-                            <!-- WINDOWS 7 & 10 -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-windows"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Windows 7 e 10</span>
-                                </div>
-                            </div>
-
-                            <!-- LINUX MINT -->
-                            <div class="knowledge-card">
-                                <div class="knowledge-card-content">
-                                    <i class="icon icon-linuxmint"></i>
-                                </div>
-
-                                <div class="knowledge-card-content">
-                                    <span>Linux Mint</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-                </section>
-
-                <!-- PROJETOS -->
-                <section class="app-section" data-chapter_id="projects">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">PROJETOS</h1>
-                    </header>
-
-                    <article class="app-section-main markdown-body">
-                        <h2>Jogos</h2>
-
-                        <div class="projects-container">
-
-                            <!-- DEPTHS -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-depths"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Depths</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">02/03/2025</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C#</span>
-                                            <span class="project-technology">MonoGame</span>
-                                        </div>
-
-                                        <span class="project-description">Um jogo sobre mineração e exploração de catacumbas antigas em busca de tesouros!</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/depths"><i class="icon icon-link"></i>Itch</button>
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/Depths.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-
-                            <!-- SUNO -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-suno"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>SUno</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">04/02/2025</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C</span>
-                                        </div>
-
-                                        <span class="project-description">Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/SUno.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-
-                            <!-- STAR ZOMBIE CHASE -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-starzombiechase"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Star Zombie Chase</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">31/05/2024</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">HTML</span>
-                                            <span class="project-technology">CSS</span>
-                                            <span class="project-technology">JS</span>
-                                        </div>
-
-                                        <span class="project-description">Um pequeno jogo de quebra-cabeça cujo objetivo é escapar de zumbis e coletar itens.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://starciad.github.io/StarZombieChase/"><i class="icon icon-link"></i>WebSite</button>
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StarZombieChase.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-
-                            <!-- STELLAR DUELIST -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-stellarduelist"></i>
-                                </div>
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Stellar Duelist</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">21/09/2023</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C#</span>
-                                            <span class="project-technology">MonoGame</span>
-                                        </div>
-
-                                        <span class="project-description">Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/stellar-duelist"><i class="icon icon-link"></i>Itch</button>
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StellarDuelist.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-
-                            <!-- STARDUST SANDBOX -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-stardustsandbox"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Stardust Sandbox</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">05/08/2023</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C#</span>
-                                            <span class="project-technology">MonoGame</span>
-                                        </div>
-
-                                        <span class="project-description">Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/stardust-sandbox"><i class="icon icon-link"></i>Itch</button>
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StardustSandbox.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-
-                            <!-- SLIME LAB -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-slimelab"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Slime Lab</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">21/10/2022</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C#</span>
-                                            <span class="project-technology">MonoGame</span>
-                                        </div>
-
-                                        <span class="project-description">Pequeno jogo feito em MonoGame para estudos.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/SlimeLab.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-
-                            <!-- JAAJ XEL -->
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-jaajxel"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>JaaJ Xel</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">30/07/2021</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C#</span>
-                                            <span class="project-technology">Unity</span>
-                                        </div>
-
-                                        <span class="project-description">Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://igor-up.itch.io/jaajxel"><i class="icon icon-link"></i>Itch</button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Ferramentas</h2>
-
-                        <!-- SCSG -->
-                        <div class="projects-container">
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-scsg"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Star Character Sheet Generator (SCSG)</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">23/01/2024</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">HTML</span>
-                                            <span class="project-technology">CSS</span>
-                                            <span class="project-technology">JS</span>
-                                        </div>
-
-                                        <span class="project-description">Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://starciad.github.io/SCSG/"><i class="icon icon-link"></i>WebSite</button>
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/SCSG.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Bibliotecas</h2>
-
-                        <!-- STAR ASCII -->
-                        <div class="projects-container">
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-starascii"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Star ASCII</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">10/09/2024</span>
-
-                                        <div class="project-technologies">
-                                            <span class="project-technology">C#</span>
-                                        </div>
-
-                                        <span class="project-description">Uma biblioteca para criação de animações ASCII para terminais.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://www.nuget.org/packages/StarASCII/"><i class="icon icon-link"></i>NuGet</button>
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/StarASCII.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Outros</h2>
-
-                        <!-- SPI THEME -->
-                        <div class="projects-container">
-                            <div class="project-card">
-                                <div class="project-card-thumbnail-container">
-                                    <i class="project-card-thumbnail project-card-thumbnail-spi"></i>
-                                </div>
-
-                                <div class="project-card-information">
-                                    <header class="project-card-header">
-                                        <h3>Star Pixel Icons (SPI) Theme</h3>
-                                    </header>
-
-                                    <div class="project-card-details">
-                                        <span class="project-date">18/07/2024</span>
-
-                                        <span class="project-description">Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
-                                    </div>
-
-                                    <footer class="project-card-footer">
-                                        <button class="btn btn-link" type="button" data-url="https://github.com/Starciad/star-pixel-icons-theme.git"><i class="icon icon-link"></i>GitHub</button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                <!-- CONTATO -->
-                <section class="app-section" data-chapter_id="contact">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">CONTATO</h1>
-                    </header>
-
-                    <article class="app-section-main markdown-body">
-                        <h2>Redes Sociais</h2>
-
-                        <div class="contact-container">
-
-                            <!-- DEV.TO -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-dev"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>Dev.to</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://dev.to/starciad"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- EMAIL -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-email"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>Email</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="mailto:davilsfernandes.starciad.comu@gmail.com"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- GITHUB -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-github"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>GitHub</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://github.com/Starciad"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- ITCH.IO -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-itch"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>Itch.io</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://starciad.itch.io/"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- LINKEDIN -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-linkedin"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>LinkedIn</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://www.linkedin.com/in/davi-fernandes-723748268/"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- STACK OVERFLOW -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-stackoverflow"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>Stack Overflow</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://stackoverflow.com/users/18094188/starciad"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- TWITTER/X -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-twitter"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>Twitter/X</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://x.com/Starciad"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                            <!-- YOUTUBE -->
-                            <div class="contact-card">
-                                <div class="contact-card-content">
-                                    <i class="icon icon-youtube"></i>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <span>Youtube</span>
-                                </div>
-
-                                <div class="contact-card-content">
-                                    <button class="btn btn-link" type="button" data-url="https://www.youtube.com/@starciad"><i class="icon icon-link"></i>Visitar</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-                </section>
-
-                <!-- CRÉDITOS -->
-                <section class="app-section" data-chapter_id="credits">
-                    <header class="app-section-header">
-                        <h1 class="app-section-title">CRÉDITOS</h1>
-                    </header>
-
-                    <article class="app-section-main markdown-body">
-                        <h2>Desenvolvimento</h2>
-                        <p>Este portfólio foi idealizado e implementado por mim — Starciad — com o apoio de familiares, amigos e demais colaboradores.</p>
-
-                        <h2>Tecnologias</h2>
-
-                        <p>Para a construção deste site estático, utilizei principalmente <i>HTML</i>, <i>CSS</i> e <i>JavaScript</i>. O JavaScript foi empregado sobretudo no sistema de paginação e na interatividade do menu <strong>Explorador de Capítulos</strong>, garantindo carregamento rápido e navegação fluida.</p>
-
-                        <h2>Recursos artísticos</h2>
-                        <p>Todos os elementos gráficos, incluindo as Pixel Arts e demais ilustrações, são de minha autoria e foram criados especificamente para este projeto.</p>
-
-                        <h2>Agradecimentos</h2>
-                        <p>Obrigado por dedicar seu tempo a explorar este portfólio. Espero que sua experiência tenha sido agradável e informativa. Caso identifique algum ponto de melhoria, fique à vontade para abrir uma <i>issue</i> no repositório do projeto no GitHub.</p>
-
-                        <p>Volte sempre!</p>
-                    </article>
-                </section>
-            </div>
-
-            <!-- PAGINAÇÃO -->
-            <div class="app-section-pagination">
-                <div class="app-section-pagination-content">
-                    <button id="previous-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-previous"></i>Anterior</button>
-                </div>
-
-                <div class="app-section-pagination-content">
-                    <button id="explorer-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-menu"></i>Explorador</button>
-                </div>
-
-                <div class="app-section-pagination-content">
-                    <button id="next-section-pagination-button" class="btn btn-secondary" type="button"><i class="icon icon-next"></i>Próximo</button>
-                </div>
-            </div>
+                </footer>
+            </article>
         </main>
 
-        <!-- Baseboard -->
-        <footer class="app-footer">
+        <!-- Footer -->
+        <footer app-footer>
             <p>&copy; 2024 Starciad's Dreamland. Todos os direitos reservados.</p>
         </footer>
     </div>
