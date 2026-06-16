@@ -82,10 +82,12 @@
                             <a href="#history">2. História</a>
                             <ul>
                                 <li><a href="#biography">2.1. Biografia</a></li>
-                                <li><a href="#childhood">2.2. Infância</a></li>
-                                <li><a href="#first-steps">2.3. Os Primeiros Passos</a></li>
-                                <li><a href="#exploring-new-horizons">2.4. Explorando Novos Horizontes</a></li>
-                                <li><a href="#future">2.5. O Futuro</a></li>
+                                <ul>
+                                    <li><a href="#childhood">2.1.2. Infância</a></li>
+                                    <li><a href="#first-steps">2.1.3. Os Primeiros Passos</a></li>
+                                    <li><a href="#exploring-new-horizons">2.1.4. Explorando Novos Horizontes</a></li>
+                                    <li><a href="#future">2.1.5. O Futuro</a></li>
+                                </ul>
                             </ul>
                         </li>
 
@@ -93,10 +95,32 @@
                         <li>
                             <a href="#education_and_training">3. Educação & Formação</a>
                             <ul>
-                                <li><a href="#basic-education">3.1. Ensino Básico</a></li>
-                                <li><a href="#higher-education">3.2. Ensino Superior</a></li>
-                                <li><a href="#olympiads">3.3. Olimpíadas</a></li>
-                                <li><a href="#courses">3.4. Cursos</a></li>
+                                <li>
+                                    <a href="#basic-education">3.1. Ensino Básico</a>
+                                    <ul>
+                                        <li><a href="#elementary-school">3.1.1. Ensino Fundamental</a></li>
+                                        <li><a href="#high-school">3.1.2. Ensino Médio</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#higher-education">3.2. Ensino Superior</a>
+                                    <ul>
+                                        <li><a href="#higher-education-cc-esdhc">3.2.1. Ciência da Computação (ESDHC)</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#olympiads">3.3. Olimpíadas</a>
+                                    <ul>
+                                        <li><a href="#obi-olympiad">3.3.1. Olimpíada Brasileira de Informática (OBI)</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#courses">3.4. Cursos</a>
+                                    <ul>
+                                        <li><a href="#digital-inclusion-course">3.4.1. PHP (Inclusão Digital)</a></li>
+                                        <li><a href="#harvard-course">3.4.2. CC50 (Harvard)</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
 
@@ -137,7 +161,7 @@
                                 <li>
                                     <a href="#game-development">4.3. Desenvolvimento de Jogos</a>
                                     <ul>
-                                        <li><a href="#monogame">4.3.1. MonoGame</a></li>
+                                        <li><a href="#monogame">4.3.1. Mono Game</a></li>
                                         <li><a href="#unityengine">4.3.2. Unity Engine</a></li>
                                     </ul>
                                 </li>
@@ -283,9 +307,8 @@
                         <h3 id="higher-education">Ensino Superior</h3>
 
                         <section class="education-item">
-                            <h4 id="higher-education-item" class="education-item-title">Escola Superior Dom Helder
-                                Câmara (ESDHC) | Ciência da Computação | Bacharelado</h4>
-                            <p class="education-item-emphasis"><strong>Início:</strong> 2025 – <em>Em andamento</em></p>
+                            <h4 id="higher-education-cc-esdhc" class="education-item-title">Ciência da Computação (ESDHC)</h4>
+                            <p class="education-item-emphasis"><strong>Início:</strong> 2025 &ndash; <em>Em andamento</em></p>
                         </section>
                     </article>
 
@@ -593,302 +616,367 @@
                 <section class="project-card-container">
                     <!-- STAR MAGE (04/04/2026) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="star-mage">Star Mage</h3>
+                            <time datetime="2026-04-04">04/04/2026</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/starmage.webp" alt="Star Mage" class="thumbnail">
                             <figcaption>Capa do Star Mage</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="star-mage">Star Mage</h3>
-                                <time datetime="2026-04-04">04/04/2026</time>
+                                <p>Star Mage é um desafiador jogo de tiro 2D de rolagem lateral inspirado no design da era NES.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                                <li>MonoGame</li>
-                            </ul>
-
-                            <p>Star Mage é um desafiador jogo de tiro 2D de rolagem lateral inspirado no design da era NES.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                    <li class="technology-item">MonoGame</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://starciad.itch.io/star-mage" target="_blank">Itch</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://starciad.itch.io/star-mage" target="_blank">Itch</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- DEPTHS (02/03/2025) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="depths">Depths</h3>
+                            <time datetime="2025-03-02">02/03/2025</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/depths.webp" alt="Depths" class="thumbnail">
                             <figcaption>Capa do Depths</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="depths">Depths</h3>
-                                <time datetime="2025-03-02">02/03/2025</time>
+                                <p>Um jogo sobre mineração e exploração de catacumbas antigas em busca de tesouros!</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                                <li>MonoGame</li>
-                            </ul>
-
-                            <p>Um jogo sobre mineração e exploração de catacumbas antigas em busca de tesouros!</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                    <li class="technology-item">MonoGame</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://starciad.itch.io/depths" target="_blank">Itch</a>
-                                <a href="https://github.com/Starciad/Depths.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://starciad.itch.io/depths" target="_blank">Itch</a>
+                                    <a class="project-card-link" href="https://github.com/Starciad/Depths.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- SUNO (04/02/2025) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="suno">SUno</h3>
+                            <time datetime="2025-02-04">04/02/2025</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/suno.webp" alt="SUno" class="thumbnail">
                             <figcaption>Capa do SUno</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="suno">SUno</h3>
-                                <time datetime="2025-02-04">04/02/2025</time>
+                                <p>Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C</li>
-                            </ul>
-
-                            <p>Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://github.com/Starciad/SUno.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://github.com/Starciad/SUno.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- STAR ZOMBIE CHASE (31/05/2024) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="star-zombie-chase">Star Zombie Chase</h3>
+                            <time datetime="2024-05-31">31/05/2024</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/starzombiechase.webp" alt="Star Zombie Chase" class="thumbnail">
                             <figcaption>Capa do Star Zombie Chase</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="star-zombie-chase">Star Zombie Chase</h3>
-                                <time datetime="2024-05-31">31/05/2024</time>
+                                <p>Um pequeno jogo de quebra-cabeça cujo objetivo é escapar de zumbis e coletar itens.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JS</li>
-                            </ul>
-
-                            <p>Um pequeno jogo de quebra-cabeça cujo objetivo é escapar de zumbis e coletar itens.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">HTML</li>
+                                    <li class="technology-item">CSS</li>
+                                    <li class="technology-item">JS</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://starciad.github.io/StarZombieChase/" target="_blank">WebSite</a>
-                                <a href="https://github.com/Starciad/StarZombieChase.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://starciad.github.io/StarZombieChase/" target="_blank">WebSite</a>
+                                    <a class="project-card-link" href="https://github.com/Starciad/StarZombieChase.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- STAR ASCII (10/09/2024) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="star-ascii">Star ASCII</h3>
+                            <time datetime="2024-09-10">10/09/2024</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/starascii.webp" alt="Star ASCII" class="thumbnail">
                             <figcaption>Capa do Star ASCII</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="star-ascii">Star ASCII</h3>
-                                <time datetime="2024-09-10">10/09/2024</time>
+                                <p>Uma biblioteca para criação de animações ASCII para terminais.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                            </ul>
-
-                            <p>Uma biblioteca para criação de animações ASCII para terminais.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://www.nuget.org/packages/StarASCII/" target="_blank">NuGet</a>
-                                <a href="https://github.com/Starciad/StarASCII.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://www.nuget.org/packages/StarASCII/" target="_blank">NuGet</a>
+                                    <a class="project-card-link" href="https://github.com/Starciad/StarASCII.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- SPI THEME (18/07/2024) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="star-pixel-icons-theme">Star Pixel Icons (SPI) Theme</h3>
+                            <time datetime="2024-07-18">18/07/2024</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/spi.webp" alt="Star Pixel Icons (SPI) Theme" class="thumbnail">
                             <figcaption>Capa do Star Pixel Icons (SPI) Theme</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="star-pixel-icons-theme">Star Pixel Icons (SPI) Theme</h3>
-                                <time datetime="2024-07-18">18/07/2024</time>
+                                <p>Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>Ícones</li>
-                                <li>Linux</li>
-                            </ul>
-
-                            <p>Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">Ícones</li>
+                                    <li class="technology-item">Linux</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://github.com/Starciad/star-pixel-icons-theme.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://github.com/Starciad/star-pixel-icons-theme.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- SCSG (23/01/2024) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="star-character-sheet-generator">Star Character Sheet Generator (SCSG)</h3>
+                            <time datetime="2024-01-23">23/01/2024</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/scsg.webp" alt="Star Character Sheet Generator (SCSG)" class="thumbnail">
                             <figcaption>Capa do Star Character Sheet Generator (SCSG)</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="star-character-sheet-generator">Star Character Sheet Generator (SCSG)</h3>
-                                <time datetime="2024-01-23">23/01/2024</time>
+                                <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JS</li>
-                            </ul>
-
-                            <p>Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.
-                            </p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">HTML</li>
+                                    <li class="technology-item">CSS</li>
+                                    <li class="technology-item">JS</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://starciad.github.io/SCSG/" target="_blank">WebSite</a>
-                                <a href="https://github.com/Starciad/SCSG.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://starciad.github.io/SCSG/" target="_blank">WebSite</a>
+                                    <a class="project-card-link" href="https://github.com/Starciad/SCSG.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- STELLAR DUELIST (21/09/2023) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="stellar-duelist">Stellar Duelist</h3>
+                            <time datetime="2023-09-21">21/09/2023</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/stellarduelist.webp" alt="Stellar Duelist" class="thumbnail">
                             <figcaption>Capa do Stellar Duelist</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="stellar-duelist">Stellar Duelist</h3>
-                                <time datetime="2023-09-21">21/09/2023</time>
+                                <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                                <li>MonoGame</li>
-                            </ul>
-
-                            <p>Um pequeno jogo de tiro sobre lutar contra alienígenas!</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                    <li class="technology-item">MonoGame</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://starciad.itch.io/stellar-duelist" target="_blank">Itch</a>
-                                <a href="https://github.com/Starciad/StellarDuelist.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://starciad.itch.io/stellar-duelist" target="_blank">Itch</a>
+                                    <a class="project-card-link" href="https://github.com/Starciad/StellarDuelist.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- STARDUST SANDBOX (05/08/2023) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="stardust-sandbox">Stardust Sandbox</h3>
+                            <time datetime="2023-08-05">05/08/2023</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/stardustsandbox.webp" alt="Stardust Sandbox" class="thumbnail">
                             <figcaption>Capa do Stardust Sandbox</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="stardust-sandbox">Stardust Sandbox</h3>
-                                <time datetime="2023-08-05">05/08/2023</time>
+                                <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                                <li>MonoGame</li>
-                            </ul>
-
-                            <p>Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                    <li class="technology-item">MonoGame</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://store.steampowered.com/app/4348740/Stardust_Sandbox" target="_blank">Steam</a>
-                                <a href="https://starciad.itch.io/stardust-sandbox" target="_blank">Itch</a>
-                                <a href="https://github.com/Starciad/StardustSandbox.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://store.steampowered.com/app/4348740/Stardust_Sandbox" target="_blank">Steam</a>
+                                    <a class="project-card-link" href="https://starciad.itch.io/stardust-sandbox" target="_blank">Itch</a>
+                                    <a class="project-card-link" href="https://github.com/Starciad/StardustSandbox.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- SLIME LAB (21/10/2022) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="slime-lab">Slime Lab</h3>
+                            <time datetime="2022-10-21">21/10/2022</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/slimelab.webp" alt="Slime Lab" class="thumbnail">
                             <figcaption>Capa do Slime Lab</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="slime-lab">Slime Lab</h3>
-                                <time datetime="2022-10-21">21/10/2022</time>
+                                <p>Pequeno jogo feito em MonoGame para estudos.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                                <li>MonoGame</li>
-                            </ul>
-
-                            <p>Pequeno jogo feito em MonoGame para estudos.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                    <li class="technology-item">MonoGame</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://github.com/Starciad/SlimeLab.git" target="_blank">GitHub</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://github.com/Starciad/SlimeLab.git" target="_blank">GitHub</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
 
                     <!-- JAAJ XEL (30/07/2021) -->
                     <article class="project-card">
+                        <header class="project-card-header">
+                            <h3 id="jaaj-xel">JaaJ Xel</h3>
+                            <time datetime="2021-07-30">30/07/2021</time>
+                        </header>
+
                         <figure>
                             <img src="./assets/images/thumbnails/projects/jaajxel.webp" alt="JaaJ Xel" class="thumbnail">
                             <figcaption>Capa do JaaJ Xel</figcaption>
                         </figure>
 
-                        <div class="project-card-information">
+                        <article class="project-card-information">
                             <header>
-                                <h3 id="jaaj-xel">JaaJ Xel</h3>
-                                <time datetime="2021-07-30">30/07/2021</time>
+                                <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
                             </header>
 
-                            <ul class="technologies">
-                                <li>C#</li>
-                                <li>Unity</li>
-                            </ul>
-
-                            <p>Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.</p>
+                            <section>
+                                <ul class="technologies">
+                                    <li class="technology-item">C#</li>
+                                    <li class="technology-item">Unity</li>
+                                </ul>
+                            </section>
 
                             <footer>
-                                <a href="https://igor-up.itch.io/jaajxel" target="_blank">Itch</a>
+                                <div class="project-card-links">
+                                    <a class="project-card-link" href="https://igor-up.itch.io/jaajxel" target="_blank">Itch</a>
+                                </div>
                             </footer>
-                        </div>
+                        </article>
                     </article>
                 </section>
             </article>
 
             <hr>
-            
+
             <!-- CONTATO -->
             <article>
                 <header>

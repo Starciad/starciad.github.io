@@ -90,6 +90,61 @@
     gap: 8px;
 }
 
+.project-card-header {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    text-align: center;
+}
+
+.project-card-header time {
+    margin-top: -16px;
+}
+
+.technologies {
+    display: flex;
+    gap: 8px;
+    
+    width: 100%;
+    
+    justify-content: center;
+    
+    margin: 0px;
+    padding: 16px;
+
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.technology-item {
+    text-align: center;
+    min-width: 40px;
+
+    border-style: solid;
+    border-radius: 8px;
+    border-color: var(--color-border);
+    border-width: 1px;
+
+    padding: 8px;
+}
+
+/* a element in button style */
+
+.project-card-links {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.project-card-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--color-button-bg);
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
 /* EDUCATION */
 
 .education-container {
@@ -129,7 +184,13 @@
     text-align: center;
     text-indent: 0cm;
 
-    background-color: var(--color-border);
+    /* background-color: var(--color-border); */
+
+    border-style: solid;
+    border-radius: 8px;
+    border-color: var(--color-border);
+    border-width: 1px;
+
     padding: 16px;
     border-radius: 8px;
 }
