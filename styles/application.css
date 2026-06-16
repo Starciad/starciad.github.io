@@ -1,3 +1,6 @@
+/* APPLICATION STYLES */
+
+/* APP */
 
 .app-container {
     width: 100%;
@@ -15,16 +18,28 @@
 }
 
 .app-header {
-
+    width: 100%;
+    height: auto;
 }
 
 .app-main {
-
+    width: 100%;
+    height: auto;
 }
 
 .app-footer {
-    padding: 32px;
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    color: var(--color-text-soft);
 }
+
+.app-footer p {
+    text-align: center;
+    text-indent: 0cm;
+}
+
+/* PROJECTS */
 
 .project-card-container {
     display: flex;
@@ -74,9 +89,51 @@
     gap: 8px;
 }
 
-.project-card-information .technologies {
+/* EDUCATION */
 
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
+
+.education-section {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D9D3C8;
+    border-radius: 8px;
+
+    padding: 16px;
+}
+
+.education-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.education-item-title {
+    font-family: var(--font-title);
+    color: var(--color-text);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    text-align: center;
+}
+
+.education-item-emphasis {
+    text-align: center;
+    text-indent: 0cm;
+
+    background-color: var(--color-border);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+
+/* CARDS */
 
 .card-item-container {
     display: flex;
