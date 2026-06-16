@@ -56,6 +56,7 @@
     gap: 16px;
 
     flex-grow: 1;
+    align-items: stretch;
 
     background: #FFFFFF;
     border: 1px solid #D9D3C8;
@@ -78,6 +79,10 @@
     width: 100%;
     height: auto;
     border-radius: 4px;
+}
+
+.project-card-information {
+    align-items: stretch;
 }
 
 .project-card-information header {
@@ -127,22 +132,6 @@
     border-width: 1px;
 
     padding: 8px;
-}
-
-/* a element in button style */
-
-.project-card-links {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-}
-
-.project-card-link {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--color-button-bg);
-    color: #FFFFFF;
-    border-radius: 4px;
 }
 
 /* EDUCATION */
@@ -230,4 +219,20 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+}
+
+/* LINKS */
+
+.anchor-link-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.anchor-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--color-button-bg);
+    color: #FFFFFF;
+    border-radius: 4px;
 }
