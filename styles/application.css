@@ -47,6 +47,7 @@
     gap: 16px;
     justify-content: center;
     align-items: stretch;
+    margin-bottom: 32px;
 }
 
 .project-card {
@@ -95,6 +96,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    margin-bottom: 32px;
 }
 
 .education-section {
@@ -132,7 +134,6 @@
     border-radius: 8px;
 }
 
-
 /* CARDS */
 
 .card-item-container {
@@ -144,6 +145,7 @@
     align-items: stretch;
 
     padding: 16px;
+    margin-bottom: 32px;
 }
 
 .card-item {
