@@ -33,9 +33,7 @@ h6 {
 
 p {
     hyphens: auto;
-    text-align: justify;
     line-height: 1.5;
-    text-indent: 1.25cm;
     margin: 0 0 1rem 0;
     color: var(--color-text-soft);
 }
