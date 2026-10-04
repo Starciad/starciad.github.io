@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: PHP
-category: programming-languages
+category: Linguagens de Programação
 ---

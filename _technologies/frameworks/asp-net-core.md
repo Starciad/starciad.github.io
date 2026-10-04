@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: Asp-Net Core
-category: frameworks
+category: Frameworks
 ---

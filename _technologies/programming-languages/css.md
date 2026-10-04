@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: CSS
-category: programming-languages
+category: Linguagens de Programação
 ---

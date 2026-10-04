@@ -14,9 +14,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  technology:
+  technologies:
     output: true
-    permalink: /technology/:path/
+    permalink: /technologies/:path/
 
 defaults:
   - scope:

@@ -1,5 +1,5 @@
 ---
 layout: technology
-title:
-category:
+title: Windows 10
+category: Sistemas Operacionais
 ---

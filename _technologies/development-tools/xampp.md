@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: XAMPP
-category: development-tools
+category: Ferramentas de Desenvolvimento
 ---

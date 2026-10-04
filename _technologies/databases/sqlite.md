@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: SQLite
-category: databases
+category: Banco de Dados
 ---

@@ -1,0 +1,29 @@
+---
+layout: page
+title: Tecnologias
+permalink: /technologies/
+---
+
+{% assign categories = site.technologies | group_by: "category" | sort: "name" %}
+{% for category in categories %}
+    <h2>{{ category.name }}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tecnologia</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for technology in category.items %}
+                <tr>
+                    <td>{{ technology.title }}</td>
+                    <td>
+                        <a href="{{ technology.url | relative_url }}" role="button">Ler mais</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endfor %}

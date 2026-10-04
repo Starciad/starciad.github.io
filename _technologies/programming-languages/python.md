@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: Python
-category: programming-languages
+category: Linguagens de Programação
 ---

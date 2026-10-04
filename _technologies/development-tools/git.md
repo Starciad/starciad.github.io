@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: Git
-category: development-tools
+category: Ferramentas de Desenvolvimento
 ---

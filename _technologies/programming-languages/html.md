@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: HTML
-category: programming-languages
+category: Linguagens de Programação
 ---

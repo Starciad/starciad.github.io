@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: Flask
-category: frameworks
+category: Frameworks
 ---

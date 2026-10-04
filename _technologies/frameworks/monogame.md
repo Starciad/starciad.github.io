@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: MonoGame
-category: frameworks
+category: Frameworks
 ---

@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: C
-category: programming-languages
+category: Linguagens de Programação
 ---

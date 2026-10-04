@@ -1,5 +1,5 @@
 ---
 layout: technology
 title: Visual Studio
-category: development-tools
+category: Ferramentas de Desenvolvimento
 ---

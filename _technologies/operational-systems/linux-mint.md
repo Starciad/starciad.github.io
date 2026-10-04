@@ -1,5 +1,5 @@
 ---
 layout: technology
-title:
-category:
+title: Linux Mint
+category: Sistemas Operacionais
 ---
