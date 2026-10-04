@@ -2,16 +2,16 @@
   url: /
 - name: History
   url: /history/
-- name: Education
-  url: /education/
-- name: Training
-  url: /training/
-- name: Knowledge
-  url: /knowledge/
+- name: Learning
+  url: /learning/
+- name: Technologies
+  url: /technologies/
 - name: Experience
   url: /experience/
 - name: Projects
   url: /projects/
+- name: Books
+  url: /books/
 - name: Blog
   url: /blog/
 - name: Contact
