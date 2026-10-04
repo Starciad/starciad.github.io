@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Aprendizados
+title: Aprendizagem
 permalink: /learning/
 ---
 

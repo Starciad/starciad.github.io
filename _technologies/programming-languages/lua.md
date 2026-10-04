@@ -1,5 +1,5 @@
 ---
 layout: technology
-title: lua
+title: Lua
 category: Linguagens de Programação
 ---
