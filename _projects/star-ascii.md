@@ -1,0 +1,19 @@
+---
+# Header
+layout: project
+
+# Information
+title: Star ASCII
+authors:
+    - Starciad
+date: 2024-09-10
+short_description: Uma biblioteca para criação de animações ASCII para terminais.
+technologies:
+    - CSharp
+links:
+    github: "https://github.com/Starciad/StarASCII.git"
+    nuget: "https://www.nuget.org/packages/StarASCII/"
+
+# Assets
+cover_image: /assets/images/thumbnails/projects/starascii.webp"
+---
