@@ -25,7 +25,15 @@
     </header>
 
     <main>
-        {{ content }}
+        <!-- NAVIGATION -->
+        <section>
+            {% include navigation.html %}
+        </section>
+        
+        <!-- PAGE CONTENT -->
+        <section>
+            {{ content }}
+        </section>
     </main>
 
     <footer>

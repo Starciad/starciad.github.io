@@ -1,0 +1,10 @@
+<nav>
+    <ul>
+        {% assign navigation = site.data.navigation %}
+        {% for item in navigation %}
+            <li>
+                <a href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

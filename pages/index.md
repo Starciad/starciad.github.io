@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Home
+title: Início
+permalink: /
 ---
 
 ## Introdução

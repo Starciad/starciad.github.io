@@ -1,4 +1,5 @@
 ---
 layout: page
-title: Technologies
+title: Tecnologias
+permalink: /technologies/
 ---

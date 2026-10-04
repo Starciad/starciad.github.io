@@ -1,4 +1,5 @@
 ---
 layout: page
-title: Books
+title: Livros
+permalink: /books/
 ---

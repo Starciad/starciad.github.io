@@ -1,6 +1,7 @@
 ---
 layout: page
-title: History
+title: História
+permalink: /history/
 ---
 
 Como as boas-vindas já foram concebidas, serei direto. Aqui, irei contar-lhe sobre minha trajetória. Compartilharei um pouco sobre como me envolvi com a tecnologia, pontuando os momentos mais relevantes para compor essa história. O propósito não é contar cada detalhe minunciosamente, mas sim, oferecer um panorama geral sobre minhas experiências e interesses. Espero que esta história possa inspirar você, ou, ao menos, servir como um ponto de partida para entender melhor meu trabalho.

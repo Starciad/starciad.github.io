@@ -1,18 +1,18 @@
-- name: Home
+- title: Início
   url: /
-- name: History
+- title: História
   url: /history/
-- name: Learning
+- title: Aprendizados
   url: /learning/
-- name: Technologies
+- title: Tecnologias
   url: /technologies/
-- name: Experience
+- title: Experiências
   url: /experience/
-- name: Projects
+- title: Projetos
   url: /projects/
-- name: Books
+- title: Livros
   url: /books/
-- name: Blog
+- title: Blog
   url: /blog/
-- name: Contact
+- title: Contato
   url: /contact/

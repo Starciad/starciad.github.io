@@ -1,4 +1,5 @@
 ---
 layout: page
-title: Experience
+title: Experiências
+permalink: /experience/
 ---

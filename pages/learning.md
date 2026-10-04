@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Learning
+title: Aprendizados
+permalink: /learning/
 ---
 
 ## Academico
