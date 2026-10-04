@@ -1,0 +1,45 @@
+title: "Starciad's Website"
+email: "davilsfernandes.starciad.comu@gmail.com"
+description: "Starciad's personal website, showcasing projects, books, and technology interests."
+
+markdown: kramdown
+
+collections:
+  books:
+    output: true
+    permalink: /books/:path/
+  learning:
+    output: true
+    permalink: /learning/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  technology:
+    output: true
+    permalink: /technology/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+  - scope:
+      path: ""
+      type: "learning"
+    values:
+      layout: "learning"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "technology"
+    values:
+      layout: "technology"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
