@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: csharp
+label: csharp
+section: technologies
 category: programming-languages
 
 title: C#

@@ -1,6 +1,8 @@
 ---
 layout: book
-identifier: effective-modern-cpp
+label: effective-modern-cpp
+section: books
+
 title: C++ Modern e Eficaz
 author: Scott Meyers
 year: 2014

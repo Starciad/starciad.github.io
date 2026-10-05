@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: flask
+label: flask
+section: technologies
 category: frameworks
 
 title: Flask

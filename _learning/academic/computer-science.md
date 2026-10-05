@@ -1,6 +1,8 @@
 ---
 layout: learning
-identifier: computer-science
+label: computer-science
+section: learning
+
 title: Ciência da Computação
 category: Acadêmico
 ---

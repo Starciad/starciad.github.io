@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: sdl
+label: sdl
+section: technologies
 category: frameworks
 
 title: SDL

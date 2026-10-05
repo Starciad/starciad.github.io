@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: javascript
+label: javascript
+section: technologies
 category: programming-languages
 
 title: JavaScript

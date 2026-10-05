@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: suno
+label: uno
+section: projects
 
 # Information
 title: SUno
@@ -12,7 +13,7 @@ short_description: Uma implementação terminal do jogo de cartas UNO, escrito e
 technologies:
   - c
 links:
-  github: "https://github.com/Starciad/SUno.git"
+  github: "https://github.com/Starciad/uno.git"
 
 # Assets
 cover_image: /assets/images/thumbnails/projects/suno.webp

@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: html
+label: html
+section: technologies
 category: programming-languages
 
 title: HTML

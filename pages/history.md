@@ -1,6 +1,8 @@
 ---
 layout: page
-identifier: history
+label: history
+section: history
+
 title: História
 permalink: /history/
 ---

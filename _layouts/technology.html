@@ -11,8 +11,8 @@ layout: default
 <section>
     <h2>Veja Também</h2>
 
-    {% assign books = site.books | where_exp: "book", "book.technologies contains page.identifier" %}
-    {% assign projects = site.projects | where_exp: "project", "project.technologies contains page.identifier" %}
+    {% assign books = site.books | where_exp: "book", "book.technologies contains page.label" %}
+    {% assign projects = site.projects | where_exp: "project", "project.technologies contains page.label" %}
 
     <h3>Livros</h3>
 

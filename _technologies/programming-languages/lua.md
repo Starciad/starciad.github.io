@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: lua
+label: lua
+section: technologies
 category: programming-languages
 
 title: Lua

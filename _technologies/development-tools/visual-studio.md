@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: visual-studio
+label: visual-studio
+section: technologies
 category: development-tools
 
 title: Visual Studio

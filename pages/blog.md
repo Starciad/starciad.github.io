@@ -1,6 +1,8 @@
 ---
 layout: page
-identifier: blog
+label: blog
+section: blog
+
 title: Blog
 permalink: /blog/
 ---

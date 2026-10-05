@@ -1,18 +1,30 @@
-- title: Início
+- id: home
+  title: Início
   url: /
-- title: História
+- id: history
+  title: História
   url: /history/
-- title: Aprendizagem
+- id: learning
+  title: Aprendizagem
   url: /learning/
-- title: Tecnologias
+- id: technologies
+  title: Tecnologias
   url: /technologies/
-- title: Experiências
+- id: experiences
+  title: Experiências
   url: /experiences/
-- title: Projetos
+- id: projects
+  title: Projetos
   url: /projects/
-- title: Livros
+- id: hobbies
+  title: Hobbies
+  url: /hobbies/
+- id: books
+  title: Livros
   url: /books/
-- title: Blog
+- id: blog
+  title: Blog
   url: /blog/
-- title: Contato
+- id: contact
+  title: Contato
   url: /contact/

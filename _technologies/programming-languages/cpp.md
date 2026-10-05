@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: cpp
+label: cpp
+section: technologies
 category: programming-languages
 
 title: C++

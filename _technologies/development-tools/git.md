@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: git
+label: git
+section: technologies
 category: development-tools
 
 title: Git

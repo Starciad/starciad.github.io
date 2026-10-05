@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: star-ascii
+label: star-ascii
+section: projects
 
 # Information
 title: Star ASCII

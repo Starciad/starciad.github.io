@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: windows
+label: windows
+section: technologies
 category: operational-systems
 
 title: Windows

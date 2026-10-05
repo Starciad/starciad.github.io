@@ -1,11 +1,13 @@
 ---
 layout: page
-identifier: technologies
+label: technologies
+section: technologies
+
 title: Tecnologias
 permalink: /technologies/
 ---
 
-{% assign categories = site.technologies | group_by: "category" | sort: "name" %}
+{% assign categories = site.technologies | group_by: "category_label" | sort: "name" %}
 {% for category in categories %}
 ## {{ category.name }}
 

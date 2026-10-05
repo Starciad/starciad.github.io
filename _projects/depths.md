@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: depths
+label: depths
+section: projects
 
 # Information
 title: Depths

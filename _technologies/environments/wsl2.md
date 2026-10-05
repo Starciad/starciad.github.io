@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: wsl2
+label: wsl2
+section: technologies
 category: environments
 
 title: WSL2

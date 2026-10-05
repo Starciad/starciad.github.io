@@ -11,7 +11,7 @@ layout: default
 <section>
     <h2>Veja Também</h2>
 
-    {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.identifier" %}
+    {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.label" %}
 
     <h3>Tecnologias</h3>
 

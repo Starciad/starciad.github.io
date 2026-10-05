@@ -1,6 +1,8 @@
 ---
 layout: page
-identifier: experiences
+label: experiences
+section: experiences
+
 title: Experiências
 permalink: /experiences/
 ---

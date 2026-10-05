@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: monogame
+label: monogame
+section: technologies
 category: frameworks
 
 title: MonoGame

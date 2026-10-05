@@ -1,6 +1,8 @@
 ---
 layout: learning
-identifier: php-web-development
+label: php-web-development
+section: learning
+
 title: Programação Web com PHP
 category: Cursos
 ---

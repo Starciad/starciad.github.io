@@ -1,6 +1,8 @@
 ---
 layout: page
-identifier: learning
+label: learning
+section: learning
+
 title: Aprendizagem
 permalink: /learning/
 ---

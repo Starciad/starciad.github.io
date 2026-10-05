@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: xampp
+label: xampp
+section: technologies
 category: development-tools
 
 title: XAMPP

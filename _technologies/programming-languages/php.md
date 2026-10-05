@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: php
+label: php
+section: technologies
 category: programming-languages
 
 title: PHP

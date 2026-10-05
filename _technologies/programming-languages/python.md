@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: python
+label: python
+section: technologies
 category: programming-languages
 
 title: Python

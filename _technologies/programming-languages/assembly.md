@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: assembly
+label: assembly
+section: technologies
 category: programming-languages
 
 title: Assembly

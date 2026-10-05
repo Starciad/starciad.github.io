@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: slime-lab
+label: slime-lab
+section: projects
 
 # Information
 title: Slime Lab

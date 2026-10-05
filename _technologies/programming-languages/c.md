@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: c
+label: c
+section: technologies
 category: programming-languages
 
 title: C

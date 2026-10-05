@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: sqlite
+label: sqlite
+section: technologies
 category: databases
 
 title: SQLite

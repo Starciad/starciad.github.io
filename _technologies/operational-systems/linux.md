@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: linux
+label: linux
+section: technologies
 category: operational-systems
 
 title: Linux

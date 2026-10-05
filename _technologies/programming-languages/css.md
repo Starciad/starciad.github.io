@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: css
+label: css
+section: technologies
 category: programming-languages
 
 title: CSS

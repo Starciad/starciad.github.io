@@ -1,6 +1,7 @@
 ---
 layout: technology
-identifier: asp-net-core
+label: asp-net-core
+section: technologies
 category: frameworks
 
 title: Asp-Net Core

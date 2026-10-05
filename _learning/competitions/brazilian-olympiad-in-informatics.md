@@ -1,6 +1,8 @@
 ---
 layout: learning
-identifier: brazilian-olympiad-in-informatics
+label: brazilian-olympiad-in-informatics
+section: learning
+
 title: Olimpíada Brasileira de Informática (OBI)
 category: Competições
 ---

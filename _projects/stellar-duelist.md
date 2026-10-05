@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: stellar-duelist
+label: stellar-duelist
+section: projects
 
 # Information
 title: Stellar Duelist

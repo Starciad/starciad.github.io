@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: stardust-sandbox
+label: stardust-sandbox
+section: projects
 
 # Information
 title: Stardust Sandbox

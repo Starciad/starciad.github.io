@@ -1,6 +1,8 @@
 ---
 layout: page
-identifier: home
+label: home
+section: home
+
 title: Início
 permalink: /
 ---

@@ -1,7 +1,8 @@
 ---
 # Header
 layout: project
-identifier: star-zombie-chase
+label: star-zombie-chase
+section: projects
 
 # Information
 title: Star Zombie Chase

@@ -1,6 +1,8 @@
 ---
 layout: page
-identifier: contact
+label: contact
+section: contact
+
 title: Contato
 permalink: /contact/
 ---
