@@ -2,7 +2,8 @@
 layout: learning
 label: php-web-development
 section: learning
+category: courses
 
 title: Programação Web com PHP
-category: Cursos
+category_label: Cursos
 ---

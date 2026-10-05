@@ -7,7 +7,7 @@ title: Aprendizagem
 permalink: /learning/
 ---
 
-{% assign categories = site.learning | group_by: "category" | sort: "name" %}
+{% assign categories = site.learning | group_by: "category_label" | sort: "name" %}
 {% for category in categories %}
 ## {{ category.name }}
 
