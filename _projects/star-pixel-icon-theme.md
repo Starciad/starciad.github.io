@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: star-pixel-icon-theme
+identifier: star-pixel-icon-theme
 
 # Information
 title: Star Pixel Icon (SPI) Theme

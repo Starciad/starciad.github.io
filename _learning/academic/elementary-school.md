@@ -1,6 +1,6 @@
 ---
 layout: learning
-label: elementary-school
+identifier: elementary-school
 title: Ensino Fundamental
 category: Acadêmico
 ---

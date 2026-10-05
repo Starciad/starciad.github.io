@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: unity-engine
+identifier: unity-engine
+category: game-engines
+
 title: Unity Engine
-category: Game Engines
+category_label: Game Engines
 ---

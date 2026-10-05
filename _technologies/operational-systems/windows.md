@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: windows
+identifier: windows
+category: operational-systems
+
 title: Windows
-category: Sistemas Operacionais
+category_label: Sistemas Operacionais
 ---

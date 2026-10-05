@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: html
+identifier: html
+category: programming-languages
+
 title: HTML
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

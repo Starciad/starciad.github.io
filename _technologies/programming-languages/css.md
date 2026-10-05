@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: css
+identifier: css
+category: programming-languages
+
 title: CSS
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: php
+identifier: php
+category: programming-languages
+
 title: PHP
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

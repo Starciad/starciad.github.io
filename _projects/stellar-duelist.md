@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: stellar-duelist
+identifier: stellar-duelist
 
 # Information
 title: Stellar Duelist
@@ -10,8 +10,8 @@ authors:
 date: 2023-09-21
 short_description: Um pequeno jogo de tiro sobre lutar contra alienígenas!
 technologies:
-    - CSharp
-    - MonoGame
+    - csharp
+    - monogame
 links:
     github: "https://github.com/Starciad/StellarDuelist.git"
     itch: "https://starciad.itch.io/stellar-duelist"

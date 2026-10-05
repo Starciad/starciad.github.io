@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: star-character-sheet-generator
+identifier: star-character-sheet-generator
 
 # Information
 title: Star Character Sheet Generator (SCSG)

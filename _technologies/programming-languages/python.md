@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: python
+identifier: python
+category: programming-languages
+
 title: Python
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

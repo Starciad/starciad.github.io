@@ -1,6 +1,6 @@
 ---
 layout: learning
-label: high-school
+identifier: high-school
 title: Ensino Médio
 category: Acadêmico
 ---

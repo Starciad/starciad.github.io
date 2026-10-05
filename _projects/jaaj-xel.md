@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: jaaj-xel
+identifier: jaaj-xel
 
 # Information
 title: Jaaj Xel

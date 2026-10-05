@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: star-mage
+identifier: star-mage
 
 # Information
 title: Star Mage

@@ -1,6 +1,6 @@
 ---
 layout: page
-label: books
+identifier: books
 title: Livros
 permalink: /books/
 ---

@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: c
+identifier: c
+category: programming-languages
+
 title: C
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

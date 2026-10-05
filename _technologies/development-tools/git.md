@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: git
+identifier: git
+category: development-tools
+
 title: Git
-category: Ferramentas de Desenvolvimento
+category_label: Ferramentas de Desenvolvimento
 ---

@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: wsl2
+identifier: wsl2
+category: environments
+
 title: WSL2
-category: Ambientes de Desenvolvimento
+category_label: Ambientes de Desenvolvimento
 ---

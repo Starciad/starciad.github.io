@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: linux
+identifier: linux
+category: operational-systems
+
 title: Linux
-category: Sistemas Operacionais
+category_label: Sistemas Operacionais
 ---

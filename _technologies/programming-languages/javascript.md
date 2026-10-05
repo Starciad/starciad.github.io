@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: javascript
+identifier: javascript
+category: programming-languages
+
 title: JavaScript
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

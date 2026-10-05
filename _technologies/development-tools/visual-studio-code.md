@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: visual-studio-code
+identifier: visual-studio-code
+category: development-tools
+
 title: Visual Studio Code
-category: Ferramentas de Desenvolvimento
+category_label: Ferramentas de Desenvolvimento
 ---

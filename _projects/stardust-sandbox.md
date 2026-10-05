@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: stardust-sandbox
+identifier: stardust-sandbox
 
 # Information
 title: Stardust Sandbox
@@ -10,8 +10,8 @@ authors:
 date: 2023-08-05
 short_description: Um jogo sandbox de simulador de partículas inspirado no clássico 'falling sand'.
 technologies:
-    - CSharp
-    - MonoGame
+    - csharp
+    - monogame
 links:
     github: "https://github.com/Stardust-Sandbox"
     itch: "https://starciad.itch.io/stardust-sandbox"

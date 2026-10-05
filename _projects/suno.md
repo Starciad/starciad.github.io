@@ -1,7 +1,7 @@
 ---
 # Header
 layout: project
-label: suno
+identifier: suno
 
 # Information
 title: SUno

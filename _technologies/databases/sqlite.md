@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: sqlite
+identifier: sqlite
+category: databases
+
 title: SQLite
-category: Banco de Dados
+category_label: Banco de Dados
 ---

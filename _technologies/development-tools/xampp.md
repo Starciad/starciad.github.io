@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: xampp
+identifier: xampp
+category: development-tools
+
 title: XAMPP
-category: Ferramentas de Desenvolvimento
+category_label: Ferramentas de Desenvolvimento
 ---

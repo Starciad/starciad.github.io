@@ -1,6 +1,8 @@
 ---
 layout: technology
-label: lua
+identifier: lua
+category: programming-languages
+
 title: Lua
-category: Linguagens de Programação
+category_label: Linguagens de Programação
 ---

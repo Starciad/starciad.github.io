@@ -11,3 +11,17 @@ layout: default
 
     {{ content }}
 </article>
+
+<section>
+    <h2>Technologies</h2>
+    <ul>
+        {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.identifier" %}
+        {% for tech in techs %}
+        <li>
+            <a href="{{ tech.url }}" target="_blank" rel="noopener noreferrer">
+                {{ tech.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
