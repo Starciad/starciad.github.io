@@ -11,3 +11,25 @@ layout: default
 
     {{ content }}
 </article>
+
+<section>
+    <h2>Veja Também</h2>
+
+    {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.identifier" %}
+
+    <h3>Tecnologias</h3>
+
+    {% if techs.size > 0 %}
+    <ul>
+        {% for tech in techs %}
+        <li>
+            <a href="{{ tech.url }}" target="_self" rel="noopener noreferrer">
+                {{ tech.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhuma tecnologia encontrada relacionada a este livro.</p>
+    {% endif %}
+</section>

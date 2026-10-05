@@ -11,3 +11,42 @@ layout: default
 
     {{ content }}
 </article>
+
+<section>
+    <h2>Veja Também</h2>
+
+    {% assign books = site.books | where_exp: "book", "book.technologies contains page.identifier" %}
+    {% assign projects = site.projects | where_exp: "project", "project.technologies contains page.identifier" %}
+
+    <h3>Livros</h3>
+
+    {% if books.size > 0 %}
+    <ul>
+        {% for book in books %}
+        <li>
+            <a href="{{ book.url }}" target="_self" rel="noopener noreferrer">
+                {{ book.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhum livro encontrado relacionado a esta tecnologia.</p>
+    {% endif %}
+
+    <h3>Projetos</h3>
+
+    {% if projects.size > 0 %}
+    <ul>
+        {% for project in projects %}
+        <li>
+            <a href="{{ project.url }}" target="_self" rel="noopener noreferrer">
+                {{ project.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhum projeto encontrado relacionado a esta tecnologia.</p>
+    {% endif %}
+</section>
