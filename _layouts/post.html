@@ -10,5 +10,11 @@ layout: default
 
 <!-- PAGINATION -->
 <section>
-    
+    {% if page.previous != nil %}
+        <a href="{{ page.previous.url | relative_url }}">Anterior</a>
+    {% endif %}
+
+    {% if page.next != nil %}
+        <a href="{{ page.next.url | relative_url }}">Próximo</a>
+    {% endif %}
 </section>

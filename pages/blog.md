@@ -5,8 +5,12 @@ title: Blog
 permalink: /blog/
 ---
 
+{% if site.posts.size > 0 %}
 | Título | Tags | Categoria | Data | Ação |
 | --- | --- | --- | --- | --- |
 {%- for post in site.posts %}
 | {{ post.title }} | {{ post.tags | join: ", " }} | {{ post.category }} | {{ post.date | date: "%d/%m/%Y" }} | [Ler mais]({{ post.url | relative_url }}) |
 {%- endfor %}
+{% else %}
+Nenhum post encontrado.
+{% endif %}

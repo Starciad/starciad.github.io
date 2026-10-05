@@ -2,12 +2,18 @@ title: "Starciad's Website"
 email: "davilsfernandes.starciad.comu@gmail.com"
 description: "Starciad's personal website, showcasing projects, books, and technology interests."
 
+# Permalinks
+permalink: /blog/:year/:month/:day/:title/ # Permalink structure for blog posts
+
 markdown: kramdown
 
 collections:
   books:
     output: true
     permalink: /books/:path/
+  experiences:
+    output: true
+    permalink: /experiences/:path/
   learning:
     output: true
     permalink: /learning/:path/
@@ -24,6 +30,11 @@ defaults:
       type: "books"
     values:
       layout: "book"
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "experience"
   - scope:
       path: ""
       type: "learning"
