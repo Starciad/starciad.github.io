@@ -3,15 +3,15 @@
 
 <head>
     {% if jekyll.environment == "production" %}
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-75VKPPREV5"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75VKPPREV5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            gtag('config', 'G-75VKPPREV5');
-        </script>
+        gtag('config', 'G-75VKPPREV5');
+    </script>
     {% endif %}
 
     <meta charset="UTF-8">
@@ -23,25 +23,29 @@
 </head>
 
 <body>
-    <header>
+    <div>
+        <header>
+            <section>
+                <h1>Starciad's Dreamland</h1>
+            </section>
 
-    </header>
+            <!-- NAVIGATION -->
+            <section>
+                {% include navigation.html %}
+            </section>
+        </header>
 
-    <main>
-        <!-- NAVIGATION -->
-        <section>
-            {% include navigation.html %}
-        </section>
-        
-        <!-- PAGE CONTENT -->
-        <section>
-            {{ content }}
-        </section>
-    </main>
+        <main>
+            <!-- PAGE CONTENT -->
+            <section>
+                {{ content }}
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2024 Starciad's Dreamland. Todos os direitos reservados.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 Starciad's Dreamland. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 
 </html>

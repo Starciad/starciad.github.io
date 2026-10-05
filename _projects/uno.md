@@ -5,7 +5,7 @@ label: uno
 section: projects
 
 # Information
-title: SUno
+title: Uno
 authors:
   - Starciad
 date: 2025-02-04

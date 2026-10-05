@@ -7,8 +7,6 @@ title: Início
 permalink: /
 ---
 
-## Introdução
-
 ### Sobre Mim
 
 Olá, me chamo Davi Fernandes, mais conhecido pelo pseudônimo "Starciad". Sou brasileiro, natural de Minas Gerais e com um gosto muito grande pela tecnologia. Embora trate tudo isso — atualmente — como um mero hobby, sigo explorando e aprendendo, desbravando esse vasto mundo da tecnologia.

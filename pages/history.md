@@ -7,11 +7,11 @@ title: História
 permalink: /history/
 ---
 
-## Biografia
-
 Como as boas-vindas já foram concebidas, serei direto. Aqui, irei contar-lhe um pouco sobre minha trajetória. Compartilharei como me envolvi com a tecnologia, pontuando alguns dos momentos que considero relevantes para compor essa história. O propósito não é registrar cada detalhe minuciosamente, mas oferecer um panorama geral sobre minhas experiências, interesses e sobre como eles contribuíram para moldar meu trabalho.
 
-### Infância
+### Biografia
+
+#### Infância
 
 Para contar essa história, é necessário voltar um pouco no tempo; especificamente para quando eu ainda era apenas uma criança. Desde cedo, sempre fui movido pela curiosidade de entender como as coisas funcionavam. Pode não parecer muito, mas são justamente essas pequenas curiosidades — esses primeiros passos aparentemente triviais — que acabam moldando nossa trajetória.
 
@@ -23,7 +23,7 @@ Foi nesse período que comecei a me perguntar:
 
 Na época, eu não sabia responder. Mas a pergunta permaneceu comigo e, eventualmente, tornou-se um dos pontos de partida para minha jornada na tecnologia.
 
-### Os Primeiros Passos
+#### Os Primeiros Passos
 
 A grande mudança veio com a chegada do meu primeiro computador. Até então, minhas interações com a tecnologia eram principalmente voltadas ao consumo: jogos, entretenimento e algumas experiências ocasionais. Com um *PC* próprio, entretanto, o leque de possibilidades se abriu.
 
@@ -35,7 +35,7 @@ Com o tempo, porém, percebi que queria ter mais controle sobre aquilo que const
 
 A transição não foi simples. Programar exigia uma forma diferente de pensar e muitos dos problemas que surgiam não tinham respostas imediatas. Ainda assim, cada obstáculo superado reforçava minha curiosidade e minha vontade de continuar aprendendo.
 
-### Explorando Novos Horizontes
+#### Explorando Novos Horizontes
 
 Depois de me familiarizar com o *C#* e compreender melhor os princípios da programação orientada a objetos, comecei a procurar novos desafios. Foi nesse processo que descobri o ***MonoGame***, um *framework* que exigia mais trabalho para construir um jogo, mas que também me permitia compreender melhor aquilo que acontecia por baixo das abstrações.
 
@@ -47,7 +47,7 @@ Também comecei a explorar outras linguagens, como ***C***, ***Python*** e ***PH
 
 O interesse por sistemas operacionais surgiu naturalmente durante esse processo. Experimentar diferentes ambientes, aprender sobre *dual boot* e conhecer melhor o universo *Linux* ajudou-me a compreender uma camada diferente da computação, além de fortalecer minha familiaridade com o terminal e com a administração de sistemas.
 
-### O Futuro
+#### O Futuro
 
 Se há algo que aprendi ao longo dessa trajetória, é que o aprendizado nunca possui um ponto final. A tecnologia continua evoluindo, novas ferramentas surgem e sempre existe alguma coisa que ainda não compreendo completamente.
 

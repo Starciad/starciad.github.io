@@ -9,7 +9,8 @@ permalink: /learning/
 
 {% assign categories = site.learning | group_by: "category_label" | sort: "name" %}
 {% for category in categories %}
-## {{ category.name }}
+
+### {{ category.name }}
 
 | Título | Ação |
 | --- | --- |

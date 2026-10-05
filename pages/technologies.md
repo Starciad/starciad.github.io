@@ -9,7 +9,8 @@ permalink: /technologies/
 
 {% assign categories = site.technologies | group_by: "category_label" | sort: "name" %}
 {% for category in categories %}
-## {{ category.name }}
+
+### {{ category.name }}
 
 | Tecnologia | Ação |
 | --- | --- |
