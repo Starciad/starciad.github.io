@@ -1,5 +1,6 @@
 ---
 layout: technology
-title: Windows 7
+label: linux
+title: Linux
 category: Sistemas Operacionais
 ---

@@ -1,28 +1,12 @@
 ---
 layout: page
+label: blog
 title: Blog
 permalink: /blog/
 ---
 
-<table>
-    <thead>
-        <tr>
-            <th>Título</th>
-            <th>Tags</th>
-            <th>Categoria</th>
-            <th>Data</th>
-            <th>Ação</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for post in site.posts %}
-        <tr>
-            <td>{{ post.title }}</td>
-            <td>{{ post.tags | join: ", " }}</td>
-            <td>{{ post.category }}</td>
-            <td>{{ post.date | date: "%d/%m/%Y" }}</td>
-            <td><a href="{{ post.url | relative_url }}">Ler mais</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+| Título | Tags | Categoria | Data | Ação |
+| --- | --- | --- | --- | --- |
+{%- for post in site.posts %}
+| {{ post.title }} | {{ post.tags | join: ", " }} | {{ post.category }} | {{ post.date | date: "%d/%m/%Y" }} | [Ler mais]({{ post.url | relative_url }}) |
+{%- endfor %}

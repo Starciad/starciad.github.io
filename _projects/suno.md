@@ -1,17 +1,18 @@
 ---
 # Header
 layout: project
+label: suno
 
 # Information
 title: SUno
 authors:
-    - Starciad
+  - Starciad
 date: 2025-02-04
 short_description: Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.
 technologies:
-    - C
+  - c
 links:
-    github: "https://github.com/Starciad/SUno.git"
+  github: "https://github.com/Starciad/SUno.git"
 
 # Assets
 cover_image: /assets/images/thumbnails/projects/suno.webp

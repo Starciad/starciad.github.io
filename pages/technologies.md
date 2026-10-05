@@ -1,5 +1,6 @@
 ---
 layout: page
+label: technologies
 title: Tecnologias
 permalink: /technologies/
 ---

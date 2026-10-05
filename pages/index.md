@@ -1,5 +1,6 @@
 ---
 layout: page
+label: home
 title: Início
 permalink: /
 ---

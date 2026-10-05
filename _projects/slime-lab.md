@@ -1,6 +1,7 @@
 ---
 # Header
 layout: project
+label: slime-lab
 
 # Information
 title: Slime Lab
@@ -9,8 +10,8 @@ authors:
 date: 2022-10-21
 short_description: Pequeno jogo feito em MonoGame para estudos.
 technologies:
-    - CSharp
-    - MonoGame
+    - csharp
+    - monogame
 links:
     github: "https://github.com/Starciad/SlimeLab.git"
 

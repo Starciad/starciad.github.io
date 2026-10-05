@@ -1,6 +1,6 @@
 ---
 layout: technology
-label: python
-title: Python
+label: assembly
+title: Assembly
 category: Linguagens de Programação
 ---

@@ -1,5 +1,6 @@
 ---
 layout: page
+label: history
 title: História
 permalink: /history/
 ---

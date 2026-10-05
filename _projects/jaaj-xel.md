@@ -1,6 +1,7 @@
 ---
 # Header
 layout: project
+label: jaaj-xel
 
 # Information
 title: Jaaj Xel
@@ -10,8 +11,8 @@ authors:
 date: 2021-07-30
 short_description: Um jogo simples do gênero Tower Defense e Survival feito para a Game Jaaj 6.
 technologies:
-    - CSharp
-    - Unity
+    - csharp
+    - unity-engine
 links:
     itch: "https://igor-up.itch.io/jaajxel"
 

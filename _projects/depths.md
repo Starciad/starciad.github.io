@@ -1,6 +1,7 @@
 ---
 # Header
 layout: project
+label: depths
 
 # Information
 title: Depths
@@ -9,8 +10,8 @@ authors:
 date: 2025-03-02
 short_description: Um jogo sobre mineração e exploração de catacumbas antigas em busca de tesouros!
 technologies:
-    - CSharp
-    - MonoGame
+    - csharp
+    - monogame
 links:
     itch: "https://starciad.itch.io/depths"
     github: "https://github.com/starciad/depths"

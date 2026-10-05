@@ -1,5 +1,6 @@
 ---
 layout: technology
-title: Linux Mint
+label: windows
+title: Windows
 category: Sistemas Operacionais
 ---

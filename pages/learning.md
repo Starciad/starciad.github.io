@@ -1,5 +1,6 @@
 ---
 layout: page
+label: learning
 title: Aprendizagem
 permalink: /learning/
 ---
