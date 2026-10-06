@@ -1,0 +1,13 @@
+# Platforms
+
+- id: github
+  label: GitHub
+- id: itch
+  label: Itch
+- id: steam
+  label: Steam
+
+# General
+
+- id: website
+  label: Website

@@ -9,7 +9,7 @@ layout: default
 </article>
 
 <section>
-    <h2>Veja Também</h2>
+    <h2>Ver Também</h2>
 
     {% assign books = site.books | where_exp: "book", "book.technologies contains page.label" %}
     {% assign projects = site.projects | where_exp: "project", "project.technologies contains page.label" %}

@@ -9,7 +9,7 @@ layout: default
 </article>
 
 <section>
-    <h2>Veja Também</h2>
+    <h2>Ver Também</h2>
 
     {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.label" %}
 
@@ -28,4 +28,19 @@ layout: default
     {% else %}
     <p>Nenhuma tecnologia encontrada relacionada a este projeto.</p>
     {% endif %}
+</section>
+
+<section>
+    <h2>Ligações Externas</h2>
+
+    <ul>
+        {% for link in page.links %}
+        <li>
+            <a href="{{ link[1] }}" target="_blank" rel="noopener noreferrer">
+                {% assign linkString = site.data.strings | where: "id", link[0] | first %}
+                {{ linkString.label }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </section>
