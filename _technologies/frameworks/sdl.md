@@ -5,5 +5,4 @@ section: technologies
 category: frameworks
 
 title: SDL
-category_label: Frameworks
 ---

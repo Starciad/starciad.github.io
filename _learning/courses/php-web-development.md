@@ -5,5 +5,4 @@ section: learning
 category: courses
 
 title: Programação Web com PHP
-category_label: Cursos
 ---

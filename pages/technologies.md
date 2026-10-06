@@ -7,10 +7,12 @@ title: Tecnologias
 permalink: /technologies/
 ---
 
-{% assign categories = site.technologies | group_by: "category_label" | sort: "name" %}
+{% assign categories = site.technologies | group_by: "category" | sort: "name" %}
 {% for category in categories %}
 
-### {{ category.name }}
+{% assign categoryString = site.data.strings | where: "id", category.name | first %}
+
+### {{ categoryString.label }}
 
 | Tecnologia | Ação |
 | --- | --- |

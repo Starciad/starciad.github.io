@@ -5,5 +5,4 @@ section: learning
 category: competitions
 
 title: Olimpíada Brasileira de Informática (OBI)
-category_label: Competições
 ---

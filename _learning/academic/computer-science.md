@@ -5,5 +5,4 @@ section: learning
 category: academic
 
 title: Ciência da Computação
-category_label: Acadêmico
 ---

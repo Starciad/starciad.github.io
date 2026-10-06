@@ -3,6 +3,15 @@
 - id: website
   label: Website
 
+# Learning
+
+- id: academic
+  label: Acadêmico
+- id: courses
+  label: Cursos
+- id: competitions
+  label: Competições
+
 # Platforms
 
 - id: github
@@ -24,7 +33,7 @@
   label: Frameworks
 - id: game-engines
   label: Motores de Jogos
-- id: operating-systems
+- id: operational-systems
   label: Sistemas Operacionais
 - id: programming-languages
   label: Linguagens de Programação
