@@ -15,8 +15,8 @@ technologies:
     - html
     - javascript
 links:
-    github: "https://github.com/Starciad/SCSG.git"
-    website: "https://starciad.github.io/SCSG/"
+    github: "https://github.com/Starciad/StarCharacterSheetGenerator.git"
+    website: "https://starciad.github.io/StarCharacterSheetGenerator/"
 
 # Assets
 cover_image: /assets/images/thumbnails/projects/scsg.webp

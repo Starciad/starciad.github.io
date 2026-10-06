@@ -1,3 +1,8 @@
+# General
+
+- id: website
+  label: Website
+
 # Platforms
 
 - id: github
@@ -7,7 +12,19 @@
 - id: steam
   label: Steam
 
-# General
+# Technologies
 
-- id: website
-  label: Website
+- id: databases
+  label: Bancos de Dados
+- id: development-tools
+  label: Ferramentas de Desenvolvimento
+- id: environments
+  label: Ambientes
+- id: frameworks
+  label: Frameworks
+- id: game-engines
+  label: Motores de Jogos
+- id: operating-systems
+  label: Sistemas Operacionais
+- id: programming-languages
+  label: Linguagens de Programação
