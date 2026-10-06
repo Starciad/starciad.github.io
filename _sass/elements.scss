@@ -38,6 +38,11 @@ p {
     color: var(--color-text-soft);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     color: var(--color-accent);
     text-decoration: none;
