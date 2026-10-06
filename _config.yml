@@ -6,6 +6,7 @@ description: "Starciad's personal website, showcasing projects, books, and techn
 permalink: /blog/:year/:month/:day/:title/ # Permalink structure for blog posts
 
 markdown: kramdown
+mathjax: true
 
 # Files and directories that should not be copied to the generated site
 exclude:
