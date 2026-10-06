@@ -7,6 +7,25 @@ permalink: /blog/:year/:month/:day/:title/ # Permalink structure for blog posts
 
 markdown: kramdown
 
+# Files and directories that should not be copied to the generated site
+exclude:
+  - README.md
+  - LICENSE
+  - LICENSE.md
+  - LICENSE-ASSETS
+  - LICENSE-ASSETS.md
+  - COPYING
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - node_modules/
+  - vendor/
+  - .github/
+
 collections:
   books:
     output: true
