@@ -37,8 +37,7 @@ layout: default
         {% for link in page.links %}
         <li>
             <a href="{{ link[1] }}" target="_blank" rel="noopener noreferrer">
-                {% assign linkString = site.data.strings | where: "id", link[0] | first %}
-                {{ linkString.label }}
+                {{ link[0] | capitalize }}
             </a>
         </li>
         {% endfor %}

@@ -1,8 +1,3 @@
-# General
-
-- id: website
-  label: Website
-
 # Learning
 
 - id: academic
@@ -11,15 +6,6 @@
   label: Cursos
 - id: competitions
   label: Competições
-
-# Platforms
-
-- id: github
-  label: GitHub
-- id: itch
-  label: Itch
-- id: steam
-  label: Steam
 
 # Technologies
 
