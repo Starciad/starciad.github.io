@@ -14,6 +14,9 @@ collections:
   experiences:
     output: true
     permalink: /experiences/:path/
+  hobbies:
+    output: true
+    permalink: /hobbies/:path
   learning:
     output: true
     permalink: /learning/:path/
@@ -35,6 +38,11 @@ defaults:
       type: "experiences"
     values:
       layout: "experience"
+  - scope:
+      path: ""
+      type: "hobbies"
+    values:
+      layout: "hobby"
   - scope:
       path: ""
       type: "learning"
