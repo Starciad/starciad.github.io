@@ -3,15 +3,7 @@
 
 <head>
     {% if jekyll.environment == "production" %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75VKPPREV5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-75VKPPREV5');
-    </script>
+    {% include analytics.html %}
     {% endif %}
 
     <meta charset="UTF-8">
