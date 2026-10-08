@@ -10,7 +10,7 @@ tags: [Desenvolvimento de Jogos, Pixel Art, Blob Tileset, Autotiling, Renderiza�
 date: 2024-02-16
 ---
 
-### Introdução
+## Introdução
 
 Em jogos baseados em mapas compostos por *tiles*, é comum que elementos do cenário sejam organizados sobre uma grade. Essa abordagem é extremamente conveniente para representar terrenos, paredes, líquidos e outros componentes do mundo, mas também apresenta um problema visual bastante evidente: quando dois elementos diferentes são colocados lado a lado, a transição entre eles tende a ficar excessivamente rígida.
 
@@ -24,7 +24,7 @@ Durante o desenvolvimento do ***Pixel Dust***, antigo nome do projeto que poster
 
 ---
 
-#### O problema: *tiles* independentes
+### O problema: *tiles* independentes
 
 Considere um mapa no qual cada célula pode conter um elemento sólido. Uma abordagem tradicional consiste simplesmente em desenhar o *sprite* correspondente àquele elemento em sua posição na grade.
 
@@ -32,9 +32,8 @@ Isso funciona perfeitamente enquanto cada *tile* puder ser visualmente independe
 
 Sem algum tipo de tratamento adicional, as fronteiras entre os elementos permanecem perfeitamente alinhadas à grade:
 
-![Imagem](https://github.com/Starciad/PixelDustSandbox/assets/69594923/33109b4c-8c23-4726-a245-f2dc851be24c)
-
-![Imagem](https://github.com/Starciad/PixelDustSandbox/assets/69594923/ef1787ff-729d-497d-8eb1-edc08a215850)
+![Imagem 1][elements_without_blob_01]
+![Imagem 2][elements_without_blob_02]
 
 Visualmente, isso pode deixar o cenário excessivamente artificial. Mesmo quando a lógica do jogo continua sendo completamente baseada em uma grade, podemos fazer a representação gráfica parecer muito mais orgânica.
 
@@ -42,7 +41,7 @@ Visualmente, isso pode deixar o cenário excessivamente artificial. Mesmo quando
 
 ---
 
-#### O que é um *Blob Tileset*?
+### O que é um *Blob Tileset*?
 
 Trata-se de um conjunto de *sprites* projetado para representar as diferentes maneiras pelas quais uma determinada superfície pode se conectar às suas vizinhas.
 
@@ -66,7 +65,7 @@ A grande vantagem está justamente nessa redução: em vez de criar centenas de 
 
 ---
 
-### Estrutura do sistema
+## Estrutura do sistema
 
 A abordagem utilizada no *Pixel Dust* parte de um conjunto básico de cinco categorias de partes:
 
@@ -76,7 +75,7 @@ A abordagem utilizada no *Pixel Dust* parte de um conjunto básico de cinco cate
 - **Bordas verticais**
 - **Lacunas**
 
-![Conjunto de partes](https://github.com/Starciad/PixelDust/assets/69594923/2539c95c-712c-472a-b92d-c731417c1041)
+![Conjunto de partes][blob_01]
 
 Essas categorias não precisam necessariamente ser implementadas como *sprites* independentes. Elas representam, principalmente, os diferentes padrões visuais necessários para construir uma célula completa.
 
@@ -86,17 +85,17 @@ Ele pode ser **montado dinamicamente**.
 
 ---
 
-#### Dividindo um *tile* em partes menores
+### Dividindo um *tile* em partes menores
 
 Para determinar quais partes devem ser utilizadas, cada *tile* é considerado como uma região de **3 × 3 células**.
 
-![Divisão da região](https://github.com/Starciad/PixelDust/assets/69594923/f52ee4f5-683b-4d91-b295-b30198713b96)
+![Divisão da região][blob_02]
 
 O *tile* que estamos renderizando ocupa o centro dessa região. Ao seu redor estão as células que podem influenciar sua aparência.
 
 Em vez de tratar o *tile* como uma única unidade visual, podemos dividi-lo em quatro sub-regiões:
 
-![Divisão do elemento](https://github.com/Starciad/PixelDust/assets/69594923/2740f717-fc26-4ada-af65-55ff96b1e54a)
+![Divisão do elemento][blob_03]
 
 Cada sub-região corresponde a um dos quatro cantos do *tile*:
 
@@ -111,7 +110,7 @@ Cada uma dessas partes possui uma responsabilidade limitada: determinar como seu
 
 ---
 
-### Determinando os vizinhos relevantes
+## Determinando os vizinhos relevantes
 
 Uma das características mais interessantes dessa abordagem é que **cada *sub-tile* não precisa consultar toda a vizinhança**.
 
@@ -132,7 +131,7 @@ Essa organização permite transformar um problema aparentemente complexo em qua
 
 ---
 
-### Transformando vizinhos em um identificador
+## Transformando vizinhos em um identificador
 
 Depois de determinar quais vizinhos devem ser considerados, precisamos transformar essas informações em algo que o algoritmo possa utilizar.
 
@@ -186,7 +185,7 @@ Essa técnica é particularmente útil em sistemas de *tiles* porque permite tra
 
 ---
 
-#### Por que utilizar uma soma ponderada?
+### Por que utilizar uma soma ponderada?
 
 Poderíamos representar os vizinhos utilizando três valores booleanos:
 
@@ -229,7 +228,7 @@ O mesmo princípio pode ser utilizado em diversas outras situações de desenvol
 
 ---
 
-### Reduzindo as combinações
+## Reduzindo as combinações
 
 Cada *sub-tile* possui três possíveis vizinhos, portanto existem:
 
@@ -249,9 +248,9 @@ Essa redução é uma das principais razões pelas quais o sistema consegue repr
 
 ---
 
-#### *Sub-tile* noroeste
+### *Sub-tile* noroeste
 
-![Configurações do sub-tile noroeste](https://github.com/Starciad/PixelDust/assets/69594923/d8836c44-fe94-47a3-ae24-61b17a39b698)
+![Configurações do sub-tile noroeste][blob_04]
 
 O *sub-tile* noroeste analisa os vizinhos ao norte, oeste e noroeste.
 
@@ -259,9 +258,9 @@ Com base na combinação encontrada, ele seleciona a representação corresponde
 
 ---
 
-#### *Sub-tile* nordeste
+### *Sub-tile* nordeste
 
-![Configurações do sub-tile nordeste](https://github.com/Starciad/PixelDust/assets/69594923/e8b1e98d-9a44-448c-bc17-9b4905638161)
+![Configurações do sub-tile nordeste][blob_05]
 
 O *sub-tile* nordeste realiza o mesmo procedimento, mas considerando a região superior direita.
 
@@ -273,9 +272,9 @@ Seus vizinhos relevantes são:
 
 ---
 
-#### *Sub-tile* sudoeste
+### *Sub-tile* sudoeste
 
-![Configurações do sub-tile sudoeste](https://github.com/Starciad/PixelDust/assets/69594923/2a58c978-0239-4d4b-a399-ce98b459eba9)
+![Configurações do sub-tile sudoeste][blob_06]
 
 O *sub-tile* sudoeste é responsável pela região inferior esquerda.
 
@@ -287,9 +286,9 @@ Ele considera:
 
 ---
 
-#### *Sub-tile* sudeste
+### *Sub-tile* sudeste
 
-![Configurações do sub-tile sudeste](https://github.com/Starciad/PixelDust/assets/69594923/6534419e-fd77-4799-8b43-f7f4e10358a2)
+![Configurações do sub-tile sudeste][blob_07]
 
 Finalmente, o *sub-tile* sudeste trata da região inferior direita e verifica:
 
@@ -299,7 +298,7 @@ Finalmente, o *sub-tile* sudeste trata da região inferior direita e verifica:
 
 ---
 
-### Da vizinhança ao *sprite* final
+## Da vizinhança ao *sprite* final
 
 Podemos resumir todo o processo em algumas etapas:
 
@@ -325,7 +324,7 @@ A composição dessas quatro respostas produz o resultado final.
 
 ---
 
-### Renderização dinâmica
+## Renderização dinâmica
 
 No *Pixel Dust*, esse processo é realizado durante a renderização dos elementos.
 
@@ -345,7 +344,7 @@ O mesmo vale para a remoção de elementos.
 
 ---
 
-### Uma propriedade importante: localidade
+## Uma propriedade importante: localidade
 
 Uma das vantagens dessa técnica é que a decisão sobre um *tile* depende apenas de uma pequena região ao seu redor.
 
@@ -371,7 +370,7 @@ Essa propriedade torna o sistema relativamente barato e previsível, especialmen
 
 ---
 
-### O papel do *tile* diagonal
+## O papel do *tile* diagonal
 
 Um detalhe particularmente importante é a consideração dos vizinhos diagonais.
 
@@ -407,7 +406,7 @@ Essa pequena informação adicional é o que permite distinguir situações como
 
 ---
 
-### Por que 47 *sprites* são suficientes?
+## Por que 47 *sprites* são suficientes?
 
 O número 47 pode parecer arbitrário à primeira vista, mas ele surge justamente da combinação das diferentes configurações necessárias para representar as bordas e os cantos de uma superfície.
 
@@ -427,33 +426,33 @@ Essa distinção é importante porque transforma o *tileset* de uma simples cole
 
 ---
 
-### Generalizando a técnica
+## Generalizando a técnica
 
 Embora o exemplo do *Pixel Dust* tenha sido desenvolvido para elementos de um mapa, a mesma abordagem pode ser aplicada a praticamente qualquer situação em que uma superfície precise se adaptar às suas vizinhas.
 
 Alguns exemplos incluem:
 
-#### Terreno
+### Terreno
 
 Gramados, terra, areia, neve e outros terrenos podem utilizar o sistema para criar transições naturais entre diferentes materiais.
 
-#### Água
+### Água
 
 A borda de rios, lagos e poças pode ser determinada automaticamente de acordo com as células adjacentes.
 
-#### Paredes
+### Paredes
 
 Uma parede pode selecionar automaticamente seus cantos, bordas e regiões internas sem exigir que cada configuração seja desenhada manualmente.
 
-#### Plataformas
+### Plataformas
 
 Em jogos 2D, plataformas podem utilizar máscaras de vizinhança para determinar suas extremidades.
 
-#### Cavernas
+### Cavernas
 
 Mapas gerados proceduralmente podem se beneficiar bastante desse sistema, pois a geometria do cenário pode ser definida primeiro e a aparência calculada posteriormente.
 
-#### Materiais diferentes
+### Materiais diferentes
 
 O conceito também pode ser estendido para situações em que duas superfícies diferentes precisam interagir.
 
@@ -470,7 +469,7 @@ Nesse caso, a máscara pode deixar de representar apenas "existe ou não existe 
 
 ---
 
-### *Blob Tileset* não é apenas uma técnica de arte
+## *Blob Tileset* não é apenas uma técnica de arte
 
 Uma consequência interessante desse sistema é que ele separa parcialmente duas responsabilidades:
 
@@ -496,7 +495,7 @@ Essa separação também facilita a troca do estilo artístico. Podemos substitu
 
 ---
 
-### Aplicação no *Pixel Dust*
+## Aplicação no *Pixel Dust*
 
 A implementação dessa abordagem foi realizada originalmente quando o projeto ainda se chamava ***Pixel Dust***.
 
@@ -508,57 +507,57 @@ O sistema passou a permitir que os elementos se adaptassem automaticamente ao am
 
 Antes da implementação do algoritmo, a representação visual apresentava transições rígidas entre os elementos:
 
-![Antes da implementação](https://github.com/Starciad/PixelDustSandbox/assets/69594923/33109b4c-8c23-4726-a245-f2dc851be24c)
+![Antes da implementação][elements_without_blob_01]
 
-![Antes da implementação](https://github.com/Starciad/PixelDustSandbox/assets/69594923/ef1787ff-729d-497d-8eb1-edc08a215850)
+![Antes da implementação][elements_without_blob_02]
 
 Depois da implementação, os elementos passaram a se adaptar à sua vizinhança:
 
-![Depois da implementação](https://github.com/Starciad/PixelDustSandbox/assets/69594923/f34dd5f8-ee90-4103-ade0-75ce202f9c8d)
+![Depois da implementação][elements_with_blob_01]
 
-![Depois da implementação](https://github.com/Starciad/PixelDustSandbox/assets/69594923/08915d57-71b2-42f5-b8a8-2ef751c7fb95)
+![Depois da implementação][elements_with_blob_02]
 
-![Depois da implementação](https://github.com/Starciad/PixelDustSandbox/assets/69594923/9785d586-29d5-4da9-8763-0b0b18fe7b31)
+![Depois da implementação][elements_with_blob_03]
 
 A diferença visual é particularmente perceptível em áreas maiores, onde as pequenas transições entre os *tiles* deixam de chamar tanta atenção.
 
 ---
 
-### Vantagens da abordagem
+## Vantagens da abordagem
 
 A utilização de um *Blob Tileset* traz algumas vantagens bastante claras.
 
-#### Redução da quantidade de *sprites*
+### Redução da quantidade de *sprites*
 
 Em vez de criar uma imagem para cada configuração possível, um conjunto relativamente pequeno de peças pode ser reutilizado.
 
-#### Composição automática
+### Composição automática
 
 O desenvolvedor não precisa definir manualmente qual *sprite* deve ser utilizado em cada célula do mapa.
 
-#### Mapas dinâmicos
+### Mapas dinâmicos
 
 Como a aparência depende da vizinhança atual, alterações no mapa podem refletir automaticamente na renderização.
 
-#### Compatibilidade com geração procedural
+### Compatibilidade com geração procedural
 
 Um algoritmo pode gerar a estrutura do mapa sem precisar conhecer as regras visuais do *tileset*.
 
-#### Separação entre lógica e apresentação
+### Separação entre lógica e apresentação
 
 A estrutura lógica do mapa pode permanecer simples enquanto o sistema de renderização cuida da aparência.
 
-#### Melhor integração visual
+### Melhor integração visual
 
 As bordas e os cantos deixam de formar linhas rígidas e passam a acompanhar a geometria formada pelos elementos.
 
 ---
 
-### Considerações de implementação
+## Considerações de implementação
 
 Apesar de relativamente simples, existem alguns detalhes que merecem atenção ao implementar esse sistema.
 
-#### Atualização de vizinhos
+### Atualização de vizinhos
 
 Quando um *tile* é modificado, sua própria aparência pode mudar, mas seus vizinhos também podem precisar ser recalculados.
 
@@ -586,7 +585,7 @@ Por isso, em um sistema otimizado, alterações no mapa podem marcar uma pequena
 
 ---
 
-#### Renderizar sob demanda
+### Renderizar sob demanda
 
 Nem sempre é necessário recalcular todos os *tiles* a cada quadro.
 
@@ -604,7 +603,7 @@ Isso pode reduzir significativamente o trabalho em mapas grandes.
 
 ---
 
-### Conclusão
+## Conclusão
 
 O *Blob Tileset* é um exemplo interessante de como uma pequena quantidade de informação pode produzir uma variedade muito maior de resultados visuais.
 
@@ -626,14 +625,29 @@ No *Pixel Dust*, essa técnica serviu como uma forma de tornar o mundo mais coes
 
 ---
 
-#### Fontes e referências
+### Fontes e referências
 
 - *[Tileset Roundup — Boris](https://www.boristhebrave.com/2013/07/14/tileset-roundup/?q=tutorials/tileset-roundup)*;
 - *[Wang "Blob" Tileset — Guy](https://opengameart.org/content/wang-%E2%80%98blob%E2%80%99-tileset)*;
 - *[Wang Blob Tilesets](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html)*.
 
-##### Leitura adicional
+#### Leitura adicional
 
 O artigo *[Generating Tilesets](https://www.tilesetter.org/docs/generating_tilesets)*, do *Tilesetter*, apresenta outras aplicações dos *Blob Tilesets* e destaca sua utilidade na geração de padrões variados, incluindo labirintos e outros ambientes para jogos de plataforma, *side-scrolling* e *top-down*.
 
 > A documentação também apresenta diferentes exemplos de *Blob Tilesets* que podem ser utilizados como referência para compreender melhor a técnica.
+
+{% comment %} IMAGES {% comment %}
+
+[blob_01]: {{ "/assets/images/blog/2024/02/16/blob_01.webp" | relative_url }}
+[blob_02]: {{ "/assets/images/blog/2024/02/16/blob_02.webp" | relative_url }}
+[blob_03]: {{ "/assets/images/blog/2024/02/16/blob_03.webp" | relative_url }}
+[blob_04]: {{ "/assets/images/blog/2024/02/16/blob_04.webp" | relative_url }}
+[blob_05]: {{ "/assets/images/blog/2024/02/16/blob_05.webp" | relative_url }}
+[blob_06]: {{ "/assets/images/blog/2024/02/16/blob_06.webp" | relative_url }}
+[blob_07]: {{ "/assets/images/blog/2024/02/16/blob_07.webp" | relative_url }}
+[elements_with_blob_01]: {{ "/assets/images/blog/2024/02/16/elements_with_blob_01.webp" | relative_url }}
+[elements_with_blob_02]: {{ "/assets/images/blog/2024/02/16/elements_with_blob_02.webp" | relative_url }}
+[elements_with_blob_03]: {{ "/assets/images/blog/2024/02/16/elements_with_blob_03.webp" | relative_url }}
+[elements_without_blob_01]: {{ "/assets/images/blog/2024/02/16/elements_without_blob_01.webp" | relative_url }}
+[elements_without_blob_02]: {{ "/assets/images/blog/2024/02/16/elements_without_blob_02.webp" | relative_url }}
