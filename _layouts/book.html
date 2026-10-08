@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section>
+    {{ content }}
+</section>
+
+{% assign technologies = site.technologies | where_exp: "technology", "page.technologies contains technology.label" %}
+
+{% if techs.size > 0 %}
+<section>
+    <h2>Tecnologias</h2>
+    
+    <ul>
+        {% for technology in technologies %}
+        <li>
+            <a href="{{ technology.url }}" target="_self" rel="noopener noreferrer">
+                {{ technology.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}

@@ -1,0 +1,24 @@
+- id: dev-to
+  name: "Dev.to"
+  url: "https://dev.to/starciad"
+- id: email
+  name: "Email"
+  url: "mailto:starciad.contact@gmail.com"
+- id: github
+  name: "GitHub"
+  url: "https://github.com/Starciad"
+- id: itch-io
+  name: "Itch.io"
+  url: "https://starciad.itch.io/"
+- id: linkedin
+  name: "LinkedIn"
+  url: "https://www.linkedin.com/in/davi-fernandes-723748268/"
+- id: stack-overflow
+  name: "Stack Overflow"
+  url: "https://stackoverflow.com/users/18094188/starciad"
+- id: twitter
+  name: "Twitter/X"
+  url: "https://x.com/Starciad"
+- id: youtube
+  name: "Youtube"
+  url: "https://www.youtube.com/@starciad"

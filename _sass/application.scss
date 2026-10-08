@@ -1,0 +1,35 @@
+.app-container {
+    width: 100%;
+    min-height: 100%;
+    max-width: 720px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.06);
+
+    padding: 1.5rem;
+}
+
+.app-header {
+    width: 100%;
+    height: auto;
+}
+
+.app-main {
+    width: 100%;
+    height: auto;
+}
+
+.app-footer {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    color: var(--color-text-soft);
+}
+
+.app-footer p {
+    text-align: center;
+    text-indent: 0cm;
+}

@@ -1,0 +1,25 @@
+# Learning
+
+- id: academic
+  label: Acadêmico
+- id: courses
+  label: Cursos
+- id: competitions
+  label: Competições
+
+# Technologies
+
+- id: databases
+  label: Bancos de Dados
+- id: development-tools
+  label: Ferramentas de Desenvolvimento
+- id: environments
+  label: Ambientes
+- id: frameworks
+  label: Frameworks
+- id: game-engines
+  label: Motores de Jogos
+- id: operational-systems
+  label: Sistemas Operacionais
+- id: programming-languages
+  label: Linguagens de Programação

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<section>
+    {{ content }}
+</section>
+
+{% assign books = site.books | where_exp: "book", "book.technologies contains page.label" | sort: "title" %}
+{% assign projects = site.projects | where_exp: "project", "project.technologies contains page.label" | sort: "title" %}
+
+{% if books.size > 0 %}
+<section>
+    <h2>Livros</h2>
+
+    <ul>
+        {% for book in books %}
+        <li>
+            <a href="{{ book.url }}" target="_self" rel="noopener noreferrer">
+                {{ book.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+
+{% if projects.size > 0 %}
+<section>
+    <h2>Projetos</h2>
+
+    <ul>
+        {% for project in projects %}
+        <li>
+            <a href="{{ project.url }}" target="_self" rel="noopener noreferrer">
+                {{ project.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
