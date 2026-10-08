@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    {% if jekyll.environment == "production" %}
+    {% include analytics.html %}
+    {% endif %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Starciad's Dreamland | {{ page.title }}</title>
+
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="site-logo">Starciad's Dreamland</div>
+            {% include navigation.html %}
+        </header>
+
+        <main class="app-main">
+            <!-- PAGE CONTENT -->
+            <article>
+                <h1>{{ page.title }}</h1>
+
+                {{ content }}
+            </article>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2024 Starciad's Dreamland. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

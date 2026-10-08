@@ -1,0 +1,88 @@
+title: "Starciad's Dreamland"
+email: "davilsfernandes.starciad.comu@gmail.com"
+description: "Starciad's personal website, showcasing projects, books, and technology interests."
+
+domain: starciad.github.io
+url: https://starciad.github.io/
+baseurl: /
+
+# Permalinks
+permalink: /blog/:year/:month/:day/:title/ # Permalink structure for blog posts
+
+markdown: kramdown
+mathjax: true
+
+# Files and directories that should not be copied to the generated site
+exclude:
+  - README.md
+  - LICENSE
+  - LICENSE.md
+  - LICENSE-ASSETS
+  - LICENSE-ASSETS.md
+  - COPYING
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - node_modules/
+  - vendor/
+  - .github/
+
+collections:
+  books:
+    output: true
+    permalink: /books/:path/
+  experiences:
+    output: true
+    permalink: /experiences/:path/
+  hobbies:
+    output: true
+    permalink: /hobbies/:path
+  learning:
+    output: true
+    permalink: /learning/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  technologies:
+    output: true
+    permalink: /technologies/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "experience"
+  - scope:
+      path: ""
+      type: "hobbies"
+    values:
+      layout: "hobby"
+  - scope:
+      path: ""
+      type: "learning"
+    values:
+      layout: "learning"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "technology"
+    values:
+      layout: "technology"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

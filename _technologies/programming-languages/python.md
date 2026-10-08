@@ -1,0 +1,8 @@
+---
+layout: technology
+label: python
+section: technologies
+category: programming-languages
+
+title: Python
+---
