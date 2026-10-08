@@ -627,17 +627,15 @@ No *Pixel Dust*, essa técnica serviu como uma forma de tornar o mundo mais coes
 
 ### Fontes e referências
 
-- *[Tileset Roundup — Boris](https://www.boristhebrave.com/2013/07/14/tileset-roundup/?q=tutorials/tileset-roundup)*;
-- *[Wang "Blob" Tileset — Guy](https://opengameart.org/content/wang-%E2%80%98blob%E2%80%99-tileset)*;
-- *[Wang Blob Tilesets](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html)*.
+- BORIS. *[Tileset roundup](https://www.boristhebrave.com/2013/07/14/tileset-roundup/?q=tutorials/tileset-roundup)*. Boris the Brave, 2013.
+- GUY. *[Wang “blob” tileset](https://opengameart.org/content/wang-%E2%80%98blob%E2%80%99-tileset)*. OpenGameArt.org.
+- GUY. *[Wang blob tilesets](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html)*. Boris the Brave.
 
 #### Leitura adicional
 
 O artigo *[Generating Tilesets](https://www.tilesetter.org/docs/generating_tilesets)*, do *Tilesetter*, apresenta outras aplicações dos *Blob Tilesets* e destaca sua utilidade na geração de padrões variados, incluindo labirintos e outros ambientes para jogos de plataforma, *side-scrolling* e *top-down*.
 
 > A documentação também apresenta diferentes exemplos de *Blob Tilesets* que podem ser utilizados como referência para compreender melhor a técnica.
-
-{% comment %} IMAGES {% comment %}
 
 [blob_01]: {{ "/assets/images/blog/2024/02/16/blob_01.webp" | relative_url }}
 [blob_02]: {{ "/assets/images/blog/2024/02/16/blob_02.webp" | relative_url }}
