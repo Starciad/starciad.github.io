@@ -13,7 +13,7 @@ short_description: Pequeno jogo feito em MonoGame para estudos.
 technologies:
     - csharp
     - monogame
-links:
+external_links:
     github: "https://github.com/Starciad/SlimeLab.git"
 
 # Assets

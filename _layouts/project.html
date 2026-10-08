@@ -6,38 +6,37 @@ layout: default
     {{ content }}
 </section>
 
+{% assign technologies = site.technologies | where_exp: "technology", "page.technologies contains technology.label" | sort: "title" %}
+{% assign external_links = page.external_links %}
+
+{% if technologies.size > 0 %}
 <section>
-    <h2>Ver Também</h2>
-
-    {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.label" %}
-
-    <h3>Tecnologias</h3>
-
-    {% if techs.size > 0 %}
+    <h2>Tecnologias</h2>
+    
     <ul>
-        {% for tech in techs %}
+        {% for technology in technologies %}
         <li>
-            <a href="{{ tech.url }}" target="_self" rel="noopener noreferrer">
-                {{ tech.title }}
+            <a href="{{ technology.url }}" target="_self" rel="noopener noreferrer">
+                {{ technology.title }}
             </a>
         </li>
         {% endfor %}
     </ul>
-    {% else %}
-    <p>Nenhuma tecnologia encontrada relacionada a este projeto.</p>
-    {% endif %}
 </section>
+{% endif %}
 
+{% if external_links.size > 0 %}
 <section>
     <h2>Ligações Externas</h2>
 
     <ul>
-        {% for link in page.links %}
+        {% for external_link in external_links %}
         <li>
-            <a href="{{ link[1] }}" target="_blank" rel="noopener noreferrer">
-                {{ link[0] | capitalize }}
+            <a href="{{ external_link[1] }}" target="_blank" rel="noopener noreferrer">
+                {{ external_link[0] | capitalize }}
             </a>
         </li>
         {% endfor %}
     </ul>
 </section>
+{% endif %}

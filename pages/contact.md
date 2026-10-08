@@ -7,8 +7,8 @@ title: Contato
 permalink: /contact/
 ---
 
-| Título | Ações |
-| --- | --- | --- |
-{%- for social in site.data.social %}
-| {{ social.name }} | [Ver detalhes]({{ social.url | relative_url }}) |
-{%- endfor %}
+{% assign contacts = site.data.contacts | sort: "name" %}
+
+{% for contact in contacts %}
+- [{{ contact.name }}]({{ contact.url | relative_url }})
+{% endfor %}

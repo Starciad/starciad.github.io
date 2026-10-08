@@ -13,7 +13,7 @@ short_description: Um jogo sandbox de simulador de partículas inspirado no clá
 technologies:
     - csharp
     - monogame
-links:
+external_links:
     github: "https://github.com/Stardust-Sandbox"
     itch: "https://starciad.itch.io/stardust-sandbox"
     steam: "https://store.steampowered.com/app/4348740/Stardust_Sandbox"

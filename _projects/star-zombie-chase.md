@@ -14,7 +14,7 @@ technologies:
     - css
     - html
     - javascript
-links:
+external_links:
     github: "https://github.com/Starciad/StarZombieChase.git"
     website: "https://starciad.github.io/StarZombieChase/"
 

@@ -630,7 +630,7 @@ No *Pixel Dust*, essa técnica serviu como uma forma de tornar o mundo mais coes
 
 - *[Tileset Roundup — Boris](https://www.boristhebrave.com/2013/07/14/tileset-roundup/?q=tutorials/tileset-roundup)*;
 - *[Wang "Blob" Tileset — Guy](https://opengameart.org/content/wang-%E2%80%98blob%E2%80%99-tileset)*;
-- *[Wang Blob *Tilesets*](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html)*.
+- *[Wang Blob Tilesets](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html)*.
 
 ##### Leitura adicional
 

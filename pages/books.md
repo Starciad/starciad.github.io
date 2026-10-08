@@ -7,8 +7,8 @@ title: Livros
 permalink: /books/
 ---
 
-| Título | Autor | Ano | Ações |
-| --- | --- | --- | --- |
-{%- for book in site.books %}
-| {{ book.title }} | {{ book.author }} | {{ book.year }} | [Ver detalhes]({{ book.url | relative_url }}) |
-{%- endfor %}
+{% assign books = site.books | sort: "title" %}
+
+{% for book in books %}
+- {{ book.author | upcase }}. [*{{ book.title }}*]({{ book.url | relative_url }}). {{ book.year }}.
+{% endfor %}

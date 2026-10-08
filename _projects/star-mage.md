@@ -9,11 +9,11 @@ title: Star Mage
 authors:
     - Starciad
 date: 2026-04-04
-short_description: Star Mage é um desafiador jogo de tiro 2D de rolagem lateral inspirado no design da era NES.
+short_description: Um desafiador jogo de tiro 2D de rolagem lateral inspirado no design da era NES.
 technologies:
     - csharp
     - monogame
-links:
+external_links:
     itch: "https://starciad.itch.io/star-mage"
 
 # Assets

@@ -6,24 +6,20 @@ layout: default
     {{ content }}
 </section>
 
+{% assign technologies = site.technologies | where_exp: "technology", "page.technologies contains technology.label" %}
+
+{% if techs.size > 0 %}
 <section>
-    <h2>Ver Também</h2>
-
-    {% assign techs = site.technologies | where_exp: "tech", "page.technologies contains tech.label" %}
-
-    <h3>Tecnologias</h3>
-
-    {% if techs.size > 0 %}
+    <h2>Tecnologias</h2>
+    
     <ul>
-        {% for tech in techs %}
+        {% for technology in technologies %}
         <li>
-            <a href="{{ tech.url }}" target="_self" rel="noopener noreferrer">
-                {{ tech.title }}
+            <a href="{{ technology.url }}" target="_self" rel="noopener noreferrer">
+                {{ technology.title }}
             </a>
         </li>
         {% endfor %}
     </ul>
-    {% else %}
-    <p>Nenhuma tecnologia encontrada relacionada a este livro.</p>
-    {% endif %}
 </section>
+{% endif %}

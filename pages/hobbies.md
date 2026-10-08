@@ -7,8 +7,8 @@ title: Hobbies
 permalink: /hobbies/
 ---
 
-| Título | Ação |
-| --- | --- |
-{%- for hobby in site.hobbies %}
-| {{ hobby.title }} | [Ver detalhes]({{ hobby.url | relative_url }}) |
-{%- endfor %}
+{% assign hobbies = site.hobbies | sort: "title" %}
+
+{% for hobby in hobbies %}
+- [{{ hobby.title }}]({{ hobby.url | relative_url }})
+{% endfor %}

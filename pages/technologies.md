@@ -8,15 +8,16 @@ permalink: /technologies/
 ---
 
 {% assign categories = site.technologies | group_by: "category" | sort: "name" %}
+
 {% for category in categories %}
 
 {% assign categoryString = site.data.strings | where: "id", category.name | first %}
+{% assign categoryItems = category.items | sort: "title" %}
 
-### {{ categoryString.label }}
+## {{ categoryString.label }}
 
-| Tecnologia | Ação |
-| --- | --- |
-{%- for technology in category.items %}
-| {{ technology.title }} | [Ler mais]({{ technology.url | relative_url }}) |
-{%- endfor %}
+{% for technology in categoryItems %}
+- [{{ technology.title }}]({{ technology.url | relative_url }})
+{% endfor %}
+
 {% endfor %}

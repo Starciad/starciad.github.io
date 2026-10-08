@@ -14,7 +14,7 @@ short_description: Um jogo simples do gênero Tower Defense e Survival feito par
 technologies:
     - csharp
     - unity-engine
-links:
+external_links:
     itch: "https://igor-up.itch.io/jaajxel"
 
 # Assets

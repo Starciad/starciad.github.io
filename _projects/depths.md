@@ -13,7 +13,7 @@ short_description: Um jogo sobre mineração e exploração de catacumbas antiga
 technologies:
     - csharp
     - monogame
-links:
+external_links:
     itch: "https://starciad.itch.io/depths"
     github: "https://github.com/starciad/depths"
 

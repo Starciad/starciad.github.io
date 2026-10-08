@@ -12,7 +12,7 @@ date: 2024-09-10
 short_description: Uma biblioteca para criação de animações ASCII para terminais.
 technologies:
     - csharp
-links:
+external_links:
     github: "https://github.com/Starciad/StarASCII.git"
     nuget: "https://www.nuget.org/packages/StarASCII/"
 

@@ -12,7 +12,7 @@ date: 2025-02-04
 short_description: Uma implementação terminal do jogo de cartas UNO, escrito em C seguindo o padrão C99.
 technologies:
   - c
-links:
+external_links:
   github: "https://github.com/Starciad/uno.git"
 
 # Assets

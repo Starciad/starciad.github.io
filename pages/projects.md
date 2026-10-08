@@ -7,8 +7,8 @@ title: Projetos
 permalink: /projects/
 ---
 
-| Título | Descrição | Ações |
-| --- | --- | --- |
-{%- for project in site.projects %}
-| {{ project.title }} | {{ project.short_description }} | [Ver detalhes]({{ project.url | relative_url }}) |
-{%- endfor %}
+{% assign projects = site.projects | sort: "date" | reverse %}
+
+{% for project in projects %}
+- [{{ project.title }}]({{ project.url | relative_url }}): {{ project.short_description }}
+{% endfor %}

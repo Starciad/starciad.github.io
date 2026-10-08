@@ -13,7 +13,7 @@ short_description: Um pequeno jogo de tiro sobre lutar contra alienígenas!
 technologies:
     - csharp
     - monogame
-links:
+external_links:
     github: "https://github.com/Starciad/StellarDuelist.git"
     itch: "https://starciad.itch.io/stellar-duelist"
 
