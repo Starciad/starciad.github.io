@@ -1,5 +1,6 @@
 title: "Starciad's Dreamland"
 email: "davilsfernandes.starciad.comu@gmail.com"
+author: "Starciad"
 description: "Starciad's personal website, showcasing projects, books, and technology interests."
 
 domain: starciad.github.io
@@ -83,3 +84,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

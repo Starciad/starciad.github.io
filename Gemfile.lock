@@ -290,6 +290,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 232)
   jekyll (~> 3.10.0)
+  jekyll-seo-tag (~> 2.8.0)
+  jekyll-sitemap (~> 1.4.0)
 
 BUNDLED WITH
    2.5.23
