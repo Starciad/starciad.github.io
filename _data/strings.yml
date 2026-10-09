@@ -6,6 +6,10 @@
   label: Desenhos Digitais
 - id: traditional-drawings
   label: Desenhos Tradicionais
+- id: tracks-covers
+  label: Covers de Músicas
+- id: tracks-originals
+  label: Composições Originais
 - id: paintings
   label: Pinturas
 
