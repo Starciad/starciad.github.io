@@ -9,6 +9,6 @@ permalink: /blog/
 
 {% for post in site.posts %}
 
-- {{ post.author | upcase }}. *[{{ post.title }}]({{ post.url | relative_url }})*. {{ post.date | date: "%d/%m/%Y" }}.
+- *[{{ post.title }}]({{ post.url | relative_url }})* ({{ post.date | date: "%d/%m/%Y" }})
 
 {% endfor %}
