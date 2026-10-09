@@ -10,5 +10,5 @@ permalink: /projects/
 {% assign projects = site.projects | sort: "date" | reverse %}
 
 {% for project in projects %}
-- [{{ project.title }}]({{ project.url | relative_url }}): {{ project.short_description }}
+- [{{ project.title }}]({{ project.url | relative_url }}) **({{ project.date | date: "%Y" }})**: {{ project.short_description }}
 {% endfor %}

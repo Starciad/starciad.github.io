@@ -22,9 +22,6 @@
 - id: blog
   title: Blog
   url: /blog/
-- id: resume
-  title: Currículo
-  url: /resume/
 - id: contact
   title: Contato
   url: /contact/
