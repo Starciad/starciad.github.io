@@ -5,12 +5,16 @@
     {% if jekyll.environment == "production" %}
     {% include analytics.html %}
     {% endif %}
+    
+    <title>Starciad's Dreamland | {{ page.title }}</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% seo %}
+    {% include favicons.html %}
 
-    <title>Starciad's Dreamland | {{ page.title }}</title>
-
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/assets/styles/styles.css">
 
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -33,7 +37,10 @@
         </main>
 
         <footer class="app-footer">
+            {% assign updated_at = site.last_modified_at | default: site.github.updated_at | default: site.time %}
+            
             <p>&copy; 2024 Starciad's Dreamland. Todos os direitos reservados.</p>
+            <p>Última atualização: <time datetime="{{ updated_at | date_to_xmlschema }}">{{ updated_at | date: "%d/%m/%Y" }}</time></p>
         </footer>
     </div>
 </body>

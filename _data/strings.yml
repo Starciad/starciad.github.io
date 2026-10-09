@@ -1,7 +1,24 @@
+# Hobbies
+
+- id: animations
+  label: Animações
+- id: digital-drawings
+  label: Desenhos Digitais
+- id: traditional-drawings
+  label: Desenhos Tradicionais
+- id: tracks-covers
+  label: Covers de Músicas
+- id: tracks-originals
+  label: Composições Originais
+- id: paintings
+  label: Pinturas
+
 # Learning
 
 - id: academic
   label: Acadêmico
+- id: books
+  label: Livros
 - id: courses
   label: Cursos
 - id: competitions

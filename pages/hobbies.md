@@ -7,8 +7,17 @@ title: Hobbies
 permalink: /hobbies/
 ---
 
-{% assign hobbies = site.hobbies | sort: "title" %}
+{% assign categories = site.hobbies | group_by: "category" | sort: "title" %}
 
-{% for hobby in hobbies %}
+{% for category in categories %}
+
+{% assign categoryString = site.data.strings | where: "id", category.name | first %}
+{% assign categoryItems = category.items | sort: "title" %}
+
+## {{ categoryString.label }}
+
+{% for hobby in categoryItems %}
 - [{{ hobby.title }}]({{ hobby.url | relative_url }})
+{% endfor %}
+
 {% endfor %}

@@ -19,15 +19,9 @@
 - id: hobbies
   title: Hobbies
   url: /hobbies/
-- id: books
-  title: Livros
-  url: /books/
 - id: blog
   title: Blog
   url: /blog/
-- id: resume
-  title: Currículo
-  url: /resume/
 - id: contact
   title: Contato
   url: /contact/
