@@ -1,10 +1,10 @@
 ---
 layout: hobby
-label: track-05-thoughts-from-a-distant-place
+label: 05-thoughts-from-a-distant-place
 section: hobbies
 category: tracks-originals
 
-title: Thoughts from a Distant Place - Starciad | Stardust Sandbox - Volume 1 (2025)
+title: Thoughts from a Distant Place - Starciad \| Stardust Sandbox - Volume 1 (2025)
 ---
 
 <div class="app-video-container">

@@ -4,7 +4,7 @@ label: prelude-in-c-major
 section: hobbies
 category: tracks-covers
 
-title: Preludio em Dó Maior, BWV 846
+title: Prelude in C Major - Johann Sebastian Bach \| The Well-Tempered Clavier, Book I, BWV 846 (1722)
 ---
 
 <div class="app-video-container">

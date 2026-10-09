@@ -1,10 +1,10 @@
 ---
 layout: hobby
-label: track-04-building-something-for-you
+label: 04-building-something-for-you
 section: hobbies
 category: tracks-originals
 
-title: Building Something for You - Starciad | Stardust Sandbox - Volume 1 (2025)
+title: Building Something for You - Starciad \| Stardust Sandbox - Volume 1 (2025)
 ---
 
 <div class="app-video-container">

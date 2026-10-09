@@ -1,10 +1,10 @@
 ---
 layout: hobby
-label: track-03-lonely-heart
+label: 03-lonely-heart
 section: hobbies
 category: tracks-originals
 
-title: Lonely Heart - Starciad | Stardust Sandbox - Volume 1 (2025)
+title: Lonely Heart - Starciad \| Stardust Sandbox - Volume 1 (2025)
 ---
 
 <div class="app-video-container">

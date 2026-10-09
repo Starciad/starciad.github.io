@@ -1,10 +1,10 @@
 ---
 layout: hobby
-label: track-01-canvas-of-silence
+label: 01-canvas-of-silence
 section: hobbies
 category: tracks-originals
 
-title: Canvas of Silence - Starciad | Stardust Sandbox - Volume 1 (2025)
+title: Canvas of Silence - Starciad \| Stardust Sandbox - Volume 1 (2025)
 ---
 
 <div class="app-video-container">

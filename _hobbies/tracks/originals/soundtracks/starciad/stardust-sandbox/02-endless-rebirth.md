@@ -1,10 +1,10 @@
 ---
 layout: hobby
-label: track-02-endless-rebirth
+label: 02-endless-rebirth
 section: hobbies
 category: tracks-originals
 
-title: Endless Rebirth - Starciad | Stardust Sandbox - Volume 1 (2025)
+title: Endless Rebirth - Starciad \| Stardust Sandbox - Volume 1 (2025)
 ---
 
 <div class="app-video-container">
