@@ -1,9 +1,20 @@
-<nav aria-label="Navegação principal">
-    <ul>
-        {% assign navigation = site.data.navigation %}
-        {% for item in navigation %}
-            <li>
-                <a href="{{ item.url }}">{{ item.title }}</a>
+<nav aria-label="Main navigation">
+    {% assign navigation_items = site.data.navigation %}
+
+    <ul class="navigation-list">
+        {% for item in navigation_items %}
+            {% assign is_current = false %}
+            {% if page.section == item.id %}
+                {% assign is_current = true %}
+            {% endif %}
+
+            <li class="navigation-item{% if is_current %} is-current{% endif %}">
+                <a
+                    href="{{ item.url | relative_url }}"
+                    {% if is_current %}aria-current="page"{% endif %}
+                >
+                    {{ item.title }}
+                </a>
             </li>
         {% endfor %}
     </ul>

@@ -1,11 +1,24 @@
 :root {
-    --color-bg: #ffffff;
-    --color-text: #333941;
-    --color-text-soft: #4a5462;
-    --color-accent: #143464;
-    --color-accent-hover: #285cc4;
-    --color-border: #d9d3c8;
-    --color-button-bg: #59c135;
+    --color-background: #f7f4ee;
+    --color-text: #34383d;
+    --color-text-soft: #626a70;
+    --color-accent: #496b82;
+    --color-accent-hover: #3d5b70;
+    --color-border: #ddd8ce;
+    --color-button: #ebe6dc;
+
+    --font-title: 'Bitter', serif;
+    --font-body: 'Merriweather', serif;
+}
+
+[data-theme="dark"] {
+    --color-background: #191b1d;
+    --color-text: #e2e0da;
+    --color-text-soft: #a9aaa5;
+    --color-accent: #8eafbf;
+    --color-accent-hover: #aec7d2;
+    --color-border: #34383b;
+    --color-button: #25292b;
 
     --font-title: 'Bitter', serif;
     --font-body: 'Merriweather', serif;
