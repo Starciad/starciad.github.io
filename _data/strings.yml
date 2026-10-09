@@ -1,3 +1,14 @@
+# Hobbies
+
+- id: animations
+  label: Animações
+- id: digital-drawings
+  label: Desenhos Digitais
+- id: traditional-drawings
+  label: Desenhos Tradicionais
+- id: paintings
+  label: Pinturas
+
 # Learning
 
 - id: academic
