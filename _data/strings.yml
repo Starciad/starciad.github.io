@@ -13,6 +13,8 @@
 
 - id: academic
   label: Acadêmico
+- id: books
+  label: Livros
 - id: courses
   label: Cursos
 - id: competitions

@@ -32,9 +32,6 @@ exclude:
   - .github/
 
 collections:
-  books:
-    output: true
-    permalink: /books/:path/
   experiences:
     output: true
     permalink: /experiences/:path/

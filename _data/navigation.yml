@@ -19,9 +19,6 @@
 - id: hobbies
   title: Hobbies
   url: /hobbies/
-- id: books
-  title: Livros
-  url: /books/
 - id: blog
   title: Blog
   url: /blog/
