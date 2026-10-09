@@ -4,7 +4,7 @@ label: the-princess
 section: hobbies
 category: tracks-covers
 
-title: The Princess
+title: The Princess - Brandon Boone \| Slay the Princess - Original Game Soundtrack (2023)
 ---
 
 <div class="app-video-container">

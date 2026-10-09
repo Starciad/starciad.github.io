@@ -1,18 +1,20 @@
+/* APPLICATION */
+
 .app-container {
     width: 100%;
     min-height: 100%;
     max-width: 720px;
 
-    background: #FFFFFF;
-
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.08),
-        0 1px 3px rgba(0, 0, 0, 0.06);
+    background: var(--color-background);
 
     padding: 1.5rem;
 }
 
 .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     width: 100%;
     height: auto;
 }
@@ -34,6 +36,63 @@
     text-indent: 0cm;
 }
 
+/* ELEMENTS */
+
+.app-navigation {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-navigation nav {
+    width: 100%;
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation-item a {
+    display: block;
+    padding: 0.45rem 0.75rem;
+
+    color: var(--color-text-soft);
+    text-decoration: none;
+    border-radius: 0.35rem;
+
+    transition:
+        color 150ms ease,
+        background-color 150ms ease;
+}
+
+.navigation-item a:hover,
+.navigation-item a:focus-visible {
+    color: var(--color-text);
+    background-color: var(--color-border);
+}
+
+.navigation-item.is-current a {
+    color: var(--color-text);
+    background-color: var(--color-border);
+    font-weight: 600;
+}
+
+.navigation-item.is-current a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
 .app-video-container {
   width: 100%;
 }
@@ -44,4 +103,15 @@
   aspect-ratio: 16 / 9;
   display: block;
   border: none;
+}
+
+/* COMPONENTS */
+
+#app-theme-toggle {
+  background: var(--btn-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
 }

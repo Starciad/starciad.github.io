@@ -4,7 +4,7 @@ label: sweden
 section: hobbies
 category: tracks-covers
 
-title: Sweden
+title: Sweden - C418 \| Minecraft - Volume Alpha (2011)
 ---
 
 <div class="app-video-container">

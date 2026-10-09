@@ -4,7 +4,7 @@ label: quao-lindo-es
 section: hobbies
 category: tracks-covers
 
-title: Quão Lindo És
+title: Quão Lindo És - Livres para Adorar \| Quão Lindo És (2005)
 ---
 
 <div class="app-video-container">

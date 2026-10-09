@@ -1,10 +1,10 @@
 ---
 layout: hobby
-label: track-06-the-desire-for-a-better-future
+label: 06-the-desire-for-a-better-future
 section: hobbies
 category: tracks-originals
 
-title: The Desire for a Better Future - Starciad | Stardust Sandbox - Volume 1 (2026)
+title: The Desire for a Better Future - Starciad \| Stardust Sandbox - Volume 1 (2025)
 ---
 
 <div class="app-video-container">

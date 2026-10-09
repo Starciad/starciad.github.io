@@ -17,15 +17,27 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/assets/styles/styles.css">
 
+    <script src="/assets/scripts/theme-handler.js"></script>
+    <script src="/assets/scripts/theme-toggle.js" defer></script>
+
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 
 <body>
     <div class="app-container">
         <header class="app-header">
-            <div class="site-logo">Starciad's Dreamland</div>
-            {% include navigation.html %}
+            <div>
+                <div class="site-logo">Starciad's Dreamland</div>
+            </div>
+            
+            <div>
+                <button id="theme-toggle" aria-label="Alternar tema">🌓 Alternar Tema</button>
+            </div>
         </header>
+
+        <div class="app-navigation">
+            {% include navigation.html %}
+        </div>
 
         <main class="app-main">
             <!-- PAGE CONTENT -->

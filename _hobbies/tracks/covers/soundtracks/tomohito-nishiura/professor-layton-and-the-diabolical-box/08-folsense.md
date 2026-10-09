@@ -4,7 +4,7 @@ label: folsense
 section: hobbies
 category: tracks-covers
 
-title: Folsense
+title: Folsense - Tomohito Nishiura \| Professor Layton and the Diabolical Box (2008)
 ---
 
 <div class="app-video-container">

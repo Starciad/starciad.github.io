@@ -4,7 +4,7 @@ label: lost-woods
 section: hobbies
 category: tracks-covers
 
-title: Lost Woods
+title: Lost Woods - Koji Kondo \| The Legend of Zelda - Ocarina of Time (1998)
 ---
 
 <div class="app-video-container">

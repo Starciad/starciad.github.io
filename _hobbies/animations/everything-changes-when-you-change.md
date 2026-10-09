@@ -4,7 +4,7 @@ label: everything-changes-when-you-change
 section: hobbies
 category: animations
 
-title: Tudo Muda Quando Você Muda
+title: Tudo Muda Quando Você Muda - DD Fernandes (2025)
 ---
 
 <div class="app-video-container">
