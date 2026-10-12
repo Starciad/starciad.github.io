@@ -7,17 +7,11 @@ title: Hobbies
 permalink: /hobbies/
 ---
 
-{% assign categories = site.hobbies | group_by: "category" | sort: "title" %}
+Além de dedicar-me a tecnologia, também dedico meu tempo na realização de outras atividades, como a música, aos desenhos, a pintura, a animação, entre outros. Com isso, dedico essa página para elencar algumas das áreas as quais me dedico, e também para compartilhar alguns dos meus trabalhos.
 
-{% for category in categories %}
+Todas as seções abaixo possuem uma página dedicada, em que é possível encontrar mais informações sobre cada uma delas, bem como alguns dos meus trabalhos. Sintam-se a vontade para navegar por elas e conhecer um pouco mais sobre cada uma das minhas áreas de interesse.
 
-{% assign categoryString = site.data.strings | where: "id", category.name | first %}
-{% assign categoryItems = category.items | sort: "title" %}
-
-## {{ categoryString.label }}
-
-{% for hobby in categoryItems %}
-- [{{ hobby.title }}]({{ hobby.url | relative_url }})
-{% endfor %}
-
-{% endfor %}
+- [Animações](/animations/)
+- [Desenhos](/drawings/)
+- [Música](/music/)
+- [Pinturas](/paintings/)

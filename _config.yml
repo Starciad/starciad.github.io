@@ -33,15 +33,24 @@ exclude:
   - .github/
 
 collections:
+  animations:
+    output: true
+    permalink: /animations/:path/
+  drawings:
+    output: true
+    permalink: /drawings/:path/
   experiences:
     output: true
     permalink: /experiences/:path/
-  hobbies:
-    output: true
-    permalink: /hobbies/:path
   learning:
     output: true
     permalink: /learning/:path/
+  music:
+    output: true
+    permalink: /music/:path/
+  paintings:
+    output: true
+    permalink: /paintings/:path/
   projects:
     output: true
     permalink: /projects/:path/
@@ -50,6 +59,16 @@ collections:
     permalink: /technologies/:path/
 
 defaults:
+  - scope:
+      path: ""
+      type: "animations"
+    values:
+      layout: "animation"
+  - scope:
+      path: ""
+      type: "drawings"
+    values:
+      layout: "drawing"
   - scope:
       path: ""
       type: "books"
@@ -62,14 +81,19 @@ defaults:
       layout: "experience"
   - scope:
       path: ""
-      type: "hobbies"
-    values:
-      layout: "hobby"
-  - scope:
-      path: ""
       type: "learning"
     values:
       layout: "learning"
+  - scope:
+      path: ""
+      type: "music"
+    values:
+      layout: "music"
+  - scope:
+      path: ""
+      type: "paintings"
+    values:
+      layout: "painting"
   - scope:
       path: ""
       type: "projects"

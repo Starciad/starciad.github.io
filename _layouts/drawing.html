@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<!-- Image -->
+<section>
+    <figure>
+        <img src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}">
+        <figcaption>{{ page.image.alt }}</figcaption>
+    </figure>
+</section>
+
+<!-- Information -->
+<section>
+    <p>{{ page.date | date: "%d/%m/%Y" }}</p>
+</section>
+
+<!-- Content -->
+<section>
+    {{ content }}
+</section>
