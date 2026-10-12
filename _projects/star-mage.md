@@ -17,5 +17,7 @@ external_links:
     itch: "https://starciad.itch.io/star-mage"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/starmage.webp
+image:
+  path: /assets/images/thumbnails/projects/starmage.webp
+  alt: Star Mage
 ---

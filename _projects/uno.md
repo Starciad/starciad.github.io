@@ -16,5 +16,7 @@ external_links:
   github: "https://github.com/Starciad/uno.git"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/suno.webp
+image:
+  path: /assets/images/thumbnails/projects/suno.webp
+  alt: Uno
 ---

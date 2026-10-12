@@ -2,10 +2,20 @@
 layout: default
 ---
 
+<!-- Thumbnail -->
+<section>
+    <figure>
+        <img src="{{ page.image.path }}" alt="{{ page.image.alt }}">
+        <figcaption>{{ page.image.alt }}</figcaption>
+    </figure>
+</section>
+
+<!-- Content -->
 <section>
     {{ content }}
 </section>
 
+<!-- Technologies and External Links -->
 {% assign technologies = site.technologies | where_exp: "technology", "page.technologies contains technology.label" | sort: "title" %}
 {% assign external_links = page.external_links %}
 

@@ -17,5 +17,7 @@ external_links:
     nuget: "https://www.nuget.org/packages/StarASCII/"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/starascii.webp"
+image:
+  path: /assets/images/thumbnails/projects/starascii.webp
+  alt: Star ASCII
 ---

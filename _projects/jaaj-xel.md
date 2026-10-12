@@ -18,5 +18,7 @@ external_links:
     itch: "https://igor-up.itch.io/jaajxel"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/jaajxel.webp
+image:
+  path: /assets/images/thumbnails/projects/jaajxel.webp
+  alt: Jaaj Xel
 ---

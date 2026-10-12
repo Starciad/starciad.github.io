@@ -18,5 +18,7 @@ external_links:
     github: "https://github.com/starciad/depths"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/depths.webp
+image:
+  path: /assets/images/thumbnails/projects/depths.webp
+  alt: Depths
 ---

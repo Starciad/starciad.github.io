@@ -19,5 +19,7 @@ external_links:
     website: "https://starciad.github.io/StarZombieChase/"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/starzombiechase.webp
+image:
+  path: /assets/images/thumbnails/projects/starzombiechase.webp
+  alt: Star Zombie Chase
 ---

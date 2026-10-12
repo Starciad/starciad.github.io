@@ -2,9 +2,9 @@
 layout: learning
 label: low-level-programming-c-assembly-and-program-execution-on-intel-64-architecture
 section: learning
-category: books
 
 title: "Programação em Baixo Nível: C, Assembly e Execução de Programas na Arquitetura Intel 64"
+category: Livros
 author: Igor Zhirkov
 year: 2018
 technologies:
