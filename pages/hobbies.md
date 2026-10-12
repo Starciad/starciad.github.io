@@ -7,9 +7,9 @@ title: Hobbies
 permalink: /hobbies/
 ---
 
-Além de dedicar-me a tecnologia, também dedico meu tempo na realização de outras atividades, como a música, aos desenhos, a pintura, a animação, entre outros. Com isso, dedico essa página para elencar algumas das áreas as quais me dedico, e também para compartilhar alguns dos meus trabalhos.
+Além da tecnologia, cultivo outros interesses que me permitem explorar diferentes formas de expressão, como a música, o desenho, a pintura e a animação. Nesta página, reúno algumas dessas atividades e compartilho trabalhos que refletem parte da minha criatividade e dos meus interesses pessoais.
 
-Todas as seções abaixo possuem uma página dedicada, em que é possível encontrar mais informações sobre cada uma delas, bem como alguns dos meus trabalhos. Sintam-se a vontade para navegar por elas e conhecer um pouco mais sobre cada uma das minhas áreas de interesse.
+Abaixo, você encontrará uma página dedicada a cada uma dessas áreas, com informações e conteúdos relacionados. Sinta-se à vontade para explorá-las e conhecer um pouco mais sobre o que desenvolvo além do universo tecnológico.
 
 - [Animações](/animations/)
 - [Desenhos](/drawings/)

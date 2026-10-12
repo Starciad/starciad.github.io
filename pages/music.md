@@ -17,7 +17,9 @@ permalink: /music/
 ## {{ categoryString }}
 
 {% for item in categoryItems %}
-- [{{ item.title }} ({{ item.date | date: "%Y" }})]({{ item.url | relative_url }})
+
+- [{{ item.title }}]({{ item.url | relative_url }})
+
 {% endfor %}
 
 {% endfor %}
