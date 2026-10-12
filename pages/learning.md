@@ -11,10 +11,10 @@ permalink: /learning/
 
 {% for category in categories %}
 
-{% assign categoryString = site.data.strings | where: "id", category.name | first %}
+{% assign categoryString = category.name %}
 {% assign categoryItems = category.items | sort: "title" %}
 
-## {{ categoryString.label }}
+## {{ categoryString }}
 
 {% for item in categoryItems %}
 - [{{ item.title }}]({{ item.url | relative_url }})
