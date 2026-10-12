@@ -19,5 +19,7 @@ external_links:
     website: "https://starciad.github.io/StarCharacterSheetGenerator/"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/scsg.webp
+image:
+  path: /assets/images/thumbnails/projects/scsg.webp
+  alt: Star Character Sheet Generator
 ---

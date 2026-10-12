@@ -16,5 +16,7 @@ external_links:
     github: "https://github.com/Starciad/star-pixel-icons-theme.git"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/spi.webp
+image:
+  path: /assets/images/thumbnails/projects/spi.webp
+  alt: Star Pixel Icon Theme
 ---

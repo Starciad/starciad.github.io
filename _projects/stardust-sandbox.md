@@ -20,5 +20,7 @@ external_links:
     website: "https://stardust-sandbox.github.io/"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/stardustsandbox.webp
+image:
+  path: /assets/images/thumbnails/projects/stardustsandbox.webp
+  alt: Stardust Sandbox
 ---

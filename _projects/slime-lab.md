@@ -17,5 +17,7 @@ external_links:
     github: "https://github.com/Starciad/SlimeLab.git"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/slimelab.webp
+image:
+  path: /assets/images/thumbnails/projects/slimelab.webp
+  alt: Slime Lab
 ---

@@ -18,5 +18,7 @@ external_links:
     itch: "https://starciad.itch.io/stellar-duelist"
 
 # Assets
-cover_image: /assets/images/thumbnails/projects/stellarduelist.webp
+image:
+  path: /assets/images/thumbnails/projects/stellarduelist.webp
+  alt: Stellar Duelist
 ---
