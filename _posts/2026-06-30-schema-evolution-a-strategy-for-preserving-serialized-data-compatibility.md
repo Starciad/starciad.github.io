@@ -4,6 +4,7 @@ section: blog
 label: schema-evolution-a-strategy-for-preserving-serialized-data-compatibility
 
 title: "Evolução de Esquemas: uma estratégia para preservar a compatibilidade de dados serializados"
+description: "Como evoluir esquemas de dados serializados com migrações explícitas, preservando a compatibilidade entre versões."
 author: Starciad
 category: Engenharia de Software
 tags: [evolução de esquemas, serialização, persistência de dados, migração de dados, arquitetura de software, compatibilidade]

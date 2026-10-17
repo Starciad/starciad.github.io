@@ -3,7 +3,8 @@ layout: post
 section: blog
 label: how-to-create-organic-transitions-between-tiles-with-blob-tilesets
 
-title: Como criar transições orgânicas entre tiles com Blob Tilesets
+title: "Como criar transições orgânicas entre tiles com Blob Tilesets"
+description: "Aprenda como usar Blob Tilesets e autotiling para criar transições orgânicas entre tiles e melhorar a representação visual de mapas em grade."
 author: Starciad
 category: Desenvolvimento de Jogos
 tags: [Desenvolvimento de Jogos, Pixel Art, Blob Tileset, Autotiling, Renderização]
