@@ -54,6 +54,26 @@ p {
     color: var(--color-text-soft);
 }
 
+code {
+    padding: 0.15em 0.35em;
+    border: 1px solid var(--color-code-border);
+    border-radius: 0.25rem;
+    color: var(--color-code-text);
+    background-color: var(--color-code-background);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    margin: 0 0 1rem;
+    overflow-x: auto;
+}
+
+pre code {
+    display: block;
+    padding: 1rem;
+}
+
 figure {
     display: flex;
     flex-direction: column;
