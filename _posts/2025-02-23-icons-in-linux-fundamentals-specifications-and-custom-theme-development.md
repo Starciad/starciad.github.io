@@ -46,7 +46,7 @@ Por isso, o desenvolvimento de ícones envolve tanto decisões gráficas quanto 
 
 Um *tema de ícones* (*icon theme*) é um conjunto organizado de recursos gráficos que compartilham uma identidade visual e podem ser selecionados pelo usuário em um ambiente gráfico.
 
-Segundo a especificação de temas de ícones do freedesktop.org, um tema estabelece uma correspondência entre um identificador, o tamanho solicitado e o arquivo gráfico que deverá representá-lo. Um tema também pode herdar recursos de outros temas, complementando sua coleção sem precisar incluir todas as imagens possíveis (LARSSON; ENGLICH, 2013).
+Segundo a especificação de temas de ícones do freedesktop.org, um tema estabelece uma correspondência entre um identificador, o tamanho solicitado e o arquivo gráfico que deverá representá-lo. Um tema também pode herdar recursos de outros temas, complementando sua coleção sem precisar incluir todas as imagens possíveis.
 
 Essa característica explica por que um tema pode funcionar mesmo sem conter um ícone para cada aplicação ou tipo de arquivo instalado no sistema: os recursos ausentes podem ser procurados nos temas herdados.
 
@@ -62,7 +62,7 @@ A especificação do freedesktop.org descreve um mecanismo de descoberta baseado
 
 A aplicação ou biblioteca gráfica responsável pela interface realiza a consulta e procura um arquivo compatível com esses parâmetros. Quando o recurso não existe no tema selecionado, o mecanismo pode recorrer aos temas herdados e ao tema de referência `hicolor`.
 
-Esse comportamento depende da implementação, mas a especificação estabelece regras comuns para facilitar a interoperabilidade entre aplicações e ambientes gráficos (LARSSON; ENGLICH, 2013).
+Esse comportamento depende da implementação, mas a especificação estabelece regras comuns para facilitar a interoperabilidade entre aplicações e ambientes gráficos.
 
 Portanto, colocar uma imagem em um diretório qualquer não garante que ela será utilizada. O arquivo precisa estar em um local reconhecido, possuir um nome adequado e, quando fizer parte de um tema, estar organizado de acordo com a estrutura declarada na configuração.
 
@@ -90,7 +90,7 @@ A tabela a seguir apresenta os principais contextos previstos na especificação
 | Places        | `places/`              | Locais e objetos do sistema de arquivos, como pastas e lixeira.                                                              |
 | Status        | `status/`              | Estados e indicadores, como avisos, erros e níveis de bateria.                                                               |
 
-Fonte: adaptado da *Icon Naming Specification* do freedesktop.org (DAWES, 2007).
+Fonte: adaptado da *Icon Naming Specification* do freedesktop.org.
 
 Outras categorias, como `panel/`, `applets/`, `preferences/`, `notifications/`, `stock/` e `legacy/`, também aparecem em temas existentes. Sua presença, entretanto, não significa que todas sejam contextos padronizados pela especificação geral.
 
@@ -109,7 +109,7 @@ Por exemplo, a especificação de nomenclatura define identificadores como:
 
 Esses nomes permitem que aplicações solicitem recursos conhecidos sem precisar apontar diretamente para um arquivo gráfico específico.
 
-A especificação recomenda que os nomes utilizem caracteres ASCII, letras minúsculas, números, sublinhados, hífens e pontos, evitando espaços e separadores inadequados, como barras. Para novos identificadores, também é importante respeitar as convenções de nomenclatura e a semântica dos contextos (DAWES, 2007).
+A especificação recomenda que os nomes utilizem caracteres ASCII, letras minúsculas, números, sublinhados, hífens e pontos, evitando espaços e separadores inadequados, como barras. Para novos identificadores, também é importante respeitar as convenções de nomenclatura e a semântica dos contextos.
 
 Uma imagem chamada `meu-editor.png`, por exemplo, não substituirá automaticamente o ícone de um editor de texto que solicita `accessories-text-editor`. Para que isso aconteça, o arquivo precisa utilizar o identificador solicitado ou a aplicação deve ser configurada para solicitar o nome escolhido.
 
@@ -142,7 +142,7 @@ A especificação oficial de nomenclatura continua sendo a referência adequada 
 
 ### SVG, PNG e XPM
 
-A especificação de temas de ícones reconhece os formatos PNG, SVG e XPM, com uma ressalva importante: **o suporte a SVG é opcional para as implementações**. PNG é o formato de imagem matricial recomendado, enquanto SVG é destinado a imagens vetoriais. XPM permanece previsto por razões de compatibilidade, mas não é recomendado para novos temas (LARSSON; ENGLICH, 2013).
+A especificação de temas de ícones reconhece os formatos PNG, SVG e XPM, com uma ressalva importante: **o suporte a SVG é opcional para as implementações**. PNG é o formato de imagem matricial recomendado, enquanto SVG é destinado a imagens vetoriais. XPM permanece previsto por razões de compatibilidade, mas não é recomendado para novos temas.
 
 | Formato | Tipo                        | Características                                                                  | Considerações                                                                                                                |
 | ------- | --------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -196,7 +196,7 @@ A especificação de temas de ícones estabelece diretórios-base a partir dos q
 | `/usr/share/icons/`     | Local convencional para temas instalados em âmbito do sistema, normalmente por pacotes ou operações administrativas.      |
 | `/usr/share/pixmaps/`   | Diretório tradicional de imagens utilizadas por aplicações, não equivalente a um tema completo com sua própria estrutura. |
 
-A especificação prevê a pesquisa em `~/.icons/` por compatibilidade, nos diretórios de ícones derivados de `XDG_DATA_DIRS` e em `/usr/share/pixmaps`. Aplicações e ambientes gráficos podem acrescentar ou modificar esses caminhos (LARSSON; ENGLICH, 2013).
+A especificação prevê a pesquisa em `~/.icons/` por compatibilidade, nos diretórios de ícones derivados de `XDG_DATA_DIRS` e em `/usr/share/pixmaps`. Aplicações e ambientes gráficos podem acrescentar ou modificar esses caminhos.
 
 Por esse motivo, não se deve presumir que todos os aplicativos procuram arquivos exatamente na mesma ordem ou utilizam os mesmos mecanismos de descoberta.
 
@@ -241,7 +241,7 @@ Além disso, um tema pode utilizar outros tamanhos, diferentes escalas de exibi�
 
 O arquivo `index.theme` descreve as propriedades do tema e os diretórios que contêm seus recursos. Ele utiliza uma sintaxe semelhante à dos arquivos INI, com seções entre colchetes e pares de chave e valor.
 
-A especificação exige, entre outros elementos, a seção `[Icon Theme]`, a propriedade `Name`, a propriedade `Comment` e a lista `Directories`. Para cada diretório declarado, deve existir uma seção correspondente com os metadados necessários, incluindo `Size` (LARSSON; ENGLICH, 2013).
+A especificação exige, entre outros elementos, a seção `[Icon Theme]`, a propriedade `Name`, a propriedade `Comment` e a lista `Directories`. Para cada diretório declarado, deve existir uma seção correspondente com os metadados necessários, incluindo `Size`.
 
 A seguir, um modelo reduzido para o tema `StarPixel`:
 
@@ -283,7 +283,7 @@ As propriedades possuem finalidades distintas:
 
 O campo `Inherits=hicolor` é particularmente importante. O tema `hicolor` é previsto como tema de referência para recursos não encontrados em outros temas. Quando o tema personalizado não contém determinado identificador, a herança permite recorrer aos recursos disponíveis em seus temas ancestrais.
 
-A especificação também estabelece que, na ausência de uma herança explícita, a implementação deve incluir `hicolor` na árvore de herança (LARSSON; ENGLICH, 2013).
+A especificação também estabelece que, na ausência de uma herança explícita, a implementação deve incluir `hicolor` na árvore de herança.
 
 ### Tipos de diretório: `Fixed`, `Scalable` e `Threshold`
 
