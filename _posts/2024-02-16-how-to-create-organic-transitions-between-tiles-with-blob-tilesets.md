@@ -3,7 +3,8 @@ layout: post
 section: blog
 label: how-to-create-organic-transitions-between-tiles-with-blob-tilesets
 
-title: Como criar transições orgânicas entre tiles com Blob Tilesets
+title: "Como criar transições orgânicas entre tiles com Blob Tilesets"
+description: "Aprenda como usar Blob Tilesets e autotiling para criar transições orgânicas entre tiles e melhorar a representação visual de mapas em grade."
 author: Starciad
 category: Desenvolvimento de Jogos
 tags: [Desenvolvimento de Jogos, Pixel Art, Blob Tileset, Autotiling, Renderização]
@@ -12,148 +13,171 @@ date: 2024-02-16
 
 ## Introdução
 
-Em jogos baseados em mapas compostos por *tiles*, é comum que elementos do cenário sejam organizados sobre uma grade. Essa abordagem é extremamente conveniente para representar terrenos, paredes, líquidos e outros componentes do mundo, mas também apresenta um problema visual bastante evidente: quando dois elementos diferentes são colocados lado a lado, a transição entre eles tende a ficar excessivamente rígida.
+Mapas baseados em grades são amplamente utilizados no desenvolvimento de jogos. Sua estrutura facilita a organização do cenário, a detecção de colisões, a geração procedural de ambientes e a representação de elementos como terrenos, paredes, líquidos e plataformas. Entretanto, embora essa organização seja conveniente para a lógica do jogo, ela pode produzir um resultado visual excessivamente rígido: quando duas superfícies se encontram, suas fronteiras tendem a acompanhar os limites das células, tornando as transições facilmente perceptíveis.
 
-Uma maneira de solucionar esse problema é utilizar um ***Blob Tileset***, uma técnica de *autotiling* capaz de determinar automaticamente a aparência de um *tile* de acordo com os elementos que o cercam.
+Uma maneira de contornar esse problema consiste em utilizar um *Blob Tileset*, uma técnica de *autotiling* que determina automaticamente a aparência de uma célula com base nos elementos que a cercam. Em vez de exigir que o desenvolvedor selecione manualmente uma imagem para cada situação, o sistema identifica as conexões existentes entre as células e utiliza essa informação para compor a representação visual adequada.
 
-A ideia é relativamente simples: em vez de armazenar uma imagem diferente para cada possível configuração de vizinhança, dividimos visualmente cada *tile* em partes menores e determinamos, para cada uma delas, quais bordas e cantos devem ser exibidos. O resultado é um sistema capaz de produzir uma grande variedade de configurações utilizando apenas **47 *sprites***.
+A principal vantagem dessa abordagem está na reutilização de imagens. Embora uma célula possa assumir diferentes aparências conforme sua vizinhança, não é necessário desenhar manualmente uma imagem independente para cada combinação possível. Por meio de regras de conectividade e de um conjunto relativamente pequeno de peças, é possível representar uma grande variedade de configurações. No modelo tradicional de conectividade binária conhecido como *Blob Tileset* de 47 peças, por exemplo, as combinações válidas podem ser representadas por 47 configurações completas de uma célula.
 
-Essa técnica também aparece sob outros nomes e em diferentes ferramentas. No *Unity*, conceitos semelhantes são frequentemente associados aos ***Rule Tiles***, enquanto na comunidade do *RPG Maker VX* ela é conhecida por sua relação com os ***autotiles* A2 de terreno**. Neste artigo, utilizarei o termo ***Blob Tileset***, que é particularmente apropriado para a abordagem apresentada aqui.
+Essa técnica possui aplicações em diferentes ferramentas e ambientes de desenvolvimento. No *Unity*, abordagens semelhantes podem ser construídas com *Rule Tiles*, enquanto o *RPG Maker VX* utiliza um sistema próprio de *autotiles* para representar determinados tipos de terreno. Apesar das diferenças entre essas implementações, o princípio fundamental é semelhante: utilizar as relações entre células vizinhas para determinar automaticamente a representação gráfica.
 
-Durante o desenvolvimento do ***Pixel Dust***, antigo nome do projeto que posteriormente se tornou o *Stardust Sandbox*, implementei uma variação desse sistema diretamente durante o processo de renderização. A experiência acabou se tornando um bom exemplo de como uma técnica relativamente simples pode melhorar significativamente a aparência de mapas baseados em uma grade.
+Durante o desenvolvimento do *Pixel Dust*, projeto que posteriormente passou a se chamar *Stardust Sandbox*, implementei uma variação dessa abordagem diretamente no processo de renderização. A experiência demonstrou como a separação entre a estrutura lógica do mapa e sua representação visual pode melhorar a aparência do cenário sem exigir uma complexidade proporcional no armazenamento dos dados.
 
----
+Neste artigo, apresentarei os fundamentos dessa técnica, desde a identificação dos vizinhos relevantes até a composição e a renderização das imagens. O objetivo é compreender o funcionamento do sistema e seus princípios matemáticos, permitindo que a abordagem seja implementada independentemente da linguagem de programação ou da ferramenta utilizada.
 
-### O problema: *tiles* independentes
+## O problema das transições entre células
 
-Considere um mapa no qual cada célula pode conter um elemento sólido. Uma abordagem tradicional consiste simplesmente em desenhar o *sprite* correspondente àquele elemento em sua posição na grade.
+### Representação convencional
 
-Isso funciona perfeitamente enquanto cada *tile* puder ser visualmente independente. O problema aparece quando queremos que dois elementos pareçam pertencer a uma mesma superfície ou que um material faça uma transição suave para outro.
+Em um mapa baseado em uma grade, cada célula ocupa uma posição definida por coordenadas. A representação mais simples consiste em associar cada posição a uma imagem e desenhá-la independentemente das demais.
 
-Sem algum tipo de tratamento adicional, as fronteiras entre os elementos permanecem perfeitamente alinhadas à grade:
+Essa estratégia funciona adequadamente quando os elementos não precisam estabelecer continuidade visual entre si. Entretanto, quando duas regiões representam superfícies que devem se conectar, a ausência de tratamento das fronteiras pode produzir transições artificiais.
 
-![Imagem 1][elements_without_blob_01]
-![Imagem 2][elements_without_blob_02]
+![Exemplo de elementos sem transições orgânicas][elements_without_blob_01]
 
-Visualmente, isso pode deixar o cenário excessivamente artificial. Mesmo quando a lógica do jogo continua sendo completamente baseada em uma grade, podemos fazer a representação gráfica parecer muito mais orgânica.
+![Outro exemplo de elementos sem transições orgânicas][elements_without_blob_02]
 
-É justamente nesse ponto que entra o *Blob Tileset*.
+Observe que a estrutura lógica do mapa não precisa ser alterada para resolver esse problema. As células podem continuar organizadas em uma grade regular; o que precisa mudar é a maneira como sua aparência é determinada.
 
----
+### A necessidade de considerar a vizinhança
 
-### O que é um *Blob Tileset*?
+Imagine um conjunto de células que representam grama, cercado por células que representam terra. Se cada célula for desenhada de maneira independente, as duas superfícies poderão apresentar uma fronteira perfeitamente alinhada à grade.
 
-Trata-se de um conjunto de *sprites* projetado para representar as diferentes maneiras pelas quais uma determinada superfície pode se conectar às suas vizinhas.
+Entretanto, a aparência desejada depende da posição relativa entre os materiais. Uma célula localizada no interior de uma região deve apresentar uma representação diferente daquela situada em sua borda. Da mesma forma, os cantos externos e internos exigem tratamentos específicos.
 
-Embora seja possível imaginar um *sprite* diferente para cada configuração de vizinhança, isso rapidamente se torna impraticável.
+O problema, portanto, não consiste simplesmente em escolher uma imagem para cada material. É necessário determinar **como cada célula se relaciona visualmente com as células adjacentes**.
 
-Se considerarmos os oito vizinhos de uma célula, teríamos:
+É justamente essa informação que um sistema de *autotiling* utiliza para selecionar as imagens apropriadas.
+
+## O que é um *Blob Tileset*?
+
+Um *Blob Tileset* é um conjunto de imagens organizado para representar as diferentes configurações de conectividade de uma superfície. Seu funcionamento depende de regras que identificam quais células pertencem à mesma região e quais posições exigem a representação de bordas, cantos ou áreas internas.
+
+O termo *tileset* designa o conjunto de imagens utilizadas para compor o mapa. Já o termo *autotiling* descreve o processo de seleção automática dessas imagens de acordo com as condições de vizinhança.
+
+A diferença em relação à abordagem convencional é que a imagem utilizada em uma posição não precisa ser definida manualmente. Ela pode ser determinada a partir do estado atual do mapa.
+
+### Por que não criar uma imagem para cada configuração?
+
+Uma célula de uma grade bidimensional possui oito vizinhos imediatos: quatro nas direções cardeais e quatro nas direções diagonais.
+
+Se cada vizinho puder estar presente ou ausente, teremos:
 
 $$
 2^8 = 256
 $$
 
-possíveis combinações de presença ou ausência de vizinhos.
+combinações possíveis.
 
-Entretanto, muitas dessas combinações são equivalentes do ponto de vista visual. Além disso, o objetivo de um *Blob Tileset* não é necessariamente representar individualmente todos os oito vizinhos, mas determinar como as bordas e os cantos de uma superfície devem ser desenhados.
+Criar uma imagem independente para cada combinação seria desnecessário em um sistema convencional de conectividade binária. Muitas configurações são equivalentes do ponto de vista visual, enquanto outras podem ser descartadas por regras de conectividade.
 
-Essa observação permite reduzir drasticamente a quantidade de *sprites* necessária.
+No *Blob Tileset* tradicional de 47 peças, as conexões diagonais são condicionadas à presença dos vizinhos cardeais adjacentes. Essa restrição elimina combinações que não precisam de uma representação independente e reduz o conjunto de configurações válidas de 256 para 47.
 
-Um *Blob Tileset* tradicional consegue representar essas conexões com **47 *sprites***.
+É importante observar que essa redução depende do modelo de conectividade adotado. Se o sistema precisar representar relações diagonais de maneira independente, outras regras ou um conjunto maior de configurações poderão ser necessários.
 
-A grande vantagem está justamente nessa redução: em vez de criar centenas de imagens diferentes, construímos o *tile* final a partir de pequenas partes reutilizáveis.
+![Conjunto de peças utilizado na composição do Blob Tileset][blob_01]
 
----
+A redução do número de configurações não significa que o sistema tenha perdido a capacidade de representar as situações relevantes. Significa que as regras de conectividade permitem identificar quais combinações precisam de representações distintas e quais podem compartilhar a mesma solução visual.
 
-## Estrutura do sistema
+## Organização visual e composição das peças
 
-A abordagem utilizada no *Pixel Dust* parte de um conjunto básico de cinco categorias de partes:
+A implementação apresentada neste artigo utiliza a decomposição de uma célula em quatro regiões menores. Essa organização permite tratar cada canto de maneira independente, simplificando a seleção das imagens necessárias para construir a representação final.
 
-- **Inteiro**
-- **Cantos**
-- **Bordas horizontais**
-- **Bordas verticais**
-- **Lacunas**
+### Divisão da região de vizinhança
 
-![Conjunto de partes][blob_01]
+Para determinar a aparência de uma célula, consideramos uma região de vizinhança de 3 × 3 posições. A célula central corresponde ao elemento que será renderizado, enquanto as oito posições ao redor representam os vizinhos que podem influenciar sua aparência.
 
-Essas categorias não precisam necessariamente ser implementadas como *sprites* independentes. Elas representam, principalmente, os diferentes padrões visuais necessários para construir uma célula completa.
+![Região de vizinhança de 3 × 3 posições][blob_02]
 
-O ponto importante é que o *sprite* final não precisa existir como uma imagem única.
+Essa região fornece as informações necessárias para identificar as conexões entre a célula central e seus arredores. Entretanto, não é necessário tratar todas essas posições como uma única unidade durante a composição gráfica.
 
-Ele pode ser **montado dinamicamente**.
+Podemos dividir a célula central em quatro regiões, cada uma responsável por um dos seus cantos:
 
----
+![Divisão da célula em quatro regiões][blob_03]
 
-### Dividindo um *tile* em partes menores
+As regiões são identificadas pelas seguintes posições:
 
-Para determinar quais partes devem ser utilizadas, cada *tile* é considerado como uma região de **3 × 3 células**.
+- Noroeste: canto superior esquerdo.
+- Nordeste: canto superior direito.
+- Sudoeste: canto inferior esquerdo.
+- Sudeste: canto inferior direito.
 
-![Divisão da região][blob_02]
+Cada região, denominada *sub-tile*, é responsável por determinar como seu próprio canto deve se conectar aos elementos vizinhos.
 
-O *tile* que estamos renderizando ocupa o centro dessa região. Ao seu redor estão as células que podem influenciar sua aparência.
+Essa decomposição permite transformar um problema que envolve oito vizinhos em quatro decisões menores, cada uma baseada em apenas três posições relevantes.
 
-Em vez de tratar o *tile* como uma única unidade visual, podemos dividi-lo em quatro sub-regiões:
+### Categorias de representação
 
-![Divisão do elemento][blob_03]
+Do ponto de vista visual, as peças utilizadas na composição podem representar diferentes situações, como:
 
-Cada sub-região corresponde a um dos quatro cantos do *tile*:
+- Regiões internas, nas quais a superfície continua sem interrupções.
+- Bordas horizontais, responsáveis pelas transições nas partes superior e inferior.
+- Bordas verticais, utilizadas nas laterais.
+- Cantos externos, nos quais a superfície termina em uma extremidade.
+- Cantos internos ou reentrâncias, nos quais a região conectada apresenta uma interrupção.
+- Lacunas, que representam descontinuidades específicas da superfície.
 
-- Noroeste;
-- Nordeste;
-- Sudoeste;
-- Sudeste.
+Essas categorias descrevem funções visuais, não necessariamente arquivos de imagem independentes. Dependendo da organização do conjunto gráfico, as peças podem estar armazenadas separadamente ou integradas em uma folha de imagens.
 
-Essa divisão é fundamental para o funcionamento do sistema.
+O aspecto essencial é que a representação final pode ser construída pela reutilização de componentes menores, sem exigir uma imagem exclusiva para cada configuração possível do mapa.
 
-Cada uma dessas partes possui uma responsabilidade limitada: determinar como seu próprio canto deve se conectar aos elementos vizinhos.
+## Identificando os vizinhos relevantes
 
----
+Cada *sub-tile* considera três posições da vizinhança. Essas posições correspondem aos dois vizinhos cardeais adjacentes ao canto e ao vizinho diagonal localizado naquela direção.
 
-## Determinando os vizinhos relevantes
+| *Sub-tile* | Vizinho cardeal 1 | Vizinho cardeal 2 | Vizinho diagonal |
+| ---------- | ----------------- | ----------------- | ---------------- |
+| Noroeste   | Norte             | Oeste             | Noroeste         |
+| Nordeste   | Norte             | Leste             | Nordeste         |
+| Sudoeste   | Sul               | Oeste             | Sudoeste         |
+| Sudeste    | Sul               | Leste             | Sudeste          |
 
-Uma das características mais interessantes dessa abordagem é que **cada *sub-tile* não precisa consultar toda a vizinhança**.
+A tabela demonstra que cada região possui uma responsabilidade limitada. O *sub-tile* noroeste, por exemplo, não precisa consultar diretamente o vizinho sudeste para determinar sua própria configuração.
 
-O *sub-tile* noroeste, por exemplo, está interessado principalmente nos elementos localizados ao norte, oeste e noroeste.
+Essa independência reduz a complexidade da seleção visual e permite que as quatro regiões sejam calculadas separadamente.
 
-Da mesma maneira:
+É importante distinguir a vizinhança lógica da representação gráfica: os vizinhos consultados são células da grade, enquanto o *sub-tile* corresponde a uma região interna da célula que está sendo construída.
 
-| *Sub-tile* | Vizinhos relevantes     |
-| ---------- | ----------------------- |
-| Noroeste   | Norte, Oeste e Noroeste |
-| Nordeste   | Norte, Leste e Nordeste |
-| Sudoeste   | Sul, Oeste e Sudoeste   |
-| Sudeste    | Sul, Leste e Sudeste    |
+### A importância dos vizinhos diagonais
 
-Essa organização permite transformar um problema aparentemente complexo em quatro pequenas decisões independentes.
+Considerar apenas as quatro direções cardeais não é suficiente para representar todos os cantos de uma superfície.
 
-> **Nota:** neste artigo, o termo *tile* refere-se às células adjacentes da grade. Já *sub-tile* refere-se a uma das quatro partes internas do *tile* que está sendo construído.
+Observe a seguinte configuração:
 
----
+```text
+X X
+X .
+```
 
-## Transformando vizinhos em um identificador
+Nesse exemplo, a posição diagonal participa da definição do canto formado pelas células ocupadas. Ignorar essa informação pode produzir uma transição incorreta ou deixar de distinguir situações visualmente diferentes.
 
-Depois de determinar quais vizinhos devem ser considerados, precisamos transformar essas informações em algo que o algoritmo possa utilizar.
+Entretanto, no modelo tradicional de 47 peças, a presença de uma célula diagonal não é suficiente para estabelecer uma conexão visual quando os vizinhos cardeais adjacentes estão ausentes.
 
-Uma solução simples é atribuir um valor para cada direção.
+Em outras palavras, a conexão diagonal é condicionada à conectividade pelas duas direções cardeais correspondentes. Essa regra evita que uma simples proximidade diagonal produza uma continuidade visual indevida.
 
-Por exemplo:
+Essa restrição constitui uma das características fundamentais do modelo de conectividade utilizado pelo *Blob Tileset* de 47 peças.
 
-- Norte = 1
-- Oeste = 2
-- Noroeste = 4
+## Representando a vizinhança por uma máscara de bits
 
-Cada vizinho presente contribui com seu respectivo valor. A soma desses valores gera um identificador único para a configuração analisada.
+Depois de identificar os vizinhos relevantes, precisamos transformar suas condições de presença ou ausência em uma representação que possa ser utilizada pelo algoritmo.
 
-Podemos representar isso como:
+Uma solução consiste em atribuir um peso diferente a cada posição. Como cada vizinho é tratado como presente ou ausente, podemos representar seu estado por um valor binário e combinar esses valores em um único identificador.
+
+Considere o *sub-tile* noroeste. Podemos atribuir os seguintes pesos:
+
+- Norte: \(1\).
+- Oeste: \(2\).
+- Noroeste: \(4\).
+
+A configuração é representada pela expressão:
 
 $$
 ID = N + O + NO
 $$
 
-onde cada componente pode estar presente ou ausente.
+Nessa expressão, cada variável assume o valor do seu respectivo peso quando o vizinho está presente e zero quando está ausente.
 
-Por exemplo, se os três vizinhos estiverem presentes:
+Se os três vizinhos estiverem presentes, teremos:
 
 $$
 ID = 1 + 2 + 4 = 7
@@ -162,480 +186,326 @@ $$
 Se apenas o norte estiver presente:
 
 $$
-ID = 1
+ID = 1 + 0 + 0 = 1
 $$
 
 Se apenas o oeste estiver presente:
 
 $$
-ID = 2
+ID = 0 + 2 + 0 = 2
 $$
 
-Se nenhum estiver presente:
+Se nenhum dos três vizinhos estiver presente:
 
 $$
-ID = 0
+ID = 0 + 0 + 0 = 0
 $$
 
-Na prática, isso é equivalente à utilização de ***bits***.
+Cada combinação produz um identificador distinto, permitindo que o algoritmo associe a configuração observada a uma representação visual previamente definida.
 
-Cada direção ocupa uma posição diferente dentro de um pequeno conjunto de *bits*, e a combinação deles representa o estado dos vizinhos.
+### Por que utilizar potências de dois?
 
-Essa técnica é particularmente útil em sistemas de *tiles* porque permite transformar uma configuração espacial em um número inteiro simples, que posteriormente pode ser utilizado para selecionar um *sprite*.
+Os pesos \(1\), \(2\) e \(4\) correspondem às potências de dois:
 
----
+$$
+1 = 2^0,\qquad 2 = 2^1,\qquad 4 = 2^2
+$$
 
-### Por que utilizar uma soma ponderada?
+Essa propriedade garante que cada posição ocupe um bit diferente. A soma dos pesos presentes, portanto, representa de maneira inequívoca cada combinação de três estados binários.
 
-Poderíamos representar os vizinhos utilizando três valores booleanos:
+A mesma ideia pode ser expressa por meio de operações binárias, utilizando uma *máscara de bits*. Em vez de manter três valores separados, o sistema armazena um único número inteiro que representa o estado combinado dos vizinhos.
 
-```text
-Norte    = verdadeiro
-Oeste    = falso
-Noroeste = verdadeiro
-```
-
-Porém, isso exigiria uma estrutura adicional para comparar combinações.
-
-Ao utilizar pesos diferentes, podemos transformar diretamente essa combinação em um identificador:
-
-```text
-Norte     = 1
-Oeste     = 2
-Noroeste  = 4
-```
-
-Assim:
-
-```text
-Norte + Noroeste
-= 1 + 4
-= 5
-```
-
-O número `5` passa a representar aquela configuração específica.
-
-Essa é uma aplicação simples de uma **máscara de *bits***.
-
-O mesmo princípio pode ser utilizado em diversas outras situações de desenvolvimento de jogos, como:
-
-- sistemas de *autotiling*;
-- máscaras de colisão;
-- estados de vizinhança;
-- seleção de animações;
-- conectividade entre objetos;
-- geração procedural de mapas.
-
----
-
-## Reduzindo as combinações
-
-Cada *sub-tile* possui três possíveis vizinhos, portanto existem:
+Como existem três posições binárias independentes, o número de combinações possíveis é:
 
 $$
 2^3 = 8
 $$
 
-combinações possíveis.
+Os identificadores resultantes variam de zero a sete.
 
-Entretanto, não precisamos necessariamente de oito *sprites* diferentes.
+Essa representação é útil porque permite consultar uma tabela de configurações, selecionar uma imagem e executar outras operações sem precisar comparar repetidamente estruturas de dados mais complexas.
 
-Algumas combinações produzem o mesmo resultado visual ou podem ser agrupadas de acordo com a forma como o *Blob Tileset* é construído.
+### Valores das posições na máscara
 
-Dessa forma, cada *sub-tile* pode ser representado por apenas **seis casos visuais distintos**.
+Ao considerar as oito posições da vizinhança, cada direção pode ser associada a uma potência de dois diferente. Esses são os valores comumente utilizados para compor a máscara de bits:
 
-Essa redução é uma das principais razões pelas quais o sistema consegue representar uma quantidade muito grande de configurações com relativamente poucos *sprites*.
+| Posição  | Valor |
+| -------- | ----- |
+| Norte    |     1 |
+| Nordeste |     2 |
+| Leste    |     4 |
+| Sudeste  |     8 |
+| Sul      |    16 |
+| Sudoeste |    32 |
+| Oeste    |    64 |
+| Noroeste |   128 |
 
----
+## Reduzindo as configurações de cada *sub-tile*
+
+Embora existam oito combinações binárias para três vizinhos, nem todas precisam corresponder a representações visuais independentes.
+
+A redução depende das regras de conectividade adotadas e da maneira como as peças são organizadas no conjunto gráfico.
+
+No modelo em que a diagonal só pode influenciar a aparência quando os dois vizinhos cardeais correspondentes estão presentes, determinadas combinações tornam-se visualmente equivalentes.
+
+Considere o *sub-tile* noroeste, cujos vizinhos relevantes são norte, oeste e noroeste. Se o norte ou o oeste estiver ausente, a presença do vizinho diagonal não deve criar, por si só, uma conexão de canto. Assim, algumas combinações podem ser agrupadas e encaminhadas para a mesma representação visual.
+
+O resultado é um conjunto de seis casos visuais distintos para cada região, desde que sejam utilizadas essas regras específicas.
+
+**A máscara de bits identifica a configuração observada; a regra de conectividade determina qual configuração visual deve ser selecionada.** São operações relacionadas, mas não equivalentes.
+
+Essa distinção é importante para evitar que os oito identificadores possíveis sejam confundidos com oito imagens obrigatoriamente distintas.
 
 ### *Sub-tile* noroeste
 
 ![Configurações do sub-tile noroeste][blob_04]
 
-O *sub-tile* noroeste analisa os vizinhos ao norte, oeste e noroeste.
-
-Com base na combinação encontrada, ele seleciona a representação correspondente para o canto superior esquerdo do *tile*.
-
----
+O *sub-tile* noroeste considera os vizinhos norte, oeste e noroeste. A combinação encontrada determina se o canto superior esquerdo deve ser representado como uma região contínua, uma borda ou um canto.
 
 ### *Sub-tile* nordeste
 
 ![Configurações do sub-tile nordeste][blob_05]
 
-O *sub-tile* nordeste realiza o mesmo procedimento, mas considerando a região superior direita.
-
-Seus vizinhos relevantes são:
-
-- Norte;
-- Leste;
-- Nordeste.
-
----
+O *sub-tile* nordeste executa o mesmo procedimento para o canto superior direito, considerando os vizinhos norte, leste e nordeste.
 
 ### *Sub-tile* sudoeste
 
 ![Configurações do sub-tile sudoeste][blob_06]
 
-O *sub-tile* sudoeste é responsável pela região inferior esquerda.
-
-Ele considera:
-
-- Sul;
-- Oeste;
-- Sudoeste.
-
----
+O *sub-tile* sudoeste determina a representação do canto inferior esquerdo a partir dos vizinhos sul, oeste e sudoeste.
 
 ### *Sub-tile* sudeste
 
 ![Configurações do sub-tile sudeste][blob_07]
 
-Finalmente, o *sub-tile* sudeste trata da região inferior direita e verifica:
+Por fim, o *sub-tile* sudeste considera os vizinhos sul, leste e sudeste para definir a aparência do canto inferior direito.
 
-- Sul;
-- Leste;
-- Sudeste.
+Em conjunto, essas quatro decisões permitem construir a representação visual completa da célula.
 
----
+## Da máscara à imagem final
 
-## Da vizinhança ao *sprite* final
+Com as regras de vizinhança estabelecidas, o processo de composição pode ser descrito como uma sequência de operações.
 
-Podemos resumir todo o processo em algumas etapas:
+1. Identificar a célula que será renderizada e consultar seus vizinhos relevantes.
+2. Construir uma máscara de bits para cada uma das quatro regiões.
+3. Aplicar as regras de conectividade para determinar o caso visual correspondente.
+4. Selecionar as peças gráficas associadas a cada caso.
+5. Compor as quatro regiões para obter a aparência completa da célula.
+6. Renderizar o resultado na posição correspondente do mapa.
 
-1. Vizinhança do tile: identificar os vizinhos relevantes.
-1. Calcular a máscara de bits.
-1. Selecionar o sprite do sub-tile.
-1. Repetir para os quatro sub-tiles.
-1. Renderizar o tile completo.
+O algoritmo não precisa procurar uma imagem completa para cada situação possível. Ele precisa determinar como cada canto deve ser representado e combinar as respostas obtidas.
 
-O ponto importante é que o algoritmo não precisa descobrir qual é o *sprite* completo.
+Essa é a principal vantagem da decomposição: **a aparência de uma estrutura complexa pode ser construída a partir de decisões locais e reutilizáveis**.
 
-Ele precisa apenas responder a quatro perguntas menores:
+### Composição e reutilização
 
-> Como deve ser o canto superior esquerdo?
->
-> Como deve ser o canto superior direito?  
->
-> Como deve ser o canto inferior esquerdo?  
->
-> Como deve ser o canto inferior direito?
+Uma mesma peça pode ser utilizada em diferentes posições do mapa sempre que as condições de conectividade forem equivalentes. Isso reduz a quantidade de recursos gráficos necessários e evita a duplicação de imagens que representam a mesma função visual.
 
-A composição dessas quatro respostas produz o resultado final.
+No modelo tradicional de 47 peças, o conjunto representa as configurações completas válidas de conectividade. Na organização por quatro *sub-tiles*, as regiões internas são selecionadas e combinadas conforme suas máscaras.
 
----
+Essas duas perspectivas descrevem maneiras relacionadas de organizar o sistema, mas não devem ser confundidas como se o número de peças completas fosse necessariamente igual ao número de peças internas armazenadas.
+
+O total de arquivos gráficos depende da organização adotada para o conjunto de imagens. O princípio comum é a reutilização de representações equivalentes para evitar a criação manual de todas as combinações possíveis.
 
 ## Renderização dinâmica
 
-No *Pixel Dust*, esse processo é realizado durante a renderização dos elementos.
+No *Pixel Dust*, a abordagem foi aplicada diretamente ao processo de renderização. Para cada célula que precisava ser desenhada, o sistema consultava a vizinhança, determinava as configurações dos quatro *sub-tiles* e utilizava as peças correspondentes para construir a aparência final.
 
-Para cada elemento que precisa ser desenhado, o sistema consulta sua vizinhança, determina a configuração de cada *sub-tile* e então utiliza as partes correspondentes para montar sua aparência.
+A representação visual era, portanto, uma consequência do estado atual do mapa, e não necessariamente uma imagem completa armazenada de maneira independente para cada célula.
 
-Isso significa que a aparência do elemento não precisa ser armazenada permanentemente.
+Essa característica é especialmente útil em ambientes dinâmicos, nos quais elementos podem ser adicionados ou removidos durante a execução.
 
-Ela é uma consequência do estado atual do mapa.
+Imagine uma região de grama que recebe uma nova célula. A inserção altera não apenas o conteúdo daquela posição, mas também a conectividade das células adjacentes. O sistema pode recalcular as configurações afetadas e atualizar a aparência do terreno automaticamente.
 
-Essa característica é especialmente interessante para jogos em que o cenário pode ser alterado durante a execução.
+O mesmo princípio se aplica à remoção de células, à modificação de materiais e à geração procedural de ambientes.
 
-Imagine, por exemplo, um elemento sendo adicionado no meio de uma área existente.
+## Localidade e custo computacional
 
-O sistema não precisa gerar um novo conjunto de *sprites*. Basta atualizar o estado do mapa e, na próxima renderização, a vizinhança será analisada novamente.
+Uma propriedade importante da técnica é a **localidade das decisões**. A aparência de uma célula depende de uma região limitada ao seu redor, o que permite determinar sua representação sem analisar o mapa inteiro.
 
-O mesmo vale para a remoção de elementos.
-
----
-
-## Uma propriedade importante: localidade
-
-Uma das vantagens dessa técnica é que a decisão sobre um *tile* depende apenas de uma pequena região ao seu redor.
-
-Não precisamos analisar o mapa inteiro para determinar como uma célula deve ser desenhada.
-
-Em termos conceituais:
+Para uma célula localizada na posição \((x,y)\), podemos representar conceitualmente sua aparência como uma função da vizinhança:
 
 $$
-A(x,y) = f(N, S, L, O, NO, NE, SO, SE)
+A(x,y) = f(N,S,L,O,NO,NE,SO,SE)
 $$
 
-onde \(A(x,y)\) representa a aparência do *tile* e os demais termos representam sua vizinhança.
+Nessa expressão, \(A(x,y)\) representa a aparência da célula; \(N\), \(S\), \(L\) e \(O\) representam os vizinhos cardeais; e \(NO\), \(NE\), \(SO\) e \(SE\) representam os vizinhos diagonais.
 
-Na implementação baseada em *sub-tiles*, essa função ainda pode ser decomposta:
+Quando a aparência é construída a partir de quatro regiões independentes, podemos expressar essa composição de maneira simplificada:
 
 $$
-A = A_{NO} + A_{NE} + A_{SO} + A_{SE}
+A(x,y) =
+A_{NO} + A_{NE} + A_{SO} + A_{SE}
 $$
 
-Cada parcela representa uma pequena decisão independente.
+O símbolo de adição representa aqui a composição das quatro regiões, e não necessariamente uma soma numérica.
 
-Essa propriedade torna o sistema relativamente barato e previsível, especialmente quando comparado a soluções que precisam analisar grandes regiões do mapa.
+Cada região é calculada a partir de três vizinhos relevantes, e o resultado é combinado para produzir a imagem completa.
 
----
+Essa organização reduz o trabalho necessário para selecionar a representação de cada célula. Entretanto, o custo total ainda depende de fatores como o tamanho do mapa, a frequência das alterações, a estratégia de renderização e a quantidade de células efetivamente processadas.
 
-## O papel do *tile* diagonal
+## Otimização: atualizando apenas as células afetadas
 
-Um detalhe particularmente importante é a consideração dos vizinhos diagonais.
+Embora seja possível recalcular as máscaras durante cada operação de renderização, nem sempre essa é a estratégia mais eficiente.
 
-É tentador verificar apenas os quatro vizinhos cardeais:
+Em mapas que permanecem estáticos durante vários quadros, repetir os mesmos cálculos continuamente pode representar trabalho desnecessário. Uma alternativa consiste em recalcular a representação apenas quando o estado do mapa for alterado.
+
+### Identificação das células afetadas
+
+Quando uma célula é adicionada, removida ou modificada, sua própria aparência pode mudar. Entretanto, como a decisão depende da vizinhança, as células ao redor também podem precisar de atualização.
+
+Considere uma região preenchida:
 
 ```text
-    N
-    │
-O ─ X ─ L
-    │
-    S
+X X X
+X X X
+X X X
 ```
 
-Porém, isso não é suficiente para construir algumas das transições presentes em um *Blob Tileset*.
-
-Por exemplo, considere:
+Se a célula central for removida, a configuração passa a ser:
 
 ```text
-X X
-X .
+X X X
+X . X
+X X X
 ```
 
-O canto diagonal fornece uma informação que os vizinhos cardeais isoladamente não conseguem representar.
+A remoção modifica as condições de vizinhança das células adjacentes. Por isso, atualizar apenas a posição removida não é suficiente para garantir que toda a região seja representada corretamente.
 
-Por isso, cada *sub-tile* considera também o vizinho diagonal correspondente.
+Uma estratégia eficiente consiste em marcar as células afetadas como pendentes de atualização, recalcular suas máscaras e atualizar as informações utilizadas pela renderização.
 
-Essa pequena informação adicional é o que permite distinguir situações como:
+### Processamento sob demanda
 
-- uma conexão contínua;
-- um canto externo;
-- um canto interno;
-- uma interrupção da superfície.
+O fluxo de atualização pode ser organizado da seguinte maneira:
 
----
+1. Modificar o estado lógico do mapa.
+2. Identificar as células cuja vizinhança foi alterada.
+3. Marcar essas células como pendentes de atualização.
+4. Recalcular as configurações visuais necessárias.
+5. Atualizar a representação gráfica.
+6. Reutilizar os resultados até que uma nova alteração ocorra.
 
-## Por que 47 *sprites* são suficientes?
+Essa estratégia evita recalcular células cuja vizinhança permanece inalterada.
 
-O número 47 pode parecer arbitrário à primeira vista, mas ele surge justamente da combinação das diferentes configurações necessárias para representar as bordas e os cantos de uma superfície.
+O raio de atualização necessário depende das regras de vizinhança utilizadas. No modelo descrito, como a decisão considera apenas os vizinhos imediatos, uma alteração normalmente afeta a célula modificada e as posições adjacentes que dependem dela.
 
-A grande sacada do *Blob Tileset* é que não precisamos tratar cada configuração do mapa como um *sprite* independente.
+## O papel dos materiais e da geração procedural
 
-Em vez disso, as partes são reutilizadas.
+A técnica apresentada pode ser utilizada em diferentes tipos de cenário, desde que exista uma regra capaz de determinar quais células devem ser consideradas conectadas.
 
-Um único *sprite* de canto pode aparecer em diversas configurações diferentes. O mesmo acontece com bordas e regiões preenchidas.
+### Terrenos
 
-Portanto, os 47 *sprites* não representam 47 situações isoladas.
-
-Eles representam **peças reutilizáveis de uma linguagem visual**.
-
-O sistema de renderização é responsável por combiná-las de acordo com o contexto.
-
-Essa distinção é importante porque transforma o *tileset* de uma simples coleção de imagens em uma espécie de sistema de composição.
-
----
-
-## Generalizando a técnica
-
-Embora o exemplo do *Pixel Dust* tenha sido desenvolvido para elementos de um mapa, a mesma abordagem pode ser aplicada a praticamente qualquer situação em que uma superfície precise se adaptar às suas vizinhas.
-
-Alguns exemplos incluem:
-
-### Terreno
-
-Gramados, terra, areia, neve e outros terrenos podem utilizar o sistema para criar transições naturais entre diferentes materiais.
+Grama, terra, areia e neve podem utilizar regras de conectividade para definir bordas e transições. O algoritmo determina as configurações a partir do estado do mapa, enquanto o conjunto gráfico fornece as representações visuais correspondentes.
 
 ### Água
 
-A borda de rios, lagos e poças pode ser determinada automaticamente de acordo com as células adjacentes.
+Lagos, rios e poças podem utilizar o mesmo princípio para definir seus limites. A aparência da água é calculada de acordo com as células ocupadas e com a relação entre a superfície líquida e os materiais adjacentes.
 
-### Paredes
+### Paredes e plataformas
 
-Uma parede pode selecionar automaticamente seus cantos, bordas e regiões internas sem exigir que cada configuração seja desenhada manualmente.
+Paredes e plataformas podem utilizar regras de conectividade para selecionar automaticamente cantos, extremidades e regiões internas. Isso reduz a necessidade de definir manualmente a imagem de cada posição.
 
-### Plataformas
+### Cavernas e mapas procedurais
 
-Em jogos 2D, plataformas podem utilizar máscaras de vizinhança para determinar suas extremidades.
+Em mapas gerados proceduralmente, a geometria lógica do ambiente pode ser produzida independentemente de sua representação visual. Depois que as células ocupadas e vazias são determinadas, o sistema de *autotiling* calcula as transições necessárias.
 
-### Cavernas
+Essa separação é particularmente útil em sistemas que precisam produzir ambientes variados sem exigir a criação manual de cada configuração.
 
-Mapas gerados proceduralmente podem se beneficiar bastante desse sistema, pois a geometria do cenário pode ser definida primeiro e a aparência calculada posteriormente.
+### Transições entre materiais diferentes
 
-### Materiais diferentes
+O princípio também pode ser estendido para situações nas quais as células possuem mais de dois estados possíveis.
 
-O conceito também pode ser estendido para situações em que duas superfícies diferentes precisam interagir.
+Uma posição pode representar grama, enquanto a vizinha representa terra; outra pode representar areia em contato com água. Nesses casos, a regra de seleção deixa de considerar apenas a presença ou a ausência de um vizinho e passa a avaliar a identidade do material ou a relação entre os materiais.
 
-Por exemplo:
+A máscara binária tradicional continua sendo útil para situações em que basta identificar a conectividade de uma determinada classe de células. Entretanto, transições entre múltiplos materiais podem exigir tabelas de regras adicionais, máscaras específicas ou outros modelos de seleção.
 
-```text
-Grama → Terra
-Areia → Água
-Neve → Rocha
-Lama → Grama
-```
+## Separação entre lógica e apresentação
 
-Nesse caso, a máscara pode deixar de representar apenas "existe ou não existe um vizinho" e passar a representar **qual material está presente naquela posição**.
+Uma das consequências mais relevantes dessa arquitetura é a separação entre o estado lógico do mapa e sua representação visual.
 
----
+A lógica do mapa determina quais elementos existem e em quais posições estão localizados. O sistema de renderização utiliza essas informações para decidir como os elementos devem aparecer.
 
-## *Blob Tileset* não é apenas uma técnica de arte
+Essa divisão evita que o modelo de dados precise armazenar todas as decisões gráficas necessárias para representar cada configuração.
 
-Uma consequência interessante desse sistema é que ele separa parcialmente duas responsabilidades:
+Também facilita a substituição do conjunto de imagens. Desde que as novas peças respeitem as regras de composição esperadas pelo algoritmo, o estilo artístico pode ser alterado sem exigir uma reformulação completa da estrutura lógica do mapa.
 
-**A lógica do mapa** determina o que existe.
+O mesmo princípio permite utilizar uma única representação lógica para diferentes estilos visuais, como terrenos com aparência cartunesca, ambientes com *pixel art* ou superfícies com contornos mais detalhados.
 
-**O sistema de renderização** determina como aquilo deve parecer.
+O *Blob Tileset* não é, portanto, apenas um recurso artístico. Ele representa uma estratégia de organização que separa as relações entre os elementos da maneira como essas relações são desenhadas.
 
-Essa separação é bastante útil.
+## Vantagens e limitações
 
-Podemos armazenar o mapa simplesmente como:
+A abordagem oferece vantagens importantes, mas sua adoção deve considerar as características do projeto e as regras visuais desejadas.
 
-```text
-0 0 1 1 1 0
-0 1 1 1 0 0
-0 1 1 0 0 0
-```
+### Vantagens
 
-onde `1` representa a presença de determinado elemento.
+**Redução da quantidade de imagens.** A reutilização de peças permite representar diversas configurações sem exigir um arquivo gráfico independente para cada situação.
 
-A partir dessa informação, o sistema de renderização identifica quais células possuem vizinhos e seleciona o *sprite* correspondente para cada posição. Assim, ele pode desenhar bordas, cantos e conexões entre as áreas ocupadas sem que a estrutura lógica do mapa precise conhecer os detalhes de cada *sprite*.
+**Seleção automática.** A aparência de cada célula é determinada por regras de conectividade, reduzindo a necessidade de configurar manualmente o mapa.
 
-Essa separação também facilita a troca do estilo artístico. Podemos substituir os *sprites* do *tileset* sem necessariamente modificar o algoritmo que determina suas conexões.
+**Suporte a cenários dinâmicos.** Alterações no mapa podem ser refletidas automaticamente na representação das células afetadas.
 
----
+**Integração com geração procedural.** A estrutura do ambiente pode ser gerada independentemente da maneira como suas superfícies serão desenhadas.
+
+**Separação de responsabilidades.** A lógica do mapa pode permanecer independente dos detalhes específicos do conjunto gráfico.
+
+**Possibilidade de otimização.** Como as decisões dependem de uma vizinhança limitada, é possível atualizar apenas as células afetadas por alterações no mapa.
+
+### Limitações
+
+**Dependência das regras de conectividade.** O sistema funciona adequadamente quando as relações entre células podem ser expressas pelas regras definidas. Situações visuais mais complexas podem exigir exceções ou mecanismos adicionais.
+
+**Necessidade de um conjunto gráfico coerente.** As peças precisam compartilhar características visuais compatíveis, como escala, contornos, paleta de cores e alinhamento.
+
+**Complexidade na seleção de materiais.** Quando várias classes de terreno interagem, a simples distinção entre presença e ausência pode não ser suficiente.
+
+**Custo de atualização.** Em mapas muito dinâmicos, a recomposição frequente das regiões pode representar trabalho adicional, especialmente se a atualização não for limitada às células afetadas.
+
+**Limites da composição por regiões.** A divisão em quatro partes funciona bem para determinadas superfícies, mas não substitui modelos mais complexos quando a geometria depende de formas arbitrárias, animações específicas ou relações entre múltiplos objetos.
+
+A escolha dessa técnica deve considerar, portanto, não apenas a redução de imagens, mas também a simplicidade das regras necessárias para representar o comportamento visual desejado.
 
 ## Aplicação no *Pixel Dust*
 
-A implementação dessa abordagem foi realizada originalmente quando o projeto ainda se chamava ***Pixel Dust***.
+A implementação dessa abordagem ocorreu quando o projeto ainda utilizava o nome *Pixel Dust*. O objetivo inicial era reduzir a rigidez visual das fronteiras entre elementos colocados em células adjacentes.
 
-O objetivo inicial era relativamente simples: fazer com que elementos colocados próximos uns dos outros deixassem de apresentar fronteiras tão rígidas.
+Antes da aplicação do sistema, cada elemento era representado de maneira relativamente independente, o que tornava as transições entre superfícies muito evidentes.
 
-O resultado, entretanto, foi além de uma simples melhoria estética.
+![Exemplo do mapa antes da implementação do sistema][elements_without_blob_01]
 
-O sistema passou a permitir que os elementos se adaptassem automaticamente ao ambiente ao redor, eliminando grande parte da necessidade de tratar manualmente cada configuração possível.
+![Outro exemplo do mapa antes da implementação do sistema][elements_without_blob_02]
 
-Antes da implementação do algoritmo, a representação visual apresentava transições rígidas entre os elementos:
+Com a introdução das regras de conectividade, a representação visual passou a considerar as relações entre as células. As bordas e os cantos puderam ser selecionados automaticamente, produzindo transições mais coerentes entre as regiões do cenário.
 
-![Antes da implementação][elements_without_blob_01]
+![Exemplo do mapa após a implementação do sistema][elements_with_blob_01]
 
-![Antes da implementação][elements_without_blob_02]
+![Segundo exemplo do mapa após a implementação do sistema][elements_with_blob_02]
 
-Depois da implementação, os elementos passaram a se adaptar à sua vizinhança:
+![Terceiro exemplo do mapa após a implementação do sistema][elements_with_blob_03]
 
-![Depois da implementação][elements_with_blob_01]
+A mudança não exigiu abandonar a estrutura baseada em uma grade. Em vez disso, o sistema passou a interpretar a vizinhança para determinar a aparência de cada elemento.
 
-![Depois da implementação][elements_with_blob_02]
-
-![Depois da implementação][elements_with_blob_03]
-
-A diferença visual é particularmente perceptível em áreas maiores, onde as pequenas transições entre os *tiles* deixam de chamar tanta atenção.
-
----
-
-## Vantagens da abordagem
-
-A utilização de um *Blob Tileset* traz algumas vantagens bastante claras.
-
-### Redução da quantidade de *sprites*
-
-Em vez de criar uma imagem para cada configuração possível, um conjunto relativamente pequeno de peças pode ser reutilizado.
-
-### Composição automática
-
-O desenvolvedor não precisa definir manualmente qual *sprite* deve ser utilizado em cada célula do mapa.
-
-### Mapas dinâmicos
-
-Como a aparência depende da vizinhança atual, alterações no mapa podem refletir automaticamente na renderização.
-
-### Compatibilidade com geração procedural
-
-Um algoritmo pode gerar a estrutura do mapa sem precisar conhecer as regras visuais do *tileset*.
-
-### Separação entre lógica e apresentação
-
-A estrutura lógica do mapa pode permanecer simples enquanto o sistema de renderização cuida da aparência.
-
-### Melhor integração visual
-
-As bordas e os cantos deixam de formar linhas rígidas e passam a acompanhar a geometria formada pelos elementos.
-
----
-
-## Considerações de implementação
-
-Apesar de relativamente simples, existem alguns detalhes que merecem atenção ao implementar esse sistema.
-
-### Atualização de vizinhos
-
-Quando um *tile* é modificado, sua própria aparência pode mudar, mas seus vizinhos também podem precisar ser recalculados.
-
-Por exemplo, se uma célula for removida:
-
-```text
-Antes:
-
-XXX
-XXX
-XXX
-```
-
-e a célula central desaparecer:
-
-```text
-XXX
-X.X
-XXX
-```
-
-não é apenas a célula removida que mudou visualmente. As células ao seu redor também podem precisar trocar seus *sub-tiles*.
-
-Por isso, em um sistema otimizado, alterações no mapa podem marcar uma pequena região como "suja" para que ela seja recalculada posteriormente.
-
----
-
-### Renderizar sob demanda
-
-Nem sempre é necessário recalcular todos os *tiles* a cada quadro.
-
-Se o mapa for estático durante determinado período, podemos calcular a aparência apenas quando sua estrutura for modificada.
-
-Uma estratégia comum é:
-
-1. alterar o mapa;
-1. identificar os *tiles* afetados;
-1. recalcular suas máscaras;
-1. atualizar a informação de renderização;
-1. desenhar normalmente até que outra alteração ocorra.
-
-Isso pode reduzir significativamente o trabalho em mapas grandes.
-
----
+Essa experiência ilustra como uma alteração relativamente localizada na arquitetura de renderização pode melhorar a coesão visual de um cenário sem aumentar proporcionalmente a complexidade dos dados persistidos.
 
 ## Conclusão
 
-O *Blob Tileset* é um exemplo interessante de como uma pequena quantidade de informação pode produzir uma variedade muito maior de resultados visuais.
+O *Blob Tileset* demonstra como um conjunto limitado de imagens pode ser utilizado para representar uma quantidade muito maior de configurações visuais. A ideia fundamental consiste em analisar a vizinhança das células, aplicar regras de conectividade e reutilizar peças gráficas para construir a aparência final.
 
-A ideia central é simples:
+Ao dividir uma célula em quatro regiões, cada uma responsável por um canto, o sistema transforma a seleção visual em decisões menores. As máscaras de bits fornecem uma representação compacta das condições de vizinhança, enquanto as regras de conectividade determinam quais configurações devem compartilhar a mesma representação gráfica.
 
-> **Não precisamos armazenar todas as aparências possíveis de um *tile*; precisamos armazenar as peças necessárias para construí-las.**
+No modelo tradicional de 47 peças, a restrição das conexões diagonais permite reduzir as 256 combinações binárias possíveis para 47 configurações válidas. Na abordagem baseada em *sub-tiles*, a mesma preocupação com a reutilização aparece na composição de regiões menores, embora a quantidade de peças armazenadas dependa da organização adotada.
 
-Ao dividir cada *tile* em quatro sub-regiões, consultar sua vizinhança e utilizar máscaras de *bits* para representar as conexões, podemos determinar automaticamente quais partes devem ser renderizadas.
+Mais importante do que a quantidade exata de imagens é o princípio arquitetural: **quando um grande número de resultados pode ser produzido pela combinação de partes menores, a decomposição do problema tende a favorecer a reutilização, a manutenção e a automatização**.
 
-No caso apresentado aqui, essa abordagem permite reproduzir as conexões necessárias com apenas 47 *sprites*, enquanto mantém o mapa completamente baseado em uma grade tradicional.
+No *Pixel Dust*, essa técnica foi utilizada para produzir transições mais coerentes entre elementos do cenário. O mesmo raciocínio pode ser aplicado a terrenos, paredes, plataformas, cavernas e outros ambientes cuja representação visual dependa das relações entre células vizinhas.
 
-Mais importante do que o próprio número de *sprites* é o conceito por trás dele. O sistema demonstra uma estratégia bastante geral de desenvolvimento:
+## Bibliografia
 
-> **Quando existem muitas combinações possíveis, procure decompor o problema em pequenas decisões independentes e reutilizáveis.**
+BORIS. *Tileset roundup*. Boris the Brave, 14 jul. 2013. Disponível em: <https://www.boristhebrave.com/2013/07/14/tileset-roundup/?q=tutorials/tileset-roundup>. Acesso em: 12 dez. 2023.
 
-Essa mesma ideia pode ser aplicada a diversos outros sistemas de jogos, especialmente quando precisamos transformar uma estrutura lógica simples em uma representação visual mais rica.
+GUY. *Wang “blob” tileset*. OpenGameArt.org, 4 jun. 2014. Disponível em: <https://opengameart.org/content/wang-%E2%80%98blob%E2%80%99-tileset>. Acesso em: 16 dez. 2023.
 
-No *Pixel Dust*, essa técnica serviu como uma forma de tornar o mundo mais coeso visualmente. Em outros projetos, ela pode ser utilizada para terrenos, paredes, água, cavernas, plataformas ou praticamente qualquer superfície cuja aparência dependa de suas vizinhas.
-
----
-
-### Fontes e referências
-
-- BORIS. *[Tileset roundup](https://www.boristhebrave.com/2013/07/14/tileset-roundup/?q=tutorials/tileset-roundup)*. Boris the Brave, 2013.
-- GUY. *[Wang “blob” tileset](https://opengameart.org/content/wang-%E2%80%98blob%E2%80%99-tileset)*. OpenGameArt.org.
-- GUY. *[Wang blob tilesets](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html)*. Boris the Brave.
-
-#### Leitura adicional
-
-O artigo *[Generating Tilesets](https://www.tilesetter.org/docs/generating_tilesets)*, do *Tilesetter*, apresenta outras aplicações dos *Blob Tilesets* e destaca sua utilidade na geração de padrões variados, incluindo labirintos e outros ambientes para jogos de plataforma, *side-scrolling* e *top-down*.
-
-> A documentação também apresenta diferentes exemplos de *Blob Tilesets* que podem ser utilizados como referência para compreender melhor a técnica.
+WALKER, Guy. *Blob Tileset*. In: BORIS the Brave. *Wang Tiles*. [s. d.]. Disponível em: <https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html>. Acesso em: 18 dez. 2023.
 
 [blob_01]: {{ "/assets/images/blog/2024/02/16/blob_01.webp" | relative_url }}
 [blob_02]: {{ "/assets/images/blog/2024/02/16/blob_02.webp" | relative_url }}

@@ -93,25 +93,85 @@
     outline-offset: 2px;
 }
 
+.post-pagination {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.post-pagination h2 {
+    margin-bottom: 1rem;
+}
+
+.post-pagination-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.post-pagination-link {
+    display: flex;
+    flex: 0 1 48%;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+    padding: 0.65rem 0.75rem;
+
+    color: var(--color-text-soft);
+    border-radius: 0.35rem;
+
+    transition:
+        color 150ms ease,
+        background-color 150ms ease;
+}
+
+.post-pagination-link span {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.post-pagination-link strong {
+    color: var(--color-text);
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.post-pagination-link:hover,
+.post-pagination-link:focus-visible {
+    color: var(--color-text);
+    background-color: var(--color-border);
+}
+
+.post-pagination-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.post-pagination-link--next {
+    text-align: right;
+}
+
 .app-video-container {
-  width: 100%;
+    width: 100%;
 }
 
 .app-video-container iframe {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  border: none;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border: none;
 }
 
 /* COMPONENTS */
 
 #app-theme-toggle {
-  background: var(--btn-bg);
-  color: var(--text-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 4px;
+    background: var(--btn-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
 }

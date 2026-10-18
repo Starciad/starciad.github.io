@@ -54,6 +54,26 @@ p {
     color: var(--color-text-soft);
 }
 
+code {
+    padding: 0.15em 0.35em;
+    border: 1px solid var(--color-code-border);
+    border-radius: 0.25rem;
+    color: var(--color-code-text);
+    background-color: var(--color-code-background);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    margin: 0 0 1rem;
+    overflow-x: auto;
+}
+
+pre code {
+    display: block;
+    padding: 1rem;
+}
+
 figure {
     display: flex;
     flex-direction: column;
@@ -93,10 +113,40 @@ time {
     font-weight: bolder;
 }
 
-ul {
-    margin: 0 0 1rem 2rem;
-    padding: 0;
+ul,
+ol {
+    margin: 0 0 1rem;
+    padding-left: 2rem;
     color: var(--color-text-soft);
+}
+
+table {
+    width: 100%;
+    margin: 0 0 1rem;
+    border: 1px solid var(--color-border);
+    border-collapse: collapse;
+    color: var(--color-text);
+}
+
+th,
+td {
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: var(--color-table-row-dark);
+    font-weight: 700;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--color-table-row-light);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-table-row-dark);
 }
 
 button {

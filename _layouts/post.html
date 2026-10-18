@@ -6,13 +6,22 @@ layout: default
     {{ content }}
 </section>
 
-<!-- PAGINATION -->
-<section>
-    {% if page.previous != nil %}
-        <a href="{{ page.previous.url | relative_url }}">Anterior</a>
-    {% endif %}
+<nav class="post-pagination">
+    <h2>Navegar entre artigos</h2>
 
-    {% if page.next != nil %}
-        <a href="{{ page.next.url | relative_url }}">Próximo</a>
-    {% endif %}
-</section>
+    <div class="post-pagination-list">
+        {% if page.previous != nil %}
+            <a class="post-pagination-link" href="{{ page.previous.url | relative_url }}">
+                <span>Anterior</span>
+                <strong>{{ page.previous.title }}</strong>
+            </a>
+        {% endif %}
+
+        {% if page.next != nil %}
+            <a class="post-pagination-link post-pagination-link--next" href="{{ page.next.url | relative_url }}">
+                <span>Próximo</span>
+                <strong>{{ page.next.title }}</strong>
+            </a>
+        {% endif %}
+    </div>
+</nav>
