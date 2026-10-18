@@ -15,7 +15,7 @@ date: 2025-02-23
 
 Os ícones desempenham um papel importante na interação entre usuários e sistemas operacionais. Presentes em menus, barras de tarefas, gerenciadores de arquivos, notificações e aplicativos, eles ajudam a identificar funções, representar objetos e comunicar informações de maneira visual.
 
-No Linux, entretanto, os ícones não se limitam às imagens que aparecem na interface. Por trás de sua apresentação existe um conjunto de convenções que determina como os recursos gráficos são nomeados, organizados, encontrados e associados aos elementos da interface. Compreender essas convenções é essencial para quem deseja desenvolver um tema de ícones próprio e distribuí-lo de maneira organizada e compatível com diferentes ambientes gráficos.
+No *Linux*, entretanto, os ícones não se limitam às imagens que aparecem na interface. Por trás de sua apresentação existe um conjunto de convenções que determina como os recursos gráficos são nomeados, organizados, encontrados e associados aos elementos da interface. Compreender essas convenções é essencial para quem deseja desenvolver um tema de ícones próprio e distribuí-lo de maneira organizada e compatível com diferentes ambientes gráficos.
 
 Apesar da relevância desse assunto, as informações necessárias para desenvolver um tema funcional encontram-se distribuídas entre especificações técnicas, documentação de ferramentas, repositórios de projetos e materiais produzidos pela comunidade. Essa fragmentação pode dificultar o aprendizado, especialmente para iniciantes que ainda não conhecem os mecanismos envolvidos.
 
@@ -23,7 +23,7 @@ Este artigo reúne esses fundamentos em uma sequência progressiva. Inicialmente
 
 O objetivo é fornecer uma base técnica que permita compreender não apenas como montar um pacote de ícones, mas também por que sua organização influencia o funcionamento e a compatibilidade do resultado.
 
-## Fundamentos dos ícones em ambientes Linux
+## Fundamentos dos ícones em ambientes *Linux*
 
 ### O que é um ícone?
 
@@ -46,7 +46,7 @@ Por isso, o desenvolvimento de ícones envolve tanto decisões gráficas quanto 
 
 Um *tema de ícones* (*icon theme*) é um conjunto organizado de recursos gráficos que compartilham uma identidade visual e podem ser selecionados pelo usuário em um ambiente gráfico.
 
-Segundo a especificação de temas de ícones do freedesktop.org, um tema estabelece uma correspondência entre um identificador, o tamanho solicitado e o arquivo gráfico que deverá representá-lo. Um tema também pode herdar recursos de outros temas, complementando sua coleção sem precisar incluir todas as imagens possíveis.
+Segundo a especificação de temas de ícones do *freedesktop.org*, um tema estabelece uma correspondência entre um identificador, o tamanho solicitado e o arquivo gráfico que deverá representá-lo. Um tema também pode herdar recursos de outros temas, complementando sua coleção sem precisar incluir todas as imagens possíveis.
 
 Essa característica explica por que um tema pode funcionar mesmo sem conter um ícone para cada aplicação ou tipo de arquivo instalado no sistema: os recursos ausentes podem ser procurados nos temas herdados.
 
@@ -54,7 +54,7 @@ Um tema de ícones não deve ser confundido com um tema visual completo do ambie
 
 ### Como os ambientes gráficos encontram os ícones?
 
-A especificação do freedesktop.org descreve um mecanismo de descoberta baseado em três elementos principais:
+A especificação do *freedesktop.org* descreve um mecanismo de descoberta baseado em três elementos principais:
 
 1. **Nome do tema:** identifica o conjunto de recursos que deverá ser consultado.
 2. **Nome do ícone:** identifica o recurso solicitado pela aplicação.
@@ -76,21 +76,21 @@ O contexto é uma classificação conceitual. Ele ajuda a identificar a finalida
 
 A tabela a seguir apresenta os principais contextos previstos na especificação de nomenclatura de ícones.
 
-| Contexto      | Diretório convencional | Finalidade                                                                                                                   |
-| ------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Actions       | `actions/`             | Ações iniciadas pelo usuário, como salvar e editar.                                                                          |
-| Animations    | `animations/`          | Animações utilizadas para representar carregamentos e operações em andamento.                                                |
-| Applications  | `apps/`                | Aplicações, seus lançadores e elementos relacionados.                                                                        |
-| Categories    | `categories/`          | Categorias de aplicações e agrupamentos de funcionalidades.                                                                  |
-| Devices       | `devices/`             | Dispositivos físicos, como impressoras e periféricos.                                                                        |
-| Emblems       | `emblems/`             | Indicadores sobrepostos a outros ícones, como símbolos de leitura ou marcações.                                              |
-| Emotes        | `emotes/`              | Emoticons tradicionais; esse contexto é considerado obsoleto para novos desenvolvimentos pela especificação de nomenclatura. |
-| International | `intl/`                | Símbolos internacionais, incluindo bandeiras.                                                                                |
-| MimeTypes     | `mimetypes/`           | Tipos de conteúdo, como documentos, imagens e arquivos de áudio.                                                             |
-| Places        | `places/`              | Locais e objetos do sistema de arquivos, como pastas e lixeira.                                                              |
-| Status        | `status/`              | Estados e indicadores, como avisos, erros e níveis de bateria.                                                               |
+| Contexto        | Diretório convencional | Finalidade                                                                                                                   |
+| --------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| *Actions*       | `actions/`             | Ações iniciadas pelo usuário, como salvar e editar.                                                                          |
+| *Animations*    | `animations/`          | Animações utilizadas para representar carregamentos e operações em andamento.                                                |
+| *Applications*  | `apps/`                | Aplicações, seus lançadores e elementos relacionados.                                                                        |
+| *Categories*    | `categories/`          | Categorias de aplicações e agrupamentos de funcionalidades.                                                                  |
+| *Devices*       | `devices/`             | Dispositivos físicos, como impressoras e periféricos.                                                                        |
+| *Emblems*       | `emblems/`             | Indicadores sobrepostos a outros ícones, como símbolos de leitura ou marcações.                                              |
+| *Emotes*        | `emotes/`              | Emoticons tradicionais; esse contexto é considerado obsoleto para novos desenvolvimentos pela especificação de nomenclatura. |
+| *International* | `intl/`                | Símbolos internacionais, incluindo bandeiras.                                                                                |
+| *MimeTypes*     | `mimetypes/`           | Tipos de conteúdo, como documentos, imagens e arquivos de áudio.                                                             |
+| *Places*        | `places/`              | Locais e objetos do sistema de arquivos, como pastas e lixeira.                                                              |
+| *Status*        | `status/`              | Estados e indicadores, como avisos, erros e níveis de bateria.                                                               |
 
-Fonte: adaptado da *Icon Naming Specification* do freedesktop.org.
+Fonte: adaptado da *Icon Naming Specification* do *freedesktop.org*.
 
 Outras categorias, como `panel/`, `applets/`, `preferences/`, `notifications/`, `stock/` e `legacy/`, também aparecem em temas existentes. Sua presença, entretanto, não significa que todas sejam contextos padronizados pela especificação geral.
 
@@ -115,11 +115,11 @@ Uma imagem chamada `meu-editor.png`, por exemplo, não substituirá automaticame
 
 Há uma distinção adicional no caso dos ícones de aplicações: a especificação não recomenda presumir que um nome mais genérico será utilizado automaticamente quando o ícone específico estiver ausente. Dependendo da aplicação, o identificador pode corresponder ao nome do aplicativo ou a um nome genérico explicitamente definido.
 
-### O Linux Icon Database como ferramenta de consulta
+### O *Linux Icon Database* como ferramenta de consulta
 
-A quantidade de identificadores presentes nos temas de ícones pode dificultar a criação de uma coleção abrangente. Para ajudar a enfrentar esse problema, o projeto **Linux Icon Database** reúne identificadores encontrados em diferentes temas instalados em um sistema Linux.
+A quantidade de identificadores presentes nos temas de ícones pode dificultar a criação de uma coleção abrangente. Para ajudar a enfrentar esse problema, O projeto ***Linux Icon Database*** reúne identificadores encontrados em diferentes temas instalados em um sistema *Linux*.
 
-O projeto foi concebido a partir da coleta de temas presentes em uma instalação do Linux Mint. Os nomes foram consolidados, e entradas repetidas que representavam o mesmo identificador em formatos distintos foram filtradas para produzir uma listagem mais compacta.
+O projeto foi concebido a partir da coleta de temas presentes em uma instalação do *Linux Mint*. Os nomes foram consolidados, e entradas repetidas que representavam o mesmo identificador em formatos distintos foram filtradas para produzir uma listagem mais compacta.
 
 O resultado é útil para:
 
@@ -129,7 +129,7 @@ O resultado é útil para:
 - Localizar categorias e identificadores que merecem ser implementados.
 - Desenvolver interfaces que utilizem nomes já conhecidos pelo ecossistema.
 
-O banco deve ser entendido como um **inventário comunitário de referência**, não como uma especificação oficial ou uma relação completa de todos os ícones disponíveis no Linux. Aplicações, distribuições e ambientes gráficos podem utilizar identificadores adicionais, e a lista pode conter lacunas.
+O banco deve ser entendido como um **inventário comunitário de referência**, não como uma especificação oficial ou uma relação completa de todos os ícones disponíveis no *Linux*. Aplicações, distribuições e ambientes gráficos podem utilizar identificadores adicionais, e a lista pode conter lacunas.
 
 O projeto está disponível em:
 
@@ -456,11 +456,11 @@ No GNOME, por exemplo, o GNOME Tweaks pode oferecer opções adicionais de apar�
 
 Esses procedimentos não devem ser tratados como universais. Em sistemas nos quais o tema não aparece na interface de seleção, é necessário verificar primeiro se o ambiente reconhece o caminho, o nome do tema e o arquivo `index.theme`.
 
-### Atualização do cache de ícones
+### Atualização do *cache* de ícones
 
 Algumas implementações, especialmente as que utilizam GTK, podem recorrer a caches para acelerar a localização dos recursos.
 
-O utilitário `gtk-update-icon-cache` cria arquivos de cache para temas de ícones e espera receber o caminho de um diretório de tema que contenha `index.theme` (GTK, s.d.).
+O utilitário `gtk-update-icon-cache` cria arquivos de *cache* para temas de ícones e espera receber o caminho de um diretório de tema que contenha `index.theme` (GTK, s.d.).
 
 Em um sistema no qual o utilitário esteja disponível, a atualização pode ser realizada, por exemplo, com:
 
@@ -468,9 +468,9 @@ Em um sistema no qual o utilitário esteja disponível, a atualização pode ser
 gtk-update-icon-cache -f ~/.local/share/icons/StarPixel
 ```
 
-Esse comando é pertinente apenas quando a implementação e o utilitário instalados suportam esse procedimento. A opção `-f` solicita a substituição de um cache existente, mesmo quando ele aparenta estar atualizado.
+Esse comando é pertinente apenas quando a implementação e o utilitário instalados suportam esse procedimento. A opção `-f` solicita a substituição de um *cache* existente, mesmo quando ele aparenta estar atualizado.
 
-**Não se deve presumir que a atualização desse cache seja necessária em todos os ambientes gráficos.** Ela não corrige nomes incorretos, diretórios ausentes ou configurações inválidas e não substitui a seleção do tema nas configurações do ambiente.
+**Não se deve presumir que a atualização desse *cache* seja necessária em todos os ambientes gráficos.** Ela não corrige nomes incorretos, diretórios ausentes ou configurações inválidas e não substitui a seleção do tema nas configurações do ambiente.
 
 Além disso, versões diferentes das ferramentas GTK podem disponibilizar executáveis distintos, como `gtk4-update-icon-cache`. Consulte a documentação da versão instalada antes de adotar um comando como procedimento obrigatório.
 
@@ -562,9 +562,9 @@ Esses testes ajudam a separar problemas do tema de particularidades do ambiente.
 
 ### Utilize identificadores conhecidos quando apropriado
 
-A adoção de nomes padronizados facilita a integração com aplicações que seguem as especificações do freedesktop.org.
+A adoção de nomes padronizados facilita a integração com aplicações que seguem as especificações do *freedesktop.org*.
 
-Antes de criar um novo identificador, consulte a especificação de nomenclatura e procure o nome utilizado pela aplicação que pretende atender. O Linux Icon Database pode complementar essa investigação ao apresentar identificadores encontrados em temas existentes.
+Antes de criar um novo identificador, consulte a especificação de nomenclatura e procure o nome utilizado pela aplicação que pretende atender. O ***Linux Icon Database*** pode complementar essa investigação ao apresentar identificadores encontrados em temas existentes.
 
 Quando não houver um identificador padronizado adequado, documente a decisão e mantenha a convenção de nomes consistente ao longo do projeto.
 
@@ -619,11 +619,11 @@ Essas ferramentas cumprem funções distintas. Nenhuma delas substitui a necessi
 
 As seguintes fontes podem auxiliar no aprofundamento técnico:
 
-- **[Icon Theme Specification](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-0.11.html):** documentação do formato e da estrutura dos temas de ícones.
-- **[Icon Naming Specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-0.8.html):** referência para nomes e contextos padronizados.
-- **[Linux Icon Database](https://github.com/Starciad/linux-icon-database):** inventário comunitário de identificadores coletados de temas instalados.
-- **[Paper Icon Theme](https://github.com/Paper-Icon-Theme/Paper):** projeto de referência para estudar a organização de um tema completo.
-- **[Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme):** coleção ampla que pode ajudar a compreender decisões de organização e cobertura.
+- ***[Icon Theme Specification](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-0.11.html)***: documentação do formato e da estrutura dos temas de ícones.
+- ***[Icon Naming Specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-0.8.html)***: referência para nomes e contextos padronizados.
+- ***[Linux Icon Database](https://github.com/Starciad/linux-icon-database)***: inventário comunitário de identificadores coletados de temas instalados.
+- ***[Paper Icon Theme](https://github.com/Paper-Icon-Theme/Paper)***: projeto de referência para estudar a organização de um tema completo.
+- ***[Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)***: coleção ampla que pode ajudar a compreender decisões de organização e cobertura.
 
 Projetos existentes são úteis para estudar estruturas e escolhas de implementação, mas suas convenções particulares não devem ser automaticamente interpretadas como exigências normativas.
 
@@ -631,7 +631,7 @@ Projetos existentes são úteis para estudar estruturas e escolhas de implementa
 
 Quando o tema estiver suficientemente desenvolvido e testado, o autor poderá disponibilizá-lo para outros usuários.
 
-O GitHub é uma opção para hospedar o código-fonte, documentar a instalação, receber contribuições e organizar versões. Plataformas de compartilhamento de personalizações para ambientes Linux também podem ser adequadas, conforme as condições vigentes de cada serviço.
+O GitHub é uma opção para hospedar o código-fonte, documentar a instalação, receber contribuições e organizar versões. Plataformas de compartilhamento de personalizações para ambientes *Linux* também podem ser adequadas, conforme as condições vigentes de cada serviço.
 
 Antes da publicação, recomenda-se preparar um arquivo de documentação com:
 
@@ -648,19 +648,19 @@ Antes da publicação, recomenda-se preparar um arquivo de documentação com:
 
 ## Considerações finais
 
-Desenvolver um tema de ícones para Linux envolve mais do que produzir imagens visualmente atraentes. O resultado precisa estabelecer uma correspondência coerente entre os recursos gráficos, seus identificadores, os diretórios em que estão armazenados e os metadados que orientam sua descoberta.
+Desenvolver um tema de ícones para *Linux* envolve mais do que produzir imagens visualmente atraentes. O resultado precisa estabelecer uma correspondência coerente entre os recursos gráficos, seus identificadores, os diretórios em que estão armazenados e os metadados que orientam sua descoberta.
 
-As especificações do freedesktop.org fornecem uma base comum para organizar esses elementos e favorecem a interoperabilidade entre aplicações e ambientes gráficos. Ainda assim, diferenças entre implementações exigem atenção aos formatos suportados, aos caminhos de pesquisa e aos mecanismos de configuração utilizados por cada sistema.
+As especificações do *freedesktop.org* fornecem uma base comum para organizar esses elementos e favorecem a interoperabilidade entre aplicações e ambientes gráficos. Ainda assim, diferenças entre implementações exigem atenção aos formatos suportados, aos caminhos de pesquisa e aos mecanismos de configuração utilizados por cada sistema.
 
 Para quem está começando, a abordagem mais produtiva consiste em desenvolver uma coleção pequena, configurar corretamente o `index.theme`, validar os identificadores e testar o tema no ambiente pretendido. A partir dessa base, é possível expandir gradualmente a cobertura e aprimorar a consistência visual.
 
 Projetos de referência e bancos de identificadores podem reduzir o esforço de pesquisa, mas devem complementar — e não substituir — a documentação técnica oficial.
 
-Por fim, compartilhar os resultados, registrar as decisões de implementação e documentar as limitações contribui para que o conhecimento produzido seja útil a outros desenvolvedores e designers. Dessa maneira, a criação de temas personalizados também pode participar do fortalecimento da documentação e da colaboração dentro do ecossistema Linux.
+Por fim, compartilhar os resultados, registrar as decisões de implementação e documentar as limitações contribui para que o conhecimento produzido seja útil a outros desenvolvedores e *designers*. Dessa maneira, a criação de temas personalizados também pode participar do fortalecimento da documentação e da colaboração dentro do ecossistema *Linux*.
 
 ## Referências
 
-DAWES, Rodney. *Icon Naming Specification*. freedesktop.org, versão 0.8.90, 9 ago. 2007. Disponível em: <https://specifications.freedesktop.org/icon-naming/>. Acesso em: 3 fev. 2025.
+DAWES, Rodney. *Icon Naming Specification*. *freedesktop.org*, versão 0.8.90, 9 ago. 2007. Disponível em: <https://specifications.freedesktop.org/icon-naming/>. Acesso em: 3 fev. 2025.
 
 GTK PROJECT. *gtk4-update-icon-cache: Icon theme caching utility*. GTK Documentation, [s. d.]. Disponível em: <https://docs.gtk.org/gtk4/gtk4-update-icon-cache.html>. Acesso em: 5 fev. 2025.
 
@@ -670,7 +670,7 @@ INKSCAPE PROJECT. *Inkscape*. Inkscape, [s. d.]. Disponível em: <https://inksca
 
 KDE COMMUNITY. *Ikona*. KDE Applications, [s. d.]. Disponível em: <https://apps.kde.org/ikona/>. Acesso em: 17 fev. 2025.
 
-LARSSON, Alexander; ENGLICH, Frans. *Icon Theme Specification*. freedesktop.org, versão 0.13, 2 jul. 2013. Disponível em: <https://xdg.pages.freedesktop.org/xdg-specs/icon-theme/latest/>. Acesso em: 7 fev. 2025.
+LARSSON, Alexander; ENGLICH, Frans. *Icon Theme Specification*. *freedesktop.org*, versão 0.13, 2 jul. 2013. Disponível em: <https://xdg.pages.freedesktop.org/xdg-specs/icon-theme/latest/>. Acesso em: 7 fev. 2025.
 
 PAPIRUS DEVELOPMENT TEAM. *Papirus Icon Theme*. GitHub, [s. d.]. Disponível em: <https://github.com/PapirusDevelopmentTeam/papirus-icon-theme>. Acesso em: 19 fev. 2025.
 
