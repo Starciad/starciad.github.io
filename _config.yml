@@ -2,10 +2,11 @@ title: "Starciad's Dreamland"
 email: "davilsfernandes.starciad.comu@gmail.com"
 author: "Starciad"
 description: "Starciad's personal website, showcasing projects, books, and technology interests."
+lang: pt-BR
 
-domain: starciad.github.io
-url: https://starciad.github.io/
-baseurl: /
+domain: "starciad.github.io"
+url: "https://starciad.github.io"
+baseurl: "/"
 
 # Permalinks
 permalink: /blog/:year/:month/:day/:title/ # Permalink structure for blog posts
