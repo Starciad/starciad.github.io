@@ -6,6 +6,6 @@ section: hobbies
 title: O Pequeno Príncipe
 date: 2023-09-12
 image:
-  path: /assets/images/arts/paintings/the-little-prince.webp
+  path: /assets/images/paintings/the-little-prince.webp
   alt: O Pequeno Príncipe
 ---

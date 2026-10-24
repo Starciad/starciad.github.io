@@ -3,12 +3,38 @@ layout: default
 ---
 
 <!-- Thumbnail -->
+{% if page.image %}
 <section>
-    <figure>
-        <img src="{{ page.image.path }}" alt="{{ page.image.alt }}">
-        <figcaption>{{ page.image.alt }}</figcaption>
-    </figure>
+    <img src="{{ page.image.path }}" alt="{{ page.image.alt }}">
 </section>
+{% endif %}
+
+<!-- Videos -->
+{% if page.videos.size > 0 %}
+<section>
+    <h2>Vídeos</h2>
+    <div>
+        {% for video in page.videos %}
+        <div class="app-video-container">
+            <iframe class="app-video" src="https://www.youtube.com/embed/{{ video.id }}" title="{{ video.alt }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Screenshots -->
+{% if page.screenshots.size > 0 %}
+<section>
+    <h2>Capturas de Tela</h2>
+
+    <div>
+        {% for screenshot in page.screenshots %}
+        <img src="{{ screenshot.path }}" alt="{{ screenshot.alt }}">
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
 
 <!-- Content -->
 <section>

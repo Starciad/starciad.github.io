@@ -7,17 +7,17 @@ section: projects
 # Information
 title: Star ASCII
 authors:
-    - Starciad
+  - Starciad
 date: 2024-09-10
 short_description: Uma biblioteca para criação de animações ASCII para terminais.
 technologies:
-    - csharp
+  - csharp
 external_links:
-    github: "https://github.com/Starciad/StarASCII.git"
-    nuget: "https://www.nuget.org/packages/StarASCII/"
+  github: "https://github.com/Starciad/StarASCII.git"
+  nuget: "https://www.nuget.org/packages/StarASCII/"
 
 # Assets
 image:
-  path: /assets/images/thumbnails/projects/starascii.webp
+  path: /assets/images/thumbnails/projects/star-ascii.webp
   alt: Star ASCII
 ---

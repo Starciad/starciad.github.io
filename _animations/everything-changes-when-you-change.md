@@ -9,7 +9,7 @@ authors:
   - DD Fernandes
 date: 2025-08-16
 image:
-  path: /assets/images/arts/animations/everything-changes-when-you-change.webp
+  path: /assets/images/animations/everything-changes-when-you-change.webp
   alt: Tudo Muda Quando Você Muda
 
 video_id: CY-KnucUfaA

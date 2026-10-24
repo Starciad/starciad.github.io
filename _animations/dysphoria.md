@@ -8,7 +8,7 @@ authors:
   - Starciad
 date: 2023-10-28
 image:
-  path: /assets/images/arts/animations/dysphoria.webp
+  path: /assets/images/animations/dysphoria.webp
   alt: Disforia
 
 video_id: ftPscc1XLhA

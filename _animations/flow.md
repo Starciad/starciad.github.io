@@ -8,7 +8,7 @@ authors:
   - Starciad
 date: 2024-09-19
 image:
-  path: /assets/images/arts/animations/flow.webp
+  path: /assets/images/animations/flow.webp
   alt: Fluxo
 
 video_id: 0Drr6VcZfks

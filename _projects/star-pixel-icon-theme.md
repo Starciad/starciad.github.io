@@ -7,16 +7,16 @@ section: projects
 # Information
 title: Star Pixel Icon (SPI) Theme
 authors:
-    - Starciad
+  - Starciad
 date: 2024-07-18
 short_description: Um pacote de ícones Pixel Art para Linux, fornecendo um visual nostálgico.
 technologies:
-    - linux
+  - linux
 external_links:
-    github: "https://github.com/Starciad/star-pixel-icons-theme.git"
+    github: "https://github.com/Starciad/star-pixel-icon-theme.git"
 
 # Assets
 image:
-  path: /assets/images/thumbnails/projects/spi.webp
+  path: /assets/images/thumbnails/projects/star-pixel-icon-theme.webp
   alt: Star Pixel Icon Theme
 ---

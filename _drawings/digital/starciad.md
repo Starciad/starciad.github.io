@@ -6,6 +6,6 @@ section: hobbies
 title: Starciad
 date: 2023-01-03
 image:
-  path: /assets/images/arts/drawings/digital/starciad.webp
+  path: /assets/images/drawings/digital/starciad.webp
   alt: Starciad
 ---

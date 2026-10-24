@@ -7,19 +7,19 @@ section: projects
 # Information
 title: Star Character Sheet Generator (SCSG)
 authors:
-    - Starciad
+  - Starciad
 date: 2024-01-23
 short_description: Um utilitário gratuito, simples e rápido para gerar dinamicamente fichas de personagens.
 technologies:
-    - css
-    - html
-    - javascript
+  - css
+  - html
+  - javascript
 external_links:
-    github: "https://github.com/Starciad/StarCharacterSheetGenerator.git"
-    website: "https://starciad.github.io/StarCharacterSheetGenerator/"
+  github: "https://github.com/Starciad/StarCharacterSheetGenerator.git"
+  website: "https://starciad.github.io/StarCharacterSheetGenerator/"
 
 # Assets
 image:
-  path: /assets/images/thumbnails/projects/scsg.webp
+  path: /assets/images/thumbnails/projects/star-character-sheet-generator.webp
   alt: Star Character Sheet Generator
 ---

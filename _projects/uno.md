@@ -17,6 +17,6 @@ external_links:
 
 # Assets
 image:
-  path: /assets/images/thumbnails/projects/suno.webp
+  path: /assets/images/thumbnails/projects/uno.webp
   alt: Uno
 ---

@@ -9,6 +9,8 @@ author: Starciad
 category: Desenvolvimento de Jogos
 tags: [Desenvolvimento de Jogos, Pixel Art, Blob Tileset, Autotiling, Renderização]
 date: 2024-02-16
+
+math: true
 ---
 
 ## Introdução
